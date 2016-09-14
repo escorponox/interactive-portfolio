@@ -42,19 +42,19 @@
       Frontend
       Developer</em>. Building them from scratch has helped me to develop a solid HTML and CSS basis.</p>
   </div>
-  <div class="vertical-tab">
-    <input type="radio" checked class="tab-radio" id="tab-radio1" name="tab">
-    <input type="radio" class="tab-radio" id="tab-radio2" name="tab">
-    <input type="radio" class="tab-radio" id="tab-radio3" name="tab">
-    <input type="radio" class="tab-radio" id="tab-radio4" name="tab">
-    <input type="radio" class="tab-radio" id="tab-radio5" name="tab">
+  <div class="section__content center_container">
+    <input type="radio" class="vertical-tab__radio" id="tab-radio1" name="tab">
+    <input type="radio" class="vertical-tab__radio" id="tab-radio2" name="tab">
+    <input type="radio" class="vertical-tab__radio" id="tab-radio3" name="tab">
+    <input type="radio" class="vertical-tab__radio" id="tab-radio4" name="tab">
+    <input type="radio" checked class="vertical-tab__radio" id="tab-radio5" name="tab">
 
     <div class="vertical-tab__tabs">
-      <label class="tab-label" for="tab-radio1">Sidebar</label>
-      <label class="tab-label" for="tab-radio2">Forms</label>
-      <label class="tab-label" for="tab-radio3">Kids Calculator</label>
-      <label class="tab-label" for="tab-radio4">Shopping Cart</label>
-      <label class="tab-label" for="tab-radio5">Non-JS UI Components</label>
+      <label class="vertical-tab__label" for="tab-radio1">Sidebar</label>
+      <label class="vertical-tab__label" for="tab-radio2">Forms</label>
+      <label class="vertical-tab__label" for="tab-radio3">Kids Calculator</label>
+      <label class="vertical-tab__label" for="tab-radio4">Shopping Cart</label>
+      <label class="vertical-tab__label" for="tab-radio5">Non-JS UI Components</label>
     </div>
 
     <div class="vertical-tab__content">
@@ -69,15 +69,19 @@
             <img class="carousel__item__img" src="assets/sidebar-2.png">
           </div>
 
-          <label for="tab1-carr01-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="tab1-carr01-item2" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="tab1-carr01-item1" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="tab1-carr01-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="tab1-carr01-item2" class="carousel__right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="tab1-carr01-item2" class="carousel__left item-1"><span
+              class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="tab1-carr01-item1" class="carousel__right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="tab1-carr01-item1" class="carousel__left item-2"><span
+              class="fa fa-chevron-left fa-2x"></span></label>
           <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__dot"><label for="tab1-carr01-item1" class="carousel__dot-list__dot"><span
-                class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__dot"><label for="tab1-carr01-item2" class="carousel__dot-list__dot"><span
-                class="fa fa-circle"></span></label></li>
+            <li class="carousel__dot-list__item">
+              <label for="tab1-carr01-item1" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
+            <li class="carousel__dot-list__item">
+              <label for="tab1-carr01-item2" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
           </ul>
         </div>
         <div class="static-info">
@@ -107,18 +111,21 @@
             <img class="carousel__item__img" src="assets/forms-3.png">
           </div>
 
-          <label for="car02-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car02-item3" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="car02-item3" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car02-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="car02-item1" class="right item-3"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car02-item2" class="left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car02-item2" class="carousel__right item-1"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car02-item3" class="carousel__left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car02-item3" class="carousel__right item-2"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car02-item1" class="carousel__left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car02-item1" class="carousel__right item-3"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car02-item2" class="carousel__left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
           <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__dot"><label for="car02-item1" class="carousel__dot-list__dot"><span
+            <li class="carousel__dot-list__item"><label for="car02-item1" class="carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__dot"><label for="car02-item2" class="carousel__dot-list__dot"><span
+            <li class="carousel__dot-list__item"><label for="car02-item2" class="carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__dot"><label for="car02-item3" class="carousel__dot-list__dot"><span
+            <li class="carousel__dot-list__item"><label for="car02-item3" class="carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
           </ul>
         </div>
@@ -149,18 +156,21 @@
             <img class="carousel__item__img" src="assets/calc-3.png">
           </div>
 
-          <label for="car03-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car03-item3" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="car03-item3" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car03-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="car03-item1" class="right item-3"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car03-item2" class="left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car03-item2" class="carousel__right item-1"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car03-item3" class="carousel__left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car03-item3" class="carousel__right item-2"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car03-item1" class="carousel__left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car03-item1" class="carousel__right item-3"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car03-item2" class="carousel__left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
           <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__dot"><label for="car03-item1" class="carousel__dot-list__dot"><span
+            <li class="carousel__dot-list__item"><label for="car03-item1" class="carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__dot"><label for="car03-item2" class="carousel__dot-list__dot"><span
+            <li class="carousel__dot-list__item"><label for="car03-item2" class="carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__dot"><label for="car03-item3" class="carousel__dot-list__dot"><span
+            <li class="carousel__dot-list__item"><label for="car03-item3" class="carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
           </ul>
         </div>
@@ -169,7 +179,8 @@
           <p>Basic calculator with a flashy color palette to attract kids attention</p>
           <p>
             <a class="static-info__a static-info__a--blue"
-               href="https://escorponox.github.io/learning-web-components/components/calculator/index.html">Live Demo</a>
+               href="https://escorponox.github.io/learning-web-components/components/calculator/index.html">Live
+              Demo</a>
             <a class="static-info__a"
                href="https://github.com/escorponox/learning-web-components/tree/master/components/calculator"><span
                 class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
@@ -191,20 +202,23 @@
             <img class="carousel__item__img" src="assets/cart-3.png">
           </div>
 
-          <label for="car04-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car04-item3" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="car04-item3" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car04-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="car04-item1" class="right item-3"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car04-item2" class="left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car04-item2" class="carousel__right item-1"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car04-item3" class="carousel__left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car04-item3" class="carousel__right item-2"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car04-item1" class="carousel__left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car04-item1" class="carousel__right item-3"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car04-item2" class="carousel__left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
           <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__dot">
+            <li class="carousel__dot-list__item">
               <label for="car04-item1" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__dot">
+            <li class="carousel__dot-list__item">
               <label for="car04-item2" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__dot">
+            <li class="carousel__dot-list__item">
               <label for="car04-item3" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
           </ul>
@@ -236,20 +250,23 @@
             <img class="carousel__item__img" src="assets/component-3.gif">
           </div>
 
-          <label for="car05-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car05-item3" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="car05-item3" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car05-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
-          <label for="car05-item1" class="right item-3"><span class="fa fa-chevron-right fa-2x"></span></label>
-          <label for="car05-item2" class="left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car05-item2" class="carousel__right item-1"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car05-item3" class="carousel__left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car05-item3" class="carousel__right item-2"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car05-item1" class="carousel__left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car05-item1" class="carousel__right item-3"><span
+              class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car05-item2" class="carousel__left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
           <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__dot">
+            <li class="carousel__dot-list__item">
               <label for="car05-item1" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__dot">
+            <li class="carousel__dot-list__item">
               <label for="car05-item2" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__dot">
+            <li class="carousel__dot-list__item">
               <label for="car05-item3" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
           </ul>
@@ -263,7 +280,8 @@
             <a class="static-info__a static-info__a--blue"
                href="http://jsbin.com/sifoda/1/edit?output">Accordion Demo</a>
             <a class="static-info__a static-info__a--blue"
-               href="https://escorponox.github.io/learning-web-components/components/buttons/index.html">Buttons Demo</a>
+               href="https://escorponox.github.io/learning-web-components/components/buttons/index.html">Buttons
+              Demo</a>
           </p>
         </div>
       </div>
@@ -274,6 +292,111 @@
 <section id="skills">
   <div class="section__header">
     <h1>Skills</h1>
+    <p class="section__header__intro">This projects have been done while going through my path to become a <em>Modern
+      Frontend Developer</em>. Building them from scratch has helped me to develop a solid HTML and CSS basis.</p>
+  </div>
+  <div class="section__content section__content--radius section__content--white hpad">
+    <div class="center_container">
+      <div class="front-back-bar center_container">
+        <div class="front-back-bar__front">
+          <span class="front-back-bar__bar__label-left">Frontend</span>
+          <span class="front-back-bar__bar__label-right">60%</span>
+        </div>
+        <div class="front-back-bar__back">
+          <span class="front-back-bar__bar__label-left">40%</span>
+          <span class="front-back-bar__bar__label-right">Backend</span>
+        </div>
+      </div>
+    </div>
+    <div class="center_container">
+      <div class="row-labels">
+        <div class="bar-graph__row-labels__label">Expert</div>
+        <div class="bar-graph__row-labels__label">Proficient</div>
+        <div class="bar-graph__row-labels__label">Competent</div>
+        <div class="bar-graph__row-labels__label">Learning</div>
+      </div>
+      <div class="one-third">
+        <h3 class="align-center">Frontend</h3>
+        <div class="bar-graph bar-graph--first">
+          <div class="bar-graph__col bar-graph__col--proficient">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">HTML/CSS</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--competent">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">JavaScript</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--expert">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">jQuery</div>
+          </div>
+          <div class="bar-graph__col">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">React</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--expert">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">Redux</div>
+          </div>
+        </div>
+      </div>
+      <div class="one-third">
+        <h3 class="align-center">Backend</h3>
+        <div class="bar-graph">
+          <div class="bar-graph__col bar-graph__col--proficient">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">HTML/CSS</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--competent">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">JavaScript</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--expert">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">jQuery</div>
+          </div>
+          <div class="bar-graph__col">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">React</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--expert">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">Redux</div>
+          </div>
+        </div>
+      </div>
+      <div class="one-third">
+        <h3 class="align-center">Other</h3>
+        <div class="bar-graph">
+          <div class="bar-graph__col bar-graph__col--alt-color bar-graph__col--proficient">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">HTML/CSS</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--alt-color bar-graph__col--competent">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">JavaScript</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--alt-color bar-graph__col--expert">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">jQuery</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--alt-color">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">React</div>
+          </div>
+          <div class="bar-graph__col bar-graph__col--alt-color bar-graph__col--expert">
+            <div class="bar-graph__col__tooltip"></div>
+            <div class="bar-graph__col__label">Redux</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section id="articles">
+  <div class="section__header">
+    <h1>Articles</h1>
     <p class="section__header__intro">This projects have been done while going through my path to become a <em>Modern
       Frontend
       Developer</em>. Building them from scratch has helped me to develop a solid HTML and CSS basis.</p>
