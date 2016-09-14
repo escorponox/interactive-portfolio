@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <meta charset="UTF-8">
+  <title>Carlos Coves Prieto - Interactive Portfolio</title>
+</head>
+<body>
+<header>
+  <div class="header__section">
+    <div class="header__name">Carlos Coves Prieto</div>
+  </div>
+  <nav class="header__section header__nav">
+    <a class="header__nav__link" href="#about">About</a>
+    <a class="header__nav__link" href="#projects">Projects</a>
+    <a class="header__nav__link" href="#skills">Skills</a>
+    <a class="header__nav__link" href="#articles">Articles</a>
+    <a class="header__nav__link" href="#contact">Contact</a>
+  </nav>
+  <div class="header__section">
+    <div class="header__search">
+      <input class="header__search__input" type="text" value="" required>
+      <span class="fa fa-search fa-lg header__search__icon" aria-hidden="true"></span>
+      <span class="header__search__placeholder">SEARCH</span>
+    </div>
+  </div>
+</header>
+<section id="about">
+  <div class="section__header">
+    <h1>About Me</h1>
+    <p class="section__header__intro">This projects have been done while going through my path to become a <em>Modern
+      Frontend
+      Developer</em>. Building them from scratch has helped me to develop a solid HTML and CSS basis.</p>
+  </div>
+</section>
+<section id="projects">
+  <div class="section__header">
+    <h1>Projects</h1>
+    <p class="section__header__intro">This projects have been done while going through my path to become a <em>Modern
+      Frontend
+      Developer</em>. Building them from scratch has helped me to develop a solid HTML and CSS basis.</p>
+  </div>
+  <div class="vertical-tab">
+    <input type="radio" checked class="tab-radio" id="tab-radio1" name="tab">
+    <input type="radio" class="tab-radio" id="tab-radio2" name="tab">
+    <input type="radio" class="tab-radio" id="tab-radio3" name="tab">
+    <input type="radio" class="tab-radio" id="tab-radio4" name="tab">
+    <input type="radio" class="tab-radio" id="tab-radio5" name="tab">
+
+    <div class="vertical-tab__tabs">
+      <label class="tab-label" for="tab-radio1">Sidebar</label>
+      <label class="tab-label" for="tab-radio2">Forms</label>
+      <label class="tab-label" for="tab-radio3">Kids Calculator</label>
+      <label class="tab-label" for="tab-radio4">Shopping Cart</label>
+      <label class="tab-label" for="tab-radio5">Non-JS UI Components</label>
+    </div>
+
+    <div class="vertical-tab__content">
+      <div class="vertical-tab__content__project">
+        <div class="carousel">
+          <input type="radio" class="carousel__radio" checked id="tab1-carr01-item1" name="carr01">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/sidebar.png">
+          </div>
+          <input type="radio" class="carousel__radio" id="tab1-carr01-item2" name="carr01">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/sidebar-2.png">
+          </div>
+
+          <label for="tab1-carr01-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="tab1-carr01-item2" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="tab1-carr01-item1" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="tab1-carr01-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <ul class="carousel__dot-list">
+            <li class="carousel__dot-list__dot"><label for="tab1-carr01-item1" class="carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+            <li class="carousel__dot-list__dot"><label for="tab1-carr01-item2" class="carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+          </ul>
+        </div>
+        <div class="static-info">
+          <p><strong>TECHNOLOGIES:</strong> HTML5, CSS3</p>
+          <p>This is a sidebar built for Modern Developer social media</p>
+          <p>
+            <a class="static-info__a static-info__a--blue"
+               href="https://escorponox.github.io/learning-web-components/components/sidebar/index.html">Live Demo</a>
+            <a class="static-info__a"
+               href="https://github.com/escorponox/learning-web-components/tree/master/components/sidebar"><span
+                class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
+          </p>
+        </div>
+      </div>
+      <div class="vertical-tab__content__project">
+        <div class="carousel">
+          <input type="radio" class="carousel__radio" checked id="car02-item1" name="car02">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/forms-1.png">
+          </div>
+          <input type="radio" class="carousel__radio" id="car02-item2" name="car02">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/forms-2.png">
+          </div>
+          <input type="radio" class="carousel__radio" id="car02-item3" name="car02">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/forms-3.png">
+          </div>
+
+          <label for="car02-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car02-item3" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car02-item3" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car02-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car02-item1" class="right item-3"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car02-item2" class="left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <ul class="carousel__dot-list">
+            <li class="carousel__dot-list__dot"><label for="car02-item1" class="carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+            <li class="carousel__dot-list__dot"><label for="car02-item2" class="carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+            <li class="carousel__dot-list__dot"><label for="car02-item3" class="carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+          </ul>
+        </div>
+        <div class="static-info">
+          <p class="static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
+          <p>Several forms built with custom design and using the modern validators API</p>
+          <p>
+            <a class="static-info__a static-info__a--blue"
+               href="https://escorponox.github.io/learning-web-components/components/forms/index.html">Live Demo</a>
+            <a class="static-info__a"
+               href="https://github.com/escorponox/learning-web-components/tree/master/components/forms"><span
+                class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
+          </p>
+        </div>
+      </div>
+      <div class="vertical-tab__content__project">
+        <div class="carousel">
+          <input type="radio" class="carousel__radio" checked id="car03-item1" name="car03">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/calc-1.png">
+          </div>
+          <input type="radio" class="carousel__radio" id="car03-item2" name="car03">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/calc-2.png">
+          </div>
+          <input type="radio" class="carousel__radio" id="car03-item3" name="car03">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/calc-3.png">
+          </div>
+
+          <label for="car03-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car03-item3" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car03-item3" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car03-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car03-item1" class="right item-3"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car03-item2" class="left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <ul class="carousel__dot-list">
+            <li class="carousel__dot-list__dot"><label for="car03-item1" class="carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+            <li class="carousel__dot-list__dot"><label for="car03-item2" class="carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+            <li class="carousel__dot-list__dot"><label for="car03-item3" class="carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+          </ul>
+        </div>
+        <div class="static-info">
+          <p class="static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
+          <p>Basic calculator with a flashy color palette to attract kids attention</p>
+          <p>
+            <a class="static-info__a static-info__a--blue"
+               href="https://escorponox.github.io/learning-web-components/components/calculator/index.html">Live Demo</a>
+            <a class="static-info__a"
+               href="https://github.com/escorponox/learning-web-components/tree/master/components/calculator"><span
+                class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
+          </p>
+        </div>
+      </div>
+      <div class="vertical-tab__content__project">
+        <div class="carousel">
+          <input type="radio" class="carousel__radio" checked id="car04-item1" name="car04">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/cart-1.png">
+          </div>
+          <input type="radio" class="carousel__radio" id="car04-item2" name="car04">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/cart-2.png">
+          </div>
+          <input type="radio" class="carousel__radio" id="car04-item3" name="car04">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/cart-3.png">
+          </div>
+
+          <label for="car04-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car04-item3" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car04-item3" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car04-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car04-item1" class="right item-3"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car04-item2" class="left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <ul class="carousel__dot-list">
+            <li class="carousel__dot-list__dot">
+              <label for="car04-item1" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
+            <li class="carousel__dot-list__dot">
+              <label for="car04-item2" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
+            <li class="carousel__dot-list__dot">
+              <label for="car04-item3" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
+          </ul>
+        </div>
+        <div class="static-info">
+          <p class="static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
+          <p>Simple shopping cart with a daring color palette</p>
+          <p>
+            <a class="static-info__a static-info__a--blue"
+               href="https://escorponox.github.io/learning-web-components/components/listing/index.html">Live Demo</a>
+            <a class="static-info__a"
+               href="https://github.com/escorponox/learning-web-components/tree/master/components/listing"><span
+                class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
+          </p>
+        </div>
+      </div>
+      <div class="vertical-tab__content__project">
+        <div class="carousel">
+          <input type="radio" class="carousel__radio" checked id="car05-item1" name="car05">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/component-1.gif">
+          </div>
+          <input type="radio" class="carousel__radio" id="car05-item2" name="car05">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/component-2.gif">
+          </div>
+          <input type="radio" class="carousel__radio" id="car05-item3" name="car05">
+          <div class="carousel__item">
+            <img class="carousel__item__img" src="assets/component-3.gif">
+          </div>
+
+          <label for="car05-item2" class="right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car05-item3" class="left item-1"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car05-item3" class="right item-2"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car05-item1" class="left item-2"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <label for="car05-item1" class="right item-3"><span class="fa fa-chevron-right fa-2x"></span></label>
+          <label for="car05-item2" class="left item-3"><span class="fa fa-chevron-left fa-2x"></span></label>
+          <ul class="carousel__dot-list">
+            <li class="carousel__dot-list__dot">
+              <label for="car05-item1" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
+            <li class="carousel__dot-list__dot">
+              <label for="car05-item2" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
+            <li class="carousel__dot-list__dot">
+              <label for="car05-item3" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
+          </ul>
+        </div>
+        <div class="static-info">
+          <p class="static-info__title"><strong>Technologies:</strong> HTML5, CSS3</p>
+          <p>Pure CSS re-usable components</p>
+          <p>
+            <a class="static-info__a static-info__a--blue"
+               href="http://jsbin.com/nikoxaj/3/edit?output">Tab Demo</a>
+            <a class="static-info__a static-info__a--blue"
+               href="http://jsbin.com/sifoda/1/edit?output">Accordion Demo</a>
+            <a class="static-info__a static-info__a--blue"
+               href="https://escorponox.github.io/learning-web-components/components/buttons/index.html">Buttons Demo</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="skills">
+  <div class="section__header">
+    <h1>Skills</h1>
+    <p class="section__header__intro">This projects have been done while going through my path to become a <em>Modern
+      Frontend
+      Developer</em>. Building them from scratch has helped me to develop a solid HTML and CSS basis.</p>
+  </div>
+</section>
+<section id="contact">
+  <div class="section__header">
+    <h1>Contact</h1>
+    <p class="section__header__intro">This projects have been done while going through my path to become a <em>Modern
+      Frontend
+      Developer</em>. Building them from scratch has helped me to develop a solid HTML and CSS basis.</p>
+  </div>
+  <div class="card-container">
+    <input id="card-flip" type="checkbox"/>
+    <div class="card">
+      <div class="front">
+        <label for="card-flip" class="card-flip-label">
+          <svg width="38" height="34">
+            <clipPath id="rect-clip-path">
+              <rect x="0" y="0" width="38" height="10"></rect>
+              <rect x="0" y="24" width="38" height="10"></rect>
+              <rect x="19" y="10" width="19" height="8"></rect>
+              <rect x="0" y="16" width="19" height="8"></rect>
+            </clipPath>
+            <filter id="blur-filter" x="-2" y="-2" width="50" height="50">
+              <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"></feOffset>
+              <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2"></feGaussianBlur>
+              <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+            </filter>
+            <rect class="flip-line" x="7" y="4" width="24" height="26" rx="5" ry="5"
+                  style="fill:transparent;stroke:white;stroke-width:2;"
+                  clip-path="url(#rect-clip-path)"></rect>
+            <polyline class="flip-line" points="3,17 7,15 11,17"
+                      style="fill:none;stroke:white;stroke-width:2"/>
+            <polyline class="flip-line" points="27,17 31,19 35,17"
+                      style="fill:none;stroke:white;stroke-width:2"/>
+          </svg>
+        </label>
+        <p class="heading">Carlos Coves Prieto</p>
+        <p class="sub-heading">Freelance Fullstack Developer</p>
+        <p class="description">Passionated web developer with a strong work ethic.<br>
+          Test-first coding believer an well versed in Agile development.<br/>
+          Location: Spain, World</p>
+        <p class="contact">escorponox@gmail.com</p>
+
+        <a target="_blank" class="encyclopedia" href="#">
+          <img src="assets/enc2.png">
+        </a>
+        <span class="enc-name">Carlos Coves Prieto</span>
+        <span class="on-enc">on <a href="#">Encyclopedia.MD</a></span>
+        <div class="social">
+          <a target="_blank" href="https://twitter.com/escorponox">
+            <img src="assets/twitter.png">
+          </a>
+          <a target="_blank" href="https://github.com/escorponox">
+            <img src="assets/github2.png">
+          </a>
+          <a target="_blank" href="https://es.linkedin.com/in/carlos-coves-prieto-a3128b49">
+            <img src="assets/linkedin.png">
+          </a>
+        </div>
+      </div>
+      <div class="back">
+        <label for="card-flip" class="card-flip-label">
+          <svg width="38" height="34">
+            <clipPath id="rect-clip-path">
+              <rect x="0" y="0" width="38" height="10"></rect>
+              <rect x="0" y="24" width="38" height="10"></rect>
+              <rect x="19" y="10" width="19" height="8"></rect>
+              <rect x="0" y="16" width="19" height="8"></rect>
+            </clipPath>
+            <filter id="blur-filter" x="-2" y="-2" width="50" height="50">
+              <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"></feOffset>
+              <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2"></feGaussianBlur>
+              <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+            </filter>
+            <rect class="flip-line" x="7" y="4" width="24" height="26" rx="5" ry="5"
+                  style="fill:transparent;stroke:white;stroke-width:2;"
+                  clip-path="url(#rect-clip-path)"></rect>
+            <polyline class="flip-line" points="3,17 7,15 11,17"
+                      style="fill:none;stroke:white;stroke-width:2"/>
+            <polyline class="flip-line" points="27,17 31,19 35,17"
+                      style="fill:none;stroke:white;stroke-width:2"/>
+          </svg>
+        </label>
+        <span class="back-name">Carlos Coves Prieto</span>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <span class="fa fa-copyright" aria-hidden="true"></span> 2016 Carlos Coves Prieto
+</footer>
+</body>
+</html>
