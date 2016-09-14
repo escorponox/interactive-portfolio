@@ -302,6 +302,11 @@ section:target:before {
   -webkit-transition: opacity 0.6s ease-out;
   width: 100%;
   vertical-align: middle;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
 .carousel .carousel__radio:checked + .carousel__item {
