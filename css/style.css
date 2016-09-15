@@ -166,12 +166,20 @@ section:target:before {
   max-width: 77rem;
 }
 
-.center_container {
+.center-container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+.center-container--column {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
 .section__content--radius {
@@ -180,6 +188,18 @@ section:target:before {
 
 .section__content--white {
   background-color: #FFFFFF;
+}
+
+.img--center {
+  display: block;
+  margin: 0 auto;
+}
+
+.about-me__info {
+  font-size: 1.25em;
+  margin: 1em auto;
+  max-width: 800px;
+  text-align: justify;
 }
 
 .hpad {
@@ -378,7 +398,7 @@ section:target:before {
 
 .static-info__a {
   margin-right: 30px;
-  transition: all .3s ease-out;
+  transition: all .2s ease-out;
 }
 
 .static-info__a--blue {
@@ -390,6 +410,7 @@ section:target:before {
 }
 
 .static-info__a--blue:hover {
+  color: #154998;
   text-shadow: 1px 1px 1px #154998;
 }
 
@@ -484,13 +505,14 @@ section:target:before {
 
 .card-container .sub-heading {
   color: #ACACAC;
-  margin: 2px 0 30px;
+  margin: 2px 0 20px;
 }
 
 .card-container .description {
   color: #CFCFCF;
   font-weight: 600;
   line-height: 24px;
+  margin-bottom: 1em;
 }
 
 .card-container .contact {
@@ -614,7 +636,7 @@ section:target:before {
   flex-direction: column;
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
-  margin: 0 0 9em 1em;
+  margin: 0 0 10em 1em;
   padding: 0 1em;
   justify-content: flex-end;
   -webkit-justify-content: flex-end;
@@ -633,7 +655,7 @@ section:target:before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 2em 9em;
+  margin: 0 2em 10em;
   padding: 0 1em;
   flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -768,4 +790,24 @@ section:target:before {
   top: 100%;
   transform: translate(-50%);
   width: 0;
+}
+
+.article-list {
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25em;
+}
+
+.article-list__item {
+  margin: .25em 0;
+}
+
+.article-list__link {
+  color: #4686E6;
+  transition: all .2s ease-out;
+}
+
+.article-list__link:hover {
+  color: #154998;
+  text-shadow: 1px 1px 1px #154998
 }
