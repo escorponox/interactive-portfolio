@@ -22,20 +22,42 @@
   <div class="header__section">
     <div class="header__search">
       <input class="header__search__input" type="text" value="" required>
-      <span class="fa fa-search fa-lg header__search__icon" aria-hidden="true"></span>
+      <label for="modal-switch" class="header__search__icon modal-switch-button" aria-hidden="true">
+        <span class="fa fa-search"></span>
+      </label>
       <span class="header__search__placeholder">SEARCH</span>
+      <input id="modal-switch" type="checkbox" class="modal-switch">
+      <div class="modal">
+        <label for="modal-switch" class="modal__centered modal-background-button"></label>
+        <div class="modal__centered">
+          <div class="modal-box">
+            <h1>Search Temporarily Disabled</h1>
+            <label for="modal-switch" class="modal-box__button modal-switch-button">Close</label>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
+
 <section id="about">
   <div class="section__header">
     <h1>About Me</h1>
   </div>
   <div class="section__content">
     <img class="img--center" src="assets/me.png">
-    <p class="about-me__info">I am a former industrial engineer from Spain. I love computers since I was a child and
-      this love has led me to become a web developer. <em>Learn.Modern Developer</em> is helping me to become a
-      Fullstack Developer.</p>
+    <p class="about-me__info">I am a former industrial engineer from Spain. I love computers since I was a child. And
+      this love has led me to become a web developer.</p>
+    <p class="about-me__info">In my early days as Java developer, I have been lucky to met an Agile developer who has
+      introduced me in the world of Test Driven Development, Clean Code and SOLID principles. Now I am test-first
+      believer who does not doubt about adopting Agile best practices when coding. He probably does not remember me, but
+      I must express my gratitude to that developer. Thank you so much Ignasi!</p>
+    <p class="about-me__info">Right now, <em>Learn.Modern Developer</em> is helping me to become a Fullstack Developer.
+      This portfolio, built without a single line of JavaScript, is a proof of how we can create pleasant user
+      experiences by just mastering HTML and CSS, the basic frontend technologies.</p>
+    <p class="about-me__info">In my spare time, I like to take a walk with my family. Once our little daughter is
+      sleeping, my wife and I like to watch one of our favourite TV series. Lately, I enjoy playing old-school vintage
+      arcade with some friends.</p>
   </div>
 </section>
 <section id="projects">
@@ -311,16 +333,16 @@
         </div>
       </div>
     </div>
-    <div class="center-container">
-      <div class="row-labels">
-        <div class="row-labels__label">Expert</div>
-        <div class="row-labels__label">Proficient</div>
-        <div class="row-labels__label">Competent</div>
-        <div class="row-labels__label">Learning</div>
-      </div>
-      <div class="one-third">
+    <div class="center-container center-container--wrap">
+      <div class="graph-container">
         <h3 class="align-center bar-graph--red graph-title--first">Frontend</h3>
         <div class="bar-graph bar-graph--first">
+          <div class="row-labels">
+            <div class="row-labels__label">Expert</div>
+            <div class="row-labels__label">Proficient</div>
+            <div class="row-labels__label">Competent</div>
+            <div class="row-labels__label">Learning</div>
+          </div>
           <div class="bar-graph__col bar-graph__col--proficient">
             <div class="bar-graph__col__tooltip">
               <div class="center-tooltip">Reaching the expert level</div>
@@ -341,7 +363,7 @@
           </div>
           <div class="bar-graph__col">
             <div class="bar-graph__col__tooltip">
-              <div class="center-tooltip">MD will improve this</div>
+              <div class="center-tooltip">L.MD will improve this</div>
             </div>
             <div class="bar-graph__col__label">React</div>
           </div>
@@ -353,12 +375,18 @@
           </div>
         </div>
       </div>
-      <div class="one-third">
+      <div class="graph-container">
         <h3 class="align-center bar-graph--blue">Backend</h3>
         <div class="bar-graph">
+          <div class="row-labels">
+            <div class="row-labels__label">Expert</div>
+            <div class="row-labels__label">Proficient</div>
+            <div class="row-labels__label">Competent</div>
+            <div class="row-labels__label">Learning</div>
+          </div>
           <div class="bar-graph__col bar-graph__col--competent">
             <div class="bar-graph__col__tooltip">
-              <div class="center-tooltip">MD will improve this</div>
+              <div class="center-tooltip">L.MD will improve this</div>
             </div>
             <div class="bar-graph__col__label">NodeJS</div>
           </div>
@@ -376,7 +404,7 @@
           </div>
           <div class="bar-graph__col">
             <div class="bar-graph__col__tooltip">
-              <div class="center-tooltip">MD will improve this</div>
+              <div class="center-tooltip">L.MD will improve this</div>
             </div>
             <div class="bar-graph__col__label">NoSQL DB</div>
           </div>
@@ -388,12 +416,18 @@
           </div>
         </div>
       </div>
-      <div class="one-third">
+      <div class="graph-container">
         <h3 class="align-center">Other</h3>
         <div class="bar-graph">
+          <div class="row-labels">
+            <div class="row-labels__label">Expert</div>
+            <div class="row-labels__label">Proficient</div>
+            <div class="row-labels__label">Competent</div>
+            <div class="row-labels__label">Learning</div>
+          </div>
           <div class="bar-graph__col bar-graph__col--alt-color">
             <div class="bar-graph__col__tooltip">
-              <div class="center-tooltip">MD will improve this</div>
+              <div class="center-tooltip">L.MD will improve this</div>
             </div>
             <div class="bar-graph__col__label">Communication</div>
           </div>
@@ -435,15 +469,24 @@
   </div>
   <div class="section_content center-container">
     <ul class="article-list center-container center-container--column">
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Adding Borders to Elements with CSS</a></li>
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Calculating element's width</a></li>
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Comparison Operators</a></li>
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">CSS Sibling Selectors</a></li>
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">The JavaScript Document Object Model (DOM)</a></li>
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Understanding the Domain Name System (DNS)</a></li>
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Disadvantages of Developing and Using Style Guides</a></li>
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Vector Graphics with SVG</a></li>
-      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Displaying Number and Numbers Ranges in HTML</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Adding Borders to
+        Elements with CSS</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Calculating
+        element's width</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Comparison
+        Operators</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">CSS Sibling
+        Selectors</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">The JavaScript
+        Document Object Model (DOM)</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Understanding the
+        Domain Name System (DNS)</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Disadvantages of
+        Developing and Using Style Guides</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Vector Graphics with
+        SVG</a></li>
+      <li class="article-list__item"><a class="article-list__link" target="_blank" href="#articles">Displaying Number
+        and Numbers Ranges in HTML</a></li>
     </ul>
   </div>
 </section>
