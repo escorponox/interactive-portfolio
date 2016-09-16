@@ -23,7 +23,7 @@ body {
 
 p {
   font-family: 'Roboto', sans-serif;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.25em;
 }
 
 strong {
@@ -186,7 +186,7 @@ section:before {
 
 .section__content {
   margin: 0 auto;
-  max-width: 77rem;
+  max-width: 67rem;
 }
 
 .center-container {
@@ -227,7 +227,7 @@ section:before {
 .about-me__info {
   font-size: 1.25em;
   margin: 1em auto;
-  max-width: 800px;
+  max-width: 50rem;
   text-align: justify;
 }
 
@@ -241,10 +241,10 @@ section:before {
 
 .vertical-tab__tabs {
   float: left;
-  max-height: 52rem;
+  max-height: 36rem;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 17rem;
+  width: 15rem;
 }
 
 .vertical-tab__label {
@@ -254,11 +254,11 @@ section:before {
   display: block;
   font-size: 1.25em;
   height: 4rem;
-  padding: 1em 2em 1em 1em;
+  padding: 1em;
   text-align: right;
   transition: background-color 0.2s ease-in;
   -webkit-transition: background-color 0.2s ease-in;
-  width: 17rem;
+  width: 15rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -283,9 +283,9 @@ section:before {
   background-color: #FFFFFF;
   border-radius: 0 4px 4px 0;
   box-sizing: border-box;
-  height: 52rem;
+  height: 36rem;
   padding: 2rem;
-  width: 60rem
+  width: 52rem
 }
 
 .vertical-tab__content > .vertical-tab__content__project {
@@ -339,11 +339,11 @@ section:before {
 }
 
 .carousel__left {
-  left: 5%;
+  left: .5rem;
 }
 
 .carousel__right {
-  right: 5%;
+  right: .5rem;
 }
 
 .carousel__radio:checked:nth-of-type(1) ~ .item-1,
@@ -356,11 +356,11 @@ section:before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 600px;
+  height: 22rem;
   margin: 0 auto;
-  max-height: 600px;
+  max-height: 22rem;
   opacity: 0;
-  padding: 0 6.25rem;
+  padding: 0 2.5rem;
   position: absolute;
   top: 0;
   transition: opacity 0.6s ease-out;
@@ -374,7 +374,7 @@ section:before {
 .carousel__item__img {
   display: block;
   margin: 0 auto;
-  max-height: 600px;
+  max-height: 22rem;
 }
 
 .carousel__radio:checked + .carousel__item {
@@ -826,6 +826,7 @@ section:before {
   font-family: 'Roboto', sans-serif;
   font-size: 1.25em;
   list-style: none;
+  padding: 0;
 }
 
 .article-list__item {
