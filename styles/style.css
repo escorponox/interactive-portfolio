@@ -375,6 +375,7 @@ section:before {
   display: block;
   margin: 0 auto;
   max-height: 30rem;
+  max-width: 100%;
 }
 
 .carousel__radio:checked + .carousel__item {

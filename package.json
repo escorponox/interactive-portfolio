@@ -1,0 +1,26 @@
+{
+  "name": "interactive-portfolio",
+  "version": "1.0.0",
+  "description": "Interactive Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escorponox/interactive-portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Carlos Coves Prieto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/escorponox/interactive-portfolio/issues"
+  },
+  "homepage": "https://github.com/escorponox/interactive-portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1"
+  }
+}
