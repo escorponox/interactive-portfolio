@@ -472,7 +472,7 @@ section:before {
 
 .card-container .card .front,
 .card-container .card .back {
-  background: url("../assets/bg2.png");
+  background: url("../assets/images/bg2.png");
   border-radius: 2px;
   box-sizing: border-box;
   height: 100%;
@@ -486,7 +486,7 @@ section:before {
 }
 
 .card-container .card .back {
-  background: url("../assets/bg-back.png");;
+  background: url("../assets/images/bg-back.png");;
   color: #FFF;
   transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
