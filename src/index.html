@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/style.css"/>
-  <title>Carlos Coves Prieto - Interactive Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+  <title>Carlos Coves - Interactive Portfolio</title>
 </head>
 <body>
 <header>
-  <div class="header__section">
-    <div class="header__name">Carlos Coves Prieto</div>
-  </div>
+  <div class="header__section header__name">Carlos Coves</div>
   <nav class="header__section header__nav">
     <a class="header__nav__link" href="#about">About</a>
     <a class="header__nav__link" href="#projects">Projects</a>
@@ -23,52 +19,55 @@
   <div class="header__section">
     <div class="header__search">
       <input class="header__search__input" type="text" value="" required>
-      <label for="modal-switch" class="header__search__icon modal-switch-button" aria-hidden="true">
+      <label for="modal-toggle" class="header__search__icon o-enlarge--active" aria-hidden="true">
         <span class="fa fa-search"></span>
       </label>
       <span class="header__search__placeholder">SEARCH</span>
-      <input id="modal-switch" type="checkbox" class="modal-switch">
-      <div class="modal">
-        <label for="modal-switch" class="modal__centered modal-background-button"></label>
-        <div class="modal__centered">
-          <div class="modal-box">
-            <h1>Search Temporarily Disabled</h1>
-            <label for="modal-switch" class="modal-box__button modal-switch-button">Close</label>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </header>
+
+<input id="modal-toggle" type="checkbox" class="c-modal-toggle">
+<div class="c-modal">
+  <label for="modal-toggle" class="c-modal__background"></label>
+    <div class="c-modal__box o-center-margin">
+      <h1 class="c-modal__box__title">Search Temporarily Disabled</h1>
+      <label for="modal-toggle" class="c-modal__box__button o-center-margin o-enlarge--active">Close</label>
+      <div class="c-modal__box__footer">Mobile: <em>width</em> < 450px</div>
+      <div class="c-modal__box__footer">Tablet: 450px < <em>width</em> < 700px</div>
+      <div class="c-modal__box__footer">Landscape: 700px < <em>width</em> < 1000px</div>
+      <div class="c-modal__box__footer">Desktop: <em>width</em> > 1000px</div>
+    </div>
+</div>
 
 <section id="about">
   <div class="section__header">
     <h1>About Me</h1>
   </div>
-  <div class="section__content">
-    <img class="img--center" src="assets/images/me.png">
-    <p class="about-me__info">I am a former industrial engineer from Spain. I love computers since I was a child. And
-      this love has led me to become a web developer.</p>
-    <p class="about-me__info">In my early days as Java developer, I have been lucky to met an Agile developer who has
-      introduced me in the world of Test Driven Development, Clean Code and SOLID principles. Now I am test-first
-      believer who does not doubt about adopting Agile best practices when coding. He probably does not remember me, but
-      I must express my gratitude to that developer. Thank you so much Ignasi!</p>
-    <p class="about-me__info">Right now, <em>Learn.Modern Developer</em> is helping me to become a Fullstack Developer.
-      This portfolio, built without a single line of JavaScript, is a proof of how we can create pleasant user
-      experiences by just mastering HTML and CSS, the basic frontend technologies.</p>
-    <p class="about-me__info">In my spare time, I like to take a walk with my family. Once our little daughter is
-      sleeping, my wife and I like to watch one of our favourite TV series. Lately, I enjoy playing old-school vintage
-      arcade with some friends.</p>
+  <div class="section__content o-center-margin">
+    <img class="about-me__img" src="assets/images/me.png"/>
+    <p class="section__paragraph o-center-margin">I am a former industrial engineer from Spain. I love computers since I
+      was a child. And this love has led me to become a web developer.</p>
+    <p class="section__paragraph o-center-margin">In my early days as Java developer, I have been lucky to met an Agile
+      developer who has introduced me in the world of Test Driven Development, Clean Code and SOLID principles. Now I am
+      test-first believer who loves adopting Agile best practices when coding. He probably does not remember me, but I
+      must express my gratitude to that developer. Thank you so much Ignasi!</p>
+    <p class="section__paragraph o-center-margin">Right now, <em>Learn.Modern Developer</em> is helping me to become a
+      Fullstack Developer. This portfolio, built without a single line of JavaScript, is a proof of how we can create
+      pleasant user experiences by just mastering HTML and CSS, the basic frontend technologies.</p>
+    <p class="section__paragraph o-center-margin">In my spare time, I like to take a walk with my family. Once our
+      little daughter is sleeping, my wife and I like to watch one of our favourite TV series. Lately, I enjoy playing
+      old-school vintage arcade with some friends.</p>
   </div>
 </section>
 <section id="projects">
   <div class="section__header">
     <h1>Projects</h1>
-    <p class="section__header__intro">This projects have been done while going through my path to become a <em>Modern
-      Frontend
-      Developer</em>. Building them from scratch has helped me to develop a solid HTML5 and CSS3 basis.</p>
+    <p class="section__paragraph o-center-margin">This projects have been done while going through my path to become a
+      <em>Modern Frontend Developer</em>. Building them from scratch has helped me to develop a solid HTML5 and CSS3
+      basis.</p>
   </div>
-  <div class="section__content center-container">
+  <div class="section__content o-center-margin center-container">
     <input type="radio" checked class="vertical-tab__radio" id="tab-radio1" name="tab">
     <input type="radio" class="vertical-tab__radio" id="tab-radio2" name="tab">
     <input type="radio" class="vertical-tab__radio" id="tab-radio3" name="tab">
@@ -80,19 +79,19 @@
       <label class="vertical-tab__label" for="tab-radio2">Forms</label>
       <label class="vertical-tab__label" for="tab-radio3">Kids Calculator</label>
       <label class="vertical-tab__label" for="tab-radio4">Shopping Cart</label>
-      <label class="vertical-tab__label" for="tab-radio5">Non-JS UI Components</label>
+      <label class="vertical-tab__label" for="tab-radio5">UI Components</label>
     </div>
 
     <div class="vertical-tab__content">
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio" checked id="tab1-carr01-item1" name="carr01">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/sidebar.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/sidebar.png"/>
           </div>
           <input type="radio" class="carousel__radio" id="tab1-carr01-item2" name="carr01">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/sidebar-2.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/sidebar-2.png"/>
           </div>
 
           <label for="tab1-carr01-item2" class="carousel__right item-1"><span class="fa fa-chevron-right fa-2x"></span></label>
@@ -125,16 +124,16 @@
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio" checked id="car02-item1" name="car02">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/forms-1.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/forms-1.png"/>
           </div>
           <input type="radio" class="carousel__radio" id="car02-item2" name="car02">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/forms-2.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/forms-2.png"/>
           </div>
           <input type="radio" class="carousel__radio" id="car02-item3" name="car02">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/forms-3.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/forms-3.png"/>
           </div>
 
           <label for="car02-item2" class="carousel__right item-1"><span
@@ -170,16 +169,16 @@
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio" checked id="car03-item1" name="car03">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/calc-1.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/calc-1.png"/>
           </div>
           <input type="radio" class="carousel__radio" id="car03-item2" name="car03">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/calc-2.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/calc-2.png"/>
           </div>
           <input type="radio" class="carousel__radio" id="car03-item3" name="car03">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/calc-3.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/calc-3.png"/>
           </div>
 
           <label for="car03-item2" class="carousel__right item-1"><span
@@ -216,16 +215,16 @@
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio" checked id="car04-item1" name="car04">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/cart-1.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/cart-1.png"/>
           </div>
           <input type="radio" class="carousel__radio" id="car04-item2" name="car04">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/cart-2.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/cart-2.png"/>
           </div>
           <input type="radio" class="carousel__radio" id="car04-item3" name="car04">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/cart-3.png">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/cart-3.png"/>
           </div>
 
           <label for="car04-item2" class="carousel__right item-1"><span
@@ -264,16 +263,16 @@
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio" checked id="car05-item1" name="car05">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/component-1.gif">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/component-1.gif"/>
           </div>
           <input type="radio" class="carousel__radio" id="car05-item2" name="car05">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/component-2.gif">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/component-2.gif"/>
           </div>
           <input type="radio" class="carousel__radio" id="car05-item3" name="car05">
-          <div class="carousel__item">
-            <img class="carousel__item__img" src="assets/images/component-3.gif">
+          <div class="carousel__item o-center-margin">
+            <img src="assets/images/component-3.gif"/>
           </div>
 
           <label for="car05-item2" class="carousel__right item-1"><span
@@ -318,10 +317,11 @@
 <section id="skills">
   <div class="section__header">
     <h1>Skills</h1>
-    <p class="section__header__intro">My frontend skills are improving quickly due to <em>Modern Developer Program</em>,
+    <p class="section__paragraph o-center-margin">My frontend skills are improving quickly due to <em>Modern Developer
+      Program</em>,
       just like the backend skills will do when the time comes.</p>
   </div>
-  <div class="section__content section__content--radius section__content--white hpad">
+  <div class="section__content o-center-margin section__content--radius section__content--white hpad">
     <div class="center-container">
       <div class="front-back-bar center-container">
         <div class="front-back-bar__front">
@@ -445,8 +445,9 @@
 <section id="articles">
   <div class="section__header">
     <h1>Articles</h1>
-    <p class="section__header__intro">Clear and concise articles written as end-of-chapter tasks for the <em>Modern
-      Frontend Developer</em> program. They are oriented to all kind of people, even the non-technical ones.</p>
+    <p class="section__paragraph o-center-margin">Clear and concise articles written as end-of-chapter tasks for the
+      <em>Modern
+        Frontend Developer</em> program. They are oriented to all kind of people, even the non-technical ones.</p>
   </div>
   <div class="section_content center-container">
     <ul class="article-list center-container center-container--column">
@@ -474,10 +475,11 @@
 <section id="contact">
   <div class="section__header">
     <h1>Contact</h1>
-    <p class="section__header__intro">Don't hesitate to contact me if you feel I can fit in your team. You can find me
+    <p class="section__paragraph o-center-margin">Don't hesitate to contact me if you feel I can fit in your team. You
+      can find me
       in the social media in the card below.</p>
   </div>
-  <div class="card-container">
+  <div class="card-container o-center-margin">
     <input id="card-flip" type="checkbox"/>
     <div class="card">
       <div class="front">
@@ -511,19 +513,19 @@
         <p class="contact">escorponox@gmail.com</p>
 
         <a target="_blank" class="encyclopedia" href="#">
-          <img src="assets/icons/enc2.png">
+          <img src="assets/icons/enc2.png"/>
         </a>
         <span class="enc-name">Carlos Coves Prieto</span>
         <span class="on-enc">on <a href="#">Encyclopedia.MD</a></span>
         <div class="social">
           <a target="_blank" href="https://twitter.com/escorponox">
-            <img src="assets/icons/twitter.png">
+            <img src="assets/icons/twitter.png"/>
           </a>
           <a target="_blank" href="https://github.com/escorponox">
-            <img src="assets/icons/github2.png">
+            <img src="assets/icons/github2.png"/>
           </a>
           <a target="_blank" href="https://es.linkedin.com/in/carlos-coves-prieto-a3128b49">
-            <img src="assets/icons/linkedin.png">
+            <img src="assets/icons/linkedin.png"/>
           </a>
         </div>
       </div>

@@ -1,0 +1,85 @@
+.header__section {
+  display: flex;
+  flex-basis: 33%;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__name {
+  color: $color-white;
+  font-size: 2em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.header__nav {
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.header__nav__link {
+  color: $color-blue-light;
+  font-size: 1.25em;
+  margin: 0 .25em;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.header__search {
+  height: 2.5em;
+  position: relative;
+}
+
+.header__search__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid $color-blue-light;
+  color: $color-white;
+  height: 2.5em;
+  padding: 1.25em 0 0.25em;
+  width: 12em;
+}
+
+.header__search__icon {
+  border: 2px solid $color-blue-light;
+  border-radius: 4px;
+  bottom: 0;
+  color: $color-blue-light;
+  cursor: pointer;
+  height: 2.5em;
+  position: absolute;
+  left: 12.25em;
+  transition: color 0.15s ease-out, background-color 0.15s ease-out, transform .2s ease-out;
+  width: 2.5em;
+  z-index: 10;
+}
+
+.header__search__icon:hover {
+  border-color: $color-white;
+  color: $color-white;
+}
+
+.header__search__icon > .fa-search {
+  text-align: center;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.header__search__placeholder {
+  color: $color-blue-light;
+  left: 0;
+  line-height: 1em;
+  position: absolute;
+  top: 1em;
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+
+.header__search__input:focus ~ .header__search__placeholder,
+.header__search__input:valid ~ .header__search__placeholder {
+  left: -.4375em;
+  top: 0;
+  transform: scale(0.75);
+}

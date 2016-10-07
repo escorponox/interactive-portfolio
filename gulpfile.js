@@ -74,6 +74,7 @@ gulp.task('watch', function() {
 
 gulp.task('serve', function() {
   gulp.watch('src/styles/**/*.scss', ['styles-dev']);
+  gulp.watch('src/styles/style.css', ['styles-dev']);
   bs({
     server: 'src',
     browser: 'google-chrome-stable'

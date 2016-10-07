@@ -1,0 +1,37 @@
+header {
+  background-color: $color-blue;
+  box-shadow: 0 2px 2px $color-blue-dark;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section {
+  padding-bottom: 4 * $base-height-unit;
+
+  &:nth-of-type(1) {
+    min-height: 100vh;
+    padding-top: 6rem;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    height: 4rem;
+    margin-top: -4rem;
+  }
+}
+
+footer {
+  background-color: $color-grey-dark;
+  color: $color-grey-light;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  vertical-align: middle;
+}
