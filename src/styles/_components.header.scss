@@ -1,8 +1,11 @@
 .header__section {
   display: flex;
-  flex-basis: 33%;
   align-items: center;
   justify-content: center;
+
+  @include mq($mq-desktop) {
+    flex-basis: 33%;
+  }
 }
 
 .header__name {
@@ -10,6 +13,22 @@
   font-size: 2em;
   font-weight: 600;
   white-space: nowrap;
+
+  :first-child {
+    display: block;
+  }
+  :last-child {
+    display: none;
+  }
+
+  @include mq($mq-desktop) {
+    :first-child {
+      display: none;
+    }
+    :last-child {
+      display: block;
+    }
+  }
 }
 
 .header__nav {
@@ -30,6 +49,11 @@
 .header__search {
   height: 2.5em;
   position: relative;
+  width: 40px;
+
+  @include mq($mq-desktop) {
+    width: auto;
+  }
 }
 
 .header__search__input {
