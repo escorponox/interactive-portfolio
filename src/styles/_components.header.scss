@@ -3,6 +3,19 @@
   align-items: center;
   justify-content: center;
 
+  &:nth-of-type(3) {
+    display: none;
+  }
+
+  @include mq($mq-landscape) {
+    &:nth-of-type(1) {
+      display: none;
+    }
+    &:nth-of-type(3) {
+      display: flex;
+    }
+  }
+
   @include mq($mq-desktop) {
     flex-basis: 33%;
   }
@@ -34,6 +47,7 @@
 .header__nav {
   justify-content: space-around;
   flex-wrap: nowrap;
+  display: flex;
 }
 
 .header__nav__link {
@@ -72,32 +86,14 @@
 }
 
 .header__search__icon {
-  border: 2px solid $color-blue-light;
-  border-radius: 4px;
   bottom: 0;
-  color: $color-blue-light;
-  cursor: pointer;
-  height: 2.5em;
   position: absolute;
   left: 0;
-  transition: color 0.15s ease-out, background-color 0.15s ease-out, transform .2s ease-out;
-  width: 2.5em;
   z-index: 10;
 
   @include mq($mq-desktop) {
     left: 12.25em;
   }
-}
-
-.header__search__icon:hover {
-  border-color: $color-white;
-  color: $color-white;
-}
-
-.header__search__icon > .fa-search {
-  text-align: center;
-  width: 100%;
-  vertical-align: bottom;
 }
 
 .header__search__placeholder {
