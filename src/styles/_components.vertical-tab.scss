@@ -1,0 +1,95 @@
+.vertical-tab__tabs {
+  display: none;
+  max-height: 48rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 11rem;
+
+  @include mq($mq-landscape) {
+    display: block;
+  }
+}
+
+.vertical-tab__label {
+  align-items: center;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  height: 4rem;
+  justify-content: flex-end;
+  padding: 1em;
+  text-align: right;
+  transition: background-color 0.2s ease-in;
+  width: 100%;
+  user-select: none;
+
+  &:hover {
+    background-color: $color-white;
+  }
+
+  @include mq($mq-desktop) {
+    @include font-size(20px);
+  }
+}
+
+.vertical-tab__radio:checked:nth-of-type(1) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(1),
+.vertical-tab__radio:checked:nth-of-type(2) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(2),
+.vertical-tab__radio:checked:nth-of-type(3) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(3),
+.vertical-tab__radio:checked:nth-of-type(4) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(4),
+.vertical-tab__radio:checked:nth-of-type(5) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(5),
+.vertical-tab__radio:checked:nth-of-type(6) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(6) {
+  background-color: $color-white;
+  color: $color-blue;
+}
+
+.vertical-tab__content {
+  background-color: $color-white;
+  border-radius: $base-radius;
+  padding: 0;
+  width: 100%;
+
+  @include mq($mq-landscape) {
+    border-radius: 0 $base-radius $base-radius 0;
+    height: 48rem;
+    margin: 0;
+    max-width: 48rem;
+    padding: $base-spacing-unit;
+  }
+}
+
+.vertical-tab__content__project {
+
+  @media only screen and (max-width: 699px) {
+    overflow: hidden;
+    margin: 0;
+    padding: 0 $base-spacing-unit;
+    max-height: 0;
+    transition: all .5s ease-out;
+  }
+
+  @include mq($mq-landscape) {
+    display: none;
+
+  }
+}
+
+.vertical-tab__radio:checked:nth-of-type(1) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(2),
+.vertical-tab__radio:checked:nth-of-type(2) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(4),
+.vertical-tab__radio:checked:nth-of-type(3) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(6),
+.vertical-tab__radio:checked:nth-of-type(4) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(8),
+.vertical-tab__radio:checked:nth-of-type(5) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(10),
+.vertical-tab__radio:checked:nth-of-type(6) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(12) {
+
+  @media only screen and (max-width: 699px) {
+    margin: $base-spacing-unit 0;
+    padding: $base-spacing-unit;
+    max-height: 40rem;
+  }
+
+  @include mq($mq-landscape) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

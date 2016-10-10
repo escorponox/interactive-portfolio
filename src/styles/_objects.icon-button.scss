@@ -13,9 +13,20 @@
     color: $color-white;
   }
 
+  &:active {
+    border-color: $color-white;
+    color: $color-blue;
+    background-color: $color-background;
+  }
+
+
   & > .fa {
     text-align: center;
     width: 100%;
     vertical-align: bottom;
+  }
+
+  & > .fa-lg {
+    line-height: 36px;
   }
 }
