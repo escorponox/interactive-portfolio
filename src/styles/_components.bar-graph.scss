@@ -1,0 +1,186 @@
+.graph-container {
+  max-width: 28rem;
+  flex: 0 50%;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.row-labels {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.row-labels__label {
+  height: 3em;
+  line-height: 3em;
+  text-align: right;
+}
+
+.bar-graph {
+  border-bottom: 1px solid $color-grey;
+  display: flex;
+  margin-bottom: 10em;
+  padding-right: 1rem;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @include mq($mq-landscape) {
+    margin: 0 1em 10em;
+  }
+}
+
+.bar-graph--red {
+  color: $color-red;
+}
+
+.bar-graph--blue {
+  color: $color-blue;
+}
+
+.bar-graph__col {
+  background-color: $color-blue;
+  border-radius: $base-radius $base-radius 0 0;
+  height: 1.5em;
+  margin: 0 .25em;
+  min-width: 2em;
+  position: relative;
+
+  &:nth-of-type(2) {
+    background-color: $color-bar-1;
+  }
+
+  &:nth-of-type(3) {
+    background-color: $color-bar-2;
+  }
+
+  &:nth-of-type(4) {
+    background-color: $color-bar-3;
+  }
+
+  &:nth-of-type(5) {
+    background-color: $color-bar-4;
+  }
+
+  &:nth-of-type(6) {
+    background-color: $color-bar-5;
+  }
+
+}
+
+.bar-graph__col--alt-color:nth-of-type(2) {
+  background-color: $color-bar-alt-1;
+}
+
+.bar-graph__col--alt-color:nth-of-type(3) {
+  background-color: $color-bar-alt-2;
+}
+
+.bar-graph__col--alt-color:nth-of-type(4) {
+  background-color: $color-bar-alt-3;
+}
+
+.bar-graph__col--alt-color:nth-of-type(5) {
+  background-color: $color-bar-alt-4;
+}
+
+.bar-graph__col--alt-color:nth-of-type(6) {
+  background-color: $color-bar-alt-5;
+}
+
+.bar-graph__col--competent {
+  height: 4.5em;
+}
+
+.bar-graph__col--proficient {
+  height: 7.5em;
+}
+
+.bar-graph__col--expert {
+  height: 10.5em;
+}
+
+.bar-graph__col__tooltip,
+.bar-graph__col__label {
+  position: absolute;
+}
+
+.bar-graph__col__label {
+  bottom: -1.5em;
+  left: 40%;
+  text-align: left;
+  transform: rotate(60deg);
+  white-space: nowrap;
+  width: 10%;
+}
+
+.bar-graph__col__tooltip {
+  background-color: $color-grey-dark;
+  border-radius: 4px;
+  color: $color-grey-light;
+  line-height: 1em;
+  padding: .5em;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  transition: all .2s ease-out;
+  transform: translate(-50%);
+  z-index: 10;
+}
+
+.bar-graph__col .bar-graph__col__tooltip {
+  bottom: .5em;
+}
+
+.bar-graph__col.bar-graph__col--competent .bar-graph__col__tooltip {
+  bottom: 3.5em;
+}
+
+.bar-graph__col.bar-graph__col--proficient .bar-graph__col__tooltip {
+  bottom: 6.5em;
+}
+
+.bar-graph__col.bar-graph__col--expert .bar-graph__col__tooltip {
+  bottom: 9.5em;
+}
+
+.bar-graph__col:hover .bar-graph__col__tooltip {
+  opacity: 1;
+  bottom: 2.5em;
+}
+
+.bar-graph__col:hover.bar-graph__col--competent .bar-graph__col__tooltip {
+  opacity: 1;
+  bottom: 5.5em;
+}
+
+.bar-graph__col:hover.bar-graph__col--proficient .bar-graph__col__tooltip {
+  opacity: 1;
+  bottom: 8.5em;
+}
+
+.bar-graph__col:hover.bar-graph__col--expert .bar-graph__col__tooltip {
+  opacity: 1;
+  bottom: 11.5em;
+}
+
+
+.bar-graph__col__tooltip:after {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $color-grey-dark;
+  content: '';
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%);
+  width: 0;
+}

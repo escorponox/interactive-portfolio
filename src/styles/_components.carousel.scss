@@ -114,21 +114,7 @@
 }
 
 .static-info__a {
-  margin-right: 30px;
-  transition: all .2s ease-out;
-
-  &:hover {
-    text-shadow: 1px 1px 1px $color-grey;
-  }
-}
-
-.static-info__a--blue {
-  color: $color-blue;
-
-  &:hover {
-    color: $color-blue-dark;
-    text-shadow: 1px 1px 1px $color-blue-dark;
-  }
+  margin-right: $base-spacing-unit;
 }
 
 

@@ -1,7 +1,7 @@
 .accordion {
   display: block;
   box-shadow: 0 2px 2px $color-grey;
-  transition: all .5s ease-out;
+  transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   @include mq($mq-landscape) {
     display: none;
@@ -16,7 +16,7 @@
   display: flex;
   @include font-size(20px);
   padding: 1rem;
-  transition: all .5s ease-out;
+  transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
   user-select: none;
   height: 4rem;
 
