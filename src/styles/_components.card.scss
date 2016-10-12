@@ -1,157 +1,140 @@
-.card-container {
-  display: none; /* cambiar a block */
+.c-card-container {
+  display: block;
   height: 375px;
-  padding: 20px;
-  width: 630px;
+  padding: $base-spacing-unit;
+  width: 300px;
   perspective: 1000px;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
 }
 
-.card-container .card {
+.c-card {
   height: 100%;
   position: relative;
   transition: all 600ms;
-  -moz-transition: all 600ms;
-  -o-transition: all 600ms;
-  -webkit-transition: all 600ms;
   width: 100%;
   z-index: 1;
   transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
 }
 
-.card-container .card .front,
-.card-container .card .back {
-  background: url("../assets/images/bg2.png");
-  border-radius: 2px;
-  box-sizing: border-box;
+.c-card__front{
+  backface-visibility: hidden;
+  background: url("../assets/images/bg2.png") center;
+  border-radius: $base-radius;
+  color: $color-grey-light;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   line-height: 20px;
-  padding: 28px;
+  padding: 20px;
   position: absolute;
+  transition: all 600ms;
   width: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
+
+  &:hover {
+    box-shadow: 10px 20px 20px rgba(50, 50, 50, .4);
+  }
 }
 
-.card-container .card .back {
-  background: url("../assets/images/bg-back.png");;
-  color: #FFF;
+.c-card__back {
+  @extend .c-card__front;
+  background: url("../assets/images/bg-back.png") center;
   transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  -webkit-transform: rotateX(180deg);
 }
 
-.card-container:hover .card {
-  box-shadow: 10px 20px 20px rgba(50, 50, 50, .4);
-}
-
-.card-container input {
-  display: none;
-}
-
-.card-container :checked + .card {
-  transform: rotateX(180deg);
-  -moz-transform: rotateX(180deg);
-  -o-transform: rotateX(180deg);
-  -webkit-transform: rotateX(180deg);
-}
-
-.card-container:hover :checked + .card {
-  box-shadow: 10px -20px 20px rgba(50, 50, 50, .4);
-}
-
-.card-container .card-flip-label {
+.c-card__flip-label {
   cursor: pointer;
   position: absolute;
-  right: 28px;
-  top: 28px;
+  right: $base-height-unit;
+  top: $base-spacing-unit;
+
+  &:hover .flip-line {
+    filter: url(#blur-filter);
+    -webkit-filter: url(#blur-filter);
+  }
 }
 
-.card-container .card-flip-label svg:hover .flip-line {
-  filter: url(#blur-filter);
-  -webkit-filter: url(#blur-filter);
+.c-card__front__name {
+  @include font-size(28px);
+  color: $color-white;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
-.card-container .heading {
-  color: #FFF;
-  font-size: 48px;
-  font-weight: 300;
-  line-height: 48px;
-  margin: 10px 0 2px;
+.c-card__front__name__second-surname {
+  display: none;
+}
+.c-card__front__position {
+  margin-bottom: $base-height-unit;
 }
 
-.card-container .sub-heading {
-  color: #CDCDCD;
-  margin: 2px 0 20px;
-}
-
-.card-container .description {
-  color: #CDCDCD;
+.c-card__front__intro {
+  @extend .c-card__front__position;
+  display: none;
   font-weight: 600;
-  line-height: 24px;
-  margin-bottom: 1em;
 }
 
-.card-container .contact {
-  color: #9C60E6;
-  display: inline
+.c-card__front__location {
+  @extend .c-card__front__intro;
+  display: block;
 }
 
-.card-container .encyclopedia {
-  bottom: 28px;
-  display: inline-block;
-  left: 28px;
-  position: absolute;
+.c-card-container .c-card__front__email {
+  color: $color-indigo;
 }
 
-.enc-name {
-  bottom: 56px;
-  color: #FFF;
-  font-weight: 600;
-  left: 85px;
-  position: absolute;
-}
-
-.card-container .on-enc {
-  bottom: 36px;
-  color: #CDCDCD;
-  font-weight: 600;
-  left: 85px;
-  position: absolute;
-}
-
-.card-container .on-enc a {
-  color: #9C60E6;
-  text-decoration: none;
-}
-
-.card-container .social {
-  bottom: 34px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c-card__front__media {
   display: flex;
-  position: absolute;
-  right: 28px;
-
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
-.card-container .social a {
-  margin-left: 20px;
-}
-
-.card-container .back-name {
-  background-color: rgba(250, 250, 250, .8);
-  border-radius: 4px;
-  bottom: 12px;
-  color: #9c60e6;
+.c-card__front__media__encyclopedia {
   font-weight: 600;
-  left: 12px;
-  padding: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  min-height: 46px;
+  justify-content: center;
+}
+
+.c-card__front__media__encyclopedia-icon {
+  bottom: 0;
+  left: 0;
   position: absolute;
+}
+
+.c-card__front__encyclopedia-name {
+  color: $color-white;
+}
+
+.c-card__front__social {
+  display: flex;
+}
+
+.c-card__front__social__item {
+  flex-basis: 46px;
+  margin-right: $base-height-unit;
+
+  &:nth-last-of-type(1) {
+    margin-right:0;
+  }
+}
+
+.c-card__back__name {
+  background-color: $color-alpha-light;
+  border-radius: $base-radius;
+  bottom: $base-spacing-unit;
+  color: $color-indigo;
+  font-weight: 600;
+  left: $base-spacing-unit;
+  padding: $base-radius;
+  position: absolute;
+}
+
+
+.c-card__flip:checked + .c-card {
+  transform: rotateX(180deg);
 }

@@ -506,11 +506,11 @@
   <p class="section__paragraph o-center-margin">Don't hesitate to contact me if you feel I can fit in your team. You
     can find me
     in the social media in the card below.</p>
-  <div class="card-container o-center-margin">
-    <input id="card-flip" type="checkbox"/>
-    <div class="card">
-      <div class="front">
-        <label for="card-flip" class="card-flip-label">
+  <div class="c-card-container o-center-margin">
+    <input id="card-flip" type="checkbox" class="c-card__flip o-display-none"/>
+    <div class="c-card">
+      <div class="c-card__front">
+        <label for="card-flip" class="c-card__flip-label">
           <svg width="38" height="34">
             <clipPath id="rect-clip-path">
               <rect x="0" y="0" width="38" height="10"></rect>
@@ -532,32 +532,35 @@
                       style="fill:none;stroke:white;stroke-width:2"/>
           </svg>
         </label>
-        <p class="heading">Carlos Coves Prieto</p>
-        <p class="sub-heading">Freelance Fullstack Developer</p>
-        <p class="description">Passionated web developer with a strong work ethic.<br>
-          Test-first coding believer an well versed in Agile development.<br/>
-          Location: Spain, World</p>
-        <p class="contact">escorponox@gmail.com</p>
+        <p class="c-card__front__name">Carlos Coves<span class="c-card__front__name__second-surname"> Prieto</span></p>
+        <p class="c-card__front__position">Freelance Frontend Developer</p>
+        <p class="c-card__front__intro">Passionated web developer and Software Craftmanship enthusiast.<br/>
+        <p class="c-card__front__location">Location: Spain, World</p>
+        <p class="c-card__front__email">escorponox@gmail.com</p>
+        <div class="c-card__front__media">
+          <div class="c-card__front__media__encyclopedia">
+            <a target="_blank" class="c-card__front__media__encyclopedia-icon" href="#">
+              <img src="assets/icons/enc2.png"/>
+            </a>
+            <span class="c-card__front__encyclopedia-name">Carlos Coves Prieto</span>
+            <span>on <a href="#" class="t-color-indigo">Encyclopedia.MD</a></span>
+          </div>
 
-        <a target="_blank" class="encyclopedia" href="#">
-          <img src="assets/icons/enc2.png"/>
-        </a>
-        <span class="enc-name">Carlos Coves Prieto</span>
-        <span class="on-enc">on <a href="#">Encyclopedia.MD</a></span>
-        <div class="social">
-          <a target="_blank" href="https://twitter.com/escorponox">
-            <img src="assets/icons/twitter.png"/>
-          </a>
-          <a target="_blank" href="https://github.com/escorponox">
-            <img src="assets/icons/github2.png"/>
-          </a>
-          <a target="_blank" href="https://es.linkedin.com/in/carlos-coves-prieto-a3128b49">
-            <img src="assets/icons/linkedin.png"/>
-          </a>
+          <div class="c-card__front__social">
+            <a class="c-card__front__social__item" target="_blank" href="https://twitter.com/escorponox">
+              <img src="assets/icons/twitter.png"/>
+            </a>
+            <a class="c-card__front__social__item" target="_blank" href="https://github.com/escorponox">
+              <img src="assets/icons/github2.png"/>
+            </a>
+            <a class="c-card__front__social__item" target="_blank" href="https://es.linkedin.com/in/carlos-coves-prieto-a3128b49">
+              <img src="assets/icons/linkedin.png"/>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="back">
-        <label for="card-flip" class="card-flip-label">
+      <div class="c-card__back">
+        <label for="card-flip" class="c-card__flip-label">
           <svg width="38" height="34">
             <clipPath id="rect-clip-path">
               <rect x="0" y="0" width="38" height="10"></rect>
@@ -579,13 +582,13 @@
                       style="fill:none;stroke:white;stroke-width:2"/>
           </svg>
         </label>
-        <span class="back-name">Carlos Coves Prieto</span>
+        <span class="c-card__back__name">Carlos Coves Prieto</span>
       </div>
     </div>
   </div>
 </section>
 <footer>
-  <span class="fa fa-copyright" aria-hidden="true"></span> 2016 Carlos Coves Prieto
+  <span>2016 Carlos Coves Prieto</span>
 </footer>
 </body>
 </html>
