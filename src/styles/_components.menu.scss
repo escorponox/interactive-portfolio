@@ -56,12 +56,41 @@
   cursor: pointer;
   display: block;
   @include font-size(20px);
-  margin: $base-height-unit 0;
+  font-weight: 700;
+  margin-top: $base-height-unit;
   user-select: none;
 
   &:hover {
     color: #ffffff;
   }
+}
+
+.c-menu__nav__sub-menu {
+  max-height: 0;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow: hidden;
+  border-radius: $base-radius;
+  color: $color-blue;
+  background-color: $color-blue-light;
+  padding: 0;
+}
+
+.c-menu__nav__sub-menu-toggle:checked ~ .c-menu__nav__sub-menu {
+  margin-top: $base-height-unit;
+  max-height: 150px;
+  padding: $base-height-unit;
+}
+
+.c-menu__nav__sub-menu__link {
+  display: block;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.c-menu__footer {
+  position: absolute;
+  bottom: 0;
+  left: $base-spacing-unit;
 }
 
 .c-menu-toggle-label {
