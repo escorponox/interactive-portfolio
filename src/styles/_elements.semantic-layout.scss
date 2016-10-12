@@ -1,14 +1,18 @@
 header {
+  align-items: center;
   background-color: $color-blue;
   box-shadow: 0 2px 2px $color-blue-dark;
+  display: flex;
   height: 4rem;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+
+  @include mq($mq-tablet) {
+    justify-content: space-around;
+  }
 }
 
 section {

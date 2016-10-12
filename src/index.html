@@ -10,6 +10,12 @@
 </head>
 <body>
 <input id="menu-toggle" type="checkbox" class="c-menu-toggle o-display-none">
+<div class="c-menu">
+  <label for="menu-toggle" class="c-menu__background"></label>
+  <div class="c-menu__box">
+    <div class="c-menu__header">CCoves</div>
+  </div>
+</div>
 <header>
   <div class="header__section">
     <div class="header__name">
@@ -18,8 +24,8 @@
     </div>
   </div>
   <div class="header__section">
-    <label for="menu-toggle" class="o-icon-button o-enlarge--active " aria-hidden="true">
-      <span class="fa fa-caret-left fa-2x" style="display: none"></span>
+    <label for="menu-toggle" class="c-menu-toggle-label o-icon-button o-enlarge--active " aria-hidden="true">
+      <span class="fa fa-caret-left fa-2x"></span>
       <span class="fa fa-caret-right fa-2x"></span>
     </label>
   </div>
@@ -93,7 +99,7 @@
     </div>
 
     <div class="vertical-tab__content">
-      <div class="accordion"><label for="tab-radio1" class="accordion__label">Sidebar</label></div>
+      <label for="tab-radio1" class="accordion">Sidebar</label>
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio o-display-none" checked id="tab1-carr01-item1" name="carr01">
@@ -135,7 +141,7 @@
           </p>
         </div>
       </div>
-      <div class="accordion"><label for="tab-radio2" class="accordion__label">Forms</label></div>
+      <label for="tab-radio2" class="accordion">Forms</label>
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio o-display-none" checked id="car02-item1" name="car02">
@@ -185,7 +191,7 @@
           </p>
         </div>
       </div>
-      <div class="accordion"><label for="tab-radio3" class="accordion__label">Kids Calculator</label></div>
+      <label for="tab-radio3" class="accordion">Kids Calculator</label>
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio o-display-none" checked id="car03-item1" name="car03">
@@ -236,7 +242,7 @@
           </p>
         </div>
       </div>
-      <div class="accordion"><label for="tab-radio4" class="accordion__label">Shopping Cart</label></div>
+      <label for="tab-radio4" class="accordion">Shopping Cart</label>
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio o-display-none" checked id="car04-item1" name="car04">
@@ -290,7 +296,7 @@
           </p>
         </div>
       </div>
-      <div class="accordion"><label for="tab-radio5" class="accordion__label">UI Components</label></div>
+      <label for="tab-radio5" class="accordion">UI Components</label>
       <div class="vertical-tab__content__project">
         <div class="carousel">
           <input type="radio" class="carousel__radio o-display-none" checked id="car05-item1" name="car05">
