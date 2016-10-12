@@ -3,10 +3,12 @@
   border-radius: 4px;
   color: $color-blue-light;
   cursor: pointer;
-  display: block;
+  display: flex;
   height: 2.5em;
   transition: color 0.15s ease-out, background-color 0.15s ease-out, transform .2s ease-out;
   width: 2.5em;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     border-color: $color-white;
@@ -17,16 +19,5 @@
     border-color: $color-white;
     color: $color-blue;
     background-color: $color-background;
-  }
-
-
-  & > .fa {
-    text-align: center;
-    width: 100%;
-    vertical-align: bottom;
-  }
-
-  & > .fa-lg {
-    line-height: 36px;
   }
 }
