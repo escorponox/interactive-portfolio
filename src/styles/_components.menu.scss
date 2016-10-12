@@ -27,12 +27,41 @@
   bottom: 0;
   left: -245px;
   color: $color-blue-light;
-  padding: 2em;
+  padding: $base-spacing-unit;
   position: absolute;
   transition: left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
   top: 4rem;
   width: 15rem;
   max-width: 240px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.c-menu__header {
+  border-bottom: 1px solid $color-white;
+  color: $color-white;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: $base-height-unit;
+  text-align: center;
+  white-space: nowrap;
+
+  @include mq($mq-tablet) {
+    display: none;
+  }
+}
+
+.c-menu__nav__link {
+  color: $color-blue-light;
+  cursor: pointer;
+  display: block;
+  @include font-size(20px);
+  margin: $base-height-unit 0;
+  user-select: none;
+
+  &:hover {
+    color: #ffffff;
+  }
 }
 
 .c-menu-toggle-label {
