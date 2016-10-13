@@ -57,7 +57,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('clean', function() {
-  return del(['dist/']);
+  return del(['dist/', 'src/styles/main.css']);
 });
 
 gulp.task('default', ['clean'], function() {

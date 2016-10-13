@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+  <link rel="stylesheet" href="styles/main.css"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <script src="scripts/validators.js"></script>
+  <script src="scripts/signup-form.js"></script>
+  <script src="scripts/questionnaire.js"></script>
+  <script src="scripts/color.js"></script>
   <title>Carlos Coves - Interactive Portfolio</title>
 </head>
 <body>
@@ -118,41 +122,80 @@
     <div class="vertical-tab__content">
       <label for="tab-radio1" class="accordion">Sidebar</label>
       <div class="vertical-tab__content__project">
-        <div class="carousel">
-          <input type="radio" class="carousel__radio o-display-none" checked id="tab1-carr01-item1" name="carr01">
-          <input type="radio" class="carousel__radio o-display-none" id="tab1-carr01-item2" name="carr01">
-          <div class="carousel__item-container">
-            <div class="carousel__item">
+        <div class="c-carousel">
+          <input type="radio" class="c-carousel__radio o-display-none" checked id="car01-item1" name="carr01">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car01-item2" name="carr01">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car01-item3" name="carr01">
+          <div class="c-carousel__item-container">
+            <div class="c-carousel__item">
               <img src="assets/images/sidebar.png"/>
             </div>
-            <div class="carousel__item">
+            <div class="c-carousel__item">
               <img src="assets/images/sidebar-2.png"/>
             </div>
+            <div class="c-carousel__item">
+              <div class="c-carousel__item__content">
+                <div class="sidebar">
+                  <div class="name-header">
+                    <h1 class="sidebar__heading sidebar__heading--name">Carlos</h1>
+                    <h1 class="sidebar__heading">Coves Prieto</h1>
+                  </div>
+                  <div class="sidebar__photo-container sidebar__photo-container--main">
+                    <img class="sidebar__img sidebar__img--border" src="assets/images/me-sidebar.png">
+                  </div>
+                  <div class="sidebar__photo-container">
+                    <img class="sidebar__img sidebar__img--border" src="assets/images/desktop.png">
+                  </div>
+                  <div class="sidebar__photo-container">
+                    <img class="sidebar__img" src="assets/images/arch_sh.png">
+                  </div>
+                  <div class="clear-both"></div>
+                  <hr class="sidebar__hr">
+                  <div>
+                    <h3>The only way to go fast is to go well</h3>
+                    <p class="sidebar__paragraph">In my last years as a supply chain engineer, I became interested in
+                      programming and open source collaboration. After a casual meeting with an Agile developer, I
+                      discovered TDD, Clean Code and SOLID principles. Now I am a test-first coding believer.</p>
+                    <p class="sidebar__paragraph">The heading is a quote from Robert C. "Uncle Bob" Martin. The photo
+                      shows my desktop, which runs i3 window manager under Arch Linux, my favourite distro.</p>
+                    <button class="sidebar__button">Back to Full Profile</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <label for="tab1-carr01-item2" class="carousel__right item-1"><span
+            <label for="car01-item2" class="c-carousel__right item-1"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="tab1-carr01-item2" class="carousel__left item-1"><span
+            <label for="car01-item3" class="c-carousel__left item-1"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="tab1-carr01-item1" class="carousel__right item-2"><span
+            <label for="car01-item3" class="c-carousel__right item-2"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="tab1-carr01-item1" class="carousel__left item-2"><span
-                class="fa fa-chevron-left fa-2x"></span></label></div>
-          <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__item">
-              <label for="tab1-carr01-item1" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            <label for="car01-item1" class="c-carousel__left item-2"><span
+                class="fa fa-chevron-left fa-2x"></span></label>
+            <label for="car01-item1" class="c-carousel__right item-3"><span
+                class="fa fa-chevron-right fa-2x"></span></label>
+            <label for="car01-item2" class="c-carousel__left item-3"><span
+                class="fa fa-chevron-left fa-2x"></span></label>
+          </div>
+          <ul class="c-carousel__dot-list">
+            <li class="c-carousel__dot-list__item">
+              <label for="car01-item1" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__item">
-              <label for="tab1-carr01-item2" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            <li class="c-carousel__dot-list__item">
+              <label for="car01-item2" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            </li>
+            <li class="c-carousel__dot-list__item">
+              <label for="car01-item3" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
           </ul>
         </div>
-        <div class="static-info">
+        <div class="c-static-info">
           <p><strong>TECHNOLOGIES:</strong> HTML5, CSS3</p>
           <p>This is a sidebar built for Modern Developer social media</p>
           <p>
-            <a class="static-info__a c-link-shadow link-blue"
+            <a class="c-static-info__a c-link-shadow link-blue"
                href="https://escorponox.github.io/learning-web-components/components/sidebar/index.html">Live Demo</a>
-            <a class="static-info__a c-link-shadow"
+            <a class="c-static-info__a c-link-shadow"
                href="https://github.com/escorponox/learning-web-components/tree/master/components/sidebar"><span
                 class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
           </p>
@@ -160,49 +203,206 @@
       </div>
       <label for="tab-radio2" class="accordion">Forms</label>
       <div class="vertical-tab__content__project">
-        <div class="carousel">
-          <input type="radio" class="carousel__radio o-display-none" checked id="car02-item1" name="car02">
-          <input type="radio" class="carousel__radio o-display-none" id="car02-item2" name="car02">
-          <input type="radio" class="carousel__radio o-display-none" id="car02-item3" name="car02">
-          <div class="carousel__item-container">
-            <div class="carousel__item">
-              <img src="assets/images/forms-1.png"/>
+        <div class="c-carousel">
+          <input type="radio" class="c-carousel__radio o-display-none" checked id="car02-item1" name="car02">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car02-item2" name="car02">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car02-item3" name="car02">
+          <div class="c-carousel__item-container">
+            <div class="c-carousel__item">
+              <div class="c-carousel__item__content">
+                <div class="coves-form">
+                  <form id="signup-form" method="post" action="#" novalidate>
+                    <h1 class="coves-form__label align-center">Signup</h1>
+                    <label for="username" class="coves-form__label">Username</label>
+                    <div class="coves-form__input-container--column">
+                      <div class="icon icon-user"></div>
+                      <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
+                      <input id="username"
+                             class="coves-form__input coves-form__input--hover coves-form__input--focus coves-form__input--required"
+                             type="text" name="username" placeholder="Your username" tabindex="1">
+                      <span id="username__error" class="coves-form__error" aria-live="polite"></span>
+                    </div>
+                    <label for="first-name" class="coves-form__label">First Name</label>
+                    <div class="coves-form__input-container--column">
+                      <span class="icon icon-name"></span>
+                      <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
+                      <input id="first-name"
+                             class="coves-form__input coves-form__input--hover coves-form__input--focus coves-form__input--required"
+                             type="text" name="firstname" maxlength="50" placeholder="Your first name" tabindex="2">
+                      <span id="first-name__error" class="coves-form__error" aria-live="polite"></span>
+                    </div>
+                    <label for="last-name" class="coves-form__label">Last Name</label>
+                    <div class="coves-form__input-container--column">
+                      <span class="icon icon-name"></span>
+                      <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
+                      <input id="last-name"
+                             class="coves-form__input coves-form__input--hover coves-form__input--focus coves-form__input--required"
+                             type="text" name="lastname" maxlength="50" placeholder="Your last name" tabindex="3">
+                      <span id="last-name__error" class="coves-form__error" aria-live="polite"></span>
+                    </div>
+                    <label for="email" class="coves-form__label">Email Address</label>
+                    <div class="coves-form__input-container--column">
+                      <span class="icon icon-email"></span>
+                      <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
+                      <input id="email"
+                             class="coves-form__input coves-form__input--hover coves-form__input--focus coves-form__input--required"
+                             type="text" name="email" placeholder="example@dot.com" tabindex="4">
+                      <span id="email__error" class="coves-form__error" aria-live="polite"></span>
+                    </div>
+                    <label for="birth" class="coves-form__label">Date of Birth</label>
+                    <div class="coves-form__input-container--column">
+                      <span class="icon icon-date"></span>
+                      <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
+                      <input id="birth"
+                             class="coves-form__input coves-form__input--hover coves-form__input--focus coves-form__input--required"
+                             type="text" name="birth" placeholder="Your date of birth" tabindex="5">
+                      <span id="birth__error" class="coves-form__error" aria-live="polite"></span>
+                    </div>
+                    <label for="pass" class="coves-form__label">Password</label>
+                    <div class="coves-form__input-container--column">
+                      <span class="icon icon-pass"></span>
+                      <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
+                      <input id="pass"
+                             class="coves-form__input coves-form__input--hover coves-form__input--focus coves-form__input--required"
+                             type="password" name="pass" tabindex="6">
+                      <span id="pass__error" class="coves-form__error" aria-live="polite"></span>
+                    </div>
+                    <label for="pass-repeat" class="coves-form__label">Repeat Password</label>
+                    <div class="coves-form__input-container--column">
+                      <span class="icon icon-pass"></span>
+                      <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
+                      <input id="pass-repeat"
+                             class="coves-form__input coves-form__input--hover coves-form__input--focus coves-form__input--required"
+                             type="password" name="pass-repeat" tabindex="7">
+                      <span id="pass-repeat__error" class="coves-form__error" aria-live="polite"></span>
+                    </div>
+                    <div class="coves-form__input-container--row coves-form__input-container--center-flex-direction">
+                      <input type="submit" class="button" value="Submit" tabindex="8">
+                    </div>
+                    <div class="coves-form__input-container--row coves-form__input-container--center-flex-direction">
+                      <div id="signup__error-box" class="coves-form__error-box">All inputs are required</div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-            <div class="carousel__item">
-              <img src="assets/images/forms-2.png"/>
+            <div class="c-carousel__item">
+              <div class="c-carousel__item__content">
+                <div class="coves-form">
+                  <form id="questionnaire-form" method="post" action="#" novalidate>
+                    <label class="coves-form__label">How did you find this page?</label>
+                    <div class="coves-form__radio-set">
+                      <div class="coves-form__radio-container">
+                        <input id="magazine" class="coves-form__radio-container__input" type="radio" name="find"
+                               value="magazine"
+                               tabindex="1">
+                        <label for="magazine"
+                               class="coves-form__label coves-form__label--normal coves-form__label--pointer coves-form__input--hover">Magazine</label>
+                      </div>
+                      <div class="coves-form__radio-container">
+                        <input id="tv" class="coves-form__radio-container__input" type="radio" name="find" value="tv">
+                        <label for="tv"
+                               class="coves-form__label coves-form__label--normal coves-form__label--pointer coves-form__input--hover">TV</label>
+                      </div>
+                      <div class="coves-form__radio-container">
+                        <input id="google" class="coves-form__radio-container__input" type="radio" name="find"
+                               value="google">
+                        <label for="google"
+                               class="coves-form__label coves-form__label--normal coves-form__label--pointer coves-form__input--hover">Google
+                          Ad</label>
+                      </div>
+                      <div class="coves-form__radio-container">
+                        <input id="friend" class="coves-form__radio-container__input" type="radio" name="find"
+                               value="friend">
+                        <label for="friend"
+                               class="coves-form__label coves-form__label--normal coves-form__label--pointer coves-form__input--hover">Friend</label>
+                      </div>
+                      <div class="coves-form__radio-container">
+                        <input id="other" class="coves-form__radio-container__input" type="radio" name="find"
+                               value="other">
+                        <label for="other"
+                               class="coves-form__label coves-form__label--normal coves-form__label--pointer coves-form__input--hover">Other</label>
+                      </div>
+                      <div class="coves-form__input-container--column">
+                        <input id="other-text" class="coves-form__input coves-form__radio-container__text"
+                               type="text" name="other-text" disabled placeholder="Other media" tabindex="2">
+                        <span id="other-text__error" class="coves-form__error coves-form__radio-container__text__error"
+                              aria-live="polite"></span>
+                      </div>
+                    </div>
+                    <div class="coves-form__input-container--row coves-form__input-container--center-flex-direction">
+                      <input type="submit" class="button" value="Submit" tabindex="3">
+                    </div>
+                    <div class="coves-form__input-container--row">
+                      <div id="questionnaire__error-box" class="coves-form__error-box">All inputs are required</div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-            <div class="carousel__item">
-              <img src="assets/images/forms-3.png"/>
+            <div class="c-carousel__item">
+              <div class="c-carousel__item__content">
+                <div class="coves-form coves-form--center">
+                  <form method="post" action="#" novalidate>
+                    <div class="coves-form__input-container--row">
+                      <label for="red" class="coves-form__label label-range">Red</label>
+                      <input id="red" type="range" class="input-range-coves" min="0" max="255" step="5" value="130">
+                      <label for="red" class="coves-form__label label-range"></label>
+                    </div>
+                    <div class="coves-form__input-container--row">
+                      <label for="green" class="coves-form__label label-range">Green</label>
+                      <input id="green" type="range" class="input-range-coves" min="0" max="255" step="5" value="130">
+                      <label for="green" class="coves-form__label label-range"></label>
+                    </div>
+                    <div class="coves-form__input-container--row">
+                      <label for="blue" class="coves-form__label label-range">Blue</label>
+                      <input id="blue" type="range" class="input-range-coves" min="0" max="255" step="5" value="130">
+                      <label for="blue" class="coves-form__label label-range"></label>
+                    </div>
+                    <div class="coves-form__input-container--row">
+                      <label for="alpha" class="coves-form__label label-range">Alpha</label>
+                      <input id="alpha" type="range" class="input-range-coves" min="0" max="1" step="0.01" value="0.5">
+                      <label for="alpha" class="coves-form__label label-range"></label>
+                    </div>
+                    <div class="coves-form__input-container--row">
+                                    <textarea id="color" name="color"
+                                              class="coves-form__input coves-form__textarea coves-form__textarea--no-resize coves-form__input--hover align-center"
+                                              rows="1" cols="21" placeholder="Output" readonly></textarea>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
 
-            <label for="car02-item2" class="carousel__right item-1"><span
+            <label for="car02-item2" class="c-carousel__right item-1"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car02-item3" class="carousel__left item-1"><span
+            <label for="car02-item3" class="c-carousel__left item-1"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car02-item3" class="carousel__right item-2"><span
+            <label for="car02-item3" class="c-carousel__right item-2"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car02-item1" class="carousel__left item-2"><span
+            <label for="car02-item1" class="c-carousel__left item-2"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car02-item1" class="carousel__right item-3"><span
+            <label for="car02-item1" class="c-carousel__right item-3"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car02-item2" class="carousel__left item-3"><span
-                class="fa fa-chevron-left fa-2x"></span></label></div>
-          <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__item"><label for="car02-item1" class="carousel__dot-list__dot"><span
+            <label for="car02-item2" class="c-carousel__left item-3"><span
+                class="fa fa-chevron-left fa-2x"></span></label>
+          </div>
+          <ul class="c-carousel__dot-list">
+            <li class="c-carousel__dot-list__item"><label for="car02-item1" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__item"><label for="car02-item2" class="carousel__dot-list__dot"><span
+            <li class="c-carousel__dot-list__item"><label for="car02-item2" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__item"><label for="car02-item3" class="carousel__dot-list__dot"><span
+            <li class="c-carousel__dot-list__item"><label for="car02-item3" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
           </ul>
         </div>
-        <div class="static-info">
-          <p class="static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
+        <div class="c-static-info">
+          <p class="c-static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
           <p>Several forms built with custom design and using the modern validators API</p>
           <p>
-            <a class="static-info__a c-link-shadow link-blue"
+            <a class="c-static-info__a c-link-shadow link-blue"
                href="https://escorponox.github.io/learning-web-components/components/forms/index.html">Live Demo</a>
-            <a class="static-info__a c-link-shadow"
+            <a class="c-static-info__a c-link-shadow"
                href="https://github.com/escorponox/learning-web-components/tree/master/components/forms"><span
                 class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
           </p>
@@ -210,50 +410,50 @@
       </div>
       <label for="tab-radio3" class="accordion">Kids Calculator</label>
       <div class="vertical-tab__content__project">
-        <div class="carousel">
-          <input type="radio" class="carousel__radio o-display-none" checked id="car03-item1" name="car03">
-          <input type="radio" class="carousel__radio o-display-none" id="car03-item2" name="car03">
-          <input type="radio" class="carousel__radio o-display-none" id="car03-item3" name="car03">
-          <div class="carousel__item-container">
-            <div class="carousel__item">
+        <div class="c-carousel">
+          <input type="radio" class="c-carousel__radio o-display-none" checked id="car03-item1" name="car03">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item2" name="car03">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item3" name="car03">
+          <div class="c-carousel__item-container">
+            <div class="c-carousel__item">
               <img src="assets/images/calc-1.png"/>
             </div>
-            <div class="carousel__item">
+            <div class="c-carousel__item">
               <img src="assets/images/calc-2.png"/>
             </div>
-            <div class="carousel__item">
+            <div class="c-carousel__item">
               <img src="assets/images/calc-3.png"/>
             </div>
 
-            <label for="car03-item2" class="carousel__right item-1"><span
+            <label for="car03-item2" class="c-carousel__right item-1"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car03-item3" class="carousel__left item-1"><span
+            <label for="car03-item3" class="c-carousel__left item-1"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car03-item3" class="carousel__right item-2"><span
+            <label for="car03-item3" class="c-carousel__right item-2"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car03-item1" class="carousel__left item-2"><span
+            <label for="car03-item1" class="c-carousel__left item-2"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car03-item1" class="carousel__right item-3"><span
+            <label for="car03-item1" class="c-carousel__right item-3"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car03-item2" class="carousel__left item-3"><span
+            <label for="car03-item2" class="c-carousel__left item-3"><span
                 class="fa fa-chevron-left fa-2x"></span></label></div>
-          <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__item"><label for="car03-item1" class="carousel__dot-list__dot"><span
+          <ul class="c-carousel__dot-list">
+            <li class="c-carousel__dot-list__item"><label for="car03-item1" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__item"><label for="car03-item2" class="carousel__dot-list__dot"><span
+            <li class="c-carousel__dot-list__item"><label for="car03-item2" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
-            <li class="carousel__dot-list__item"><label for="car03-item3" class="carousel__dot-list__dot"><span
+            <li class="c-carousel__dot-list__item"><label for="car03-item3" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
           </ul>
         </div>
-        <div class="static-info">
-          <p class="static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
+        <div class="c-static-info">
+          <p class="c-static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
           <p>Basic calculator with a flashy color palette to attract kids attention</p>
           <p>
-            <a class="static-info__a c-link-shadow link-blue"
+            <a class="c-static-info__a c-link-shadow link-blue"
                href="https://escorponox.github.io/learning-web-components/components/calculator/index.html">Live
               Demo</a>
-            <a class="static-info__a c-link-shadow"
+            <a class="c-static-info__a c-link-shadow"
                href="https://github.com/escorponox/learning-web-components/tree/master/components/calculator"><span
                 class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
           </p>
@@ -261,53 +461,53 @@
       </div>
       <label for="tab-radio4" class="accordion">Shopping Cart</label>
       <div class="vertical-tab__content__project">
-        <div class="carousel">
-          <input type="radio" class="carousel__radio o-display-none" checked id="car04-item1" name="car04">
-          <input type="radio" class="carousel__radio o-display-none" id="car04-item2" name="car04">
-          <input type="radio" class="carousel__radio o-display-none" id="car04-item3" name="car04">
-          <div class="carousel__item-container">
-            <div class="carousel__item">
+        <div class="c-carousel">
+          <input type="radio" class="c-carousel__radio o-display-none" checked id="car04-item1" name="car04">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car04-item2" name="car04">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car04-item3" name="car04">
+          <div class="c-carousel__item-container">
+            <div class="c-carousel__item">
               <img src="assets/images/cart-1.png"/>
             </div>
-            <div class="carousel__item">
+            <div class="c-carousel__item">
               <img src="assets/images/cart-2.png"/>
             </div>
-            <div class="carousel__item">
+            <div class="c-carousel__item">
               <img src="assets/images/cart-3.png"/>
             </div>
 
-            <label for="car04-item2" class="carousel__right item-1"><span
+            <label for="car04-item2" class="c-carousel__right item-1"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car04-item3" class="carousel__left item-1"><span
+            <label for="car04-item3" class="c-carousel__left item-1"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car04-item3" class="carousel__right item-2"><span
+            <label for="car04-item3" class="c-carousel__right item-2"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car04-item1" class="carousel__left item-2"><span
+            <label for="car04-item1" class="c-carousel__left item-2"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car04-item1" class="carousel__right item-3"><span
+            <label for="car04-item1" class="c-carousel__right item-3"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car04-item2" class="carousel__left item-3"><span
+            <label for="car04-item2" class="c-carousel__left item-3"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
           </div>
-          <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__item">
-              <label for="car04-item1" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+          <ul class="c-carousel__dot-list">
+            <li class="c-carousel__dot-list__item">
+              <label for="car04-item1" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__item">
-              <label for="car04-item2" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            <li class="c-carousel__dot-list__item">
+              <label for="car04-item2" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__item">
-              <label for="car04-item3" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            <li class="c-carousel__dot-list__item">
+              <label for="car04-item3" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
           </ul>
         </div>
-        <div class="static-info">
-          <p class="static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
+        <div class="c-static-info">
+          <p class="c-static-info__title"><strong>Technologies:</strong> HTML5, CSS3, and Vanilla JavaScript</p>
           <p>Simple shopping cart with a daring color palette</p>
           <p>
-            <a class="static-info__a c-link-shadow link-blue"
+            <a class="c-static-info__a c-link-shadow link-blue"
                href="https://escorponox.github.io/learning-web-components/components/listing/index.html">Live Demo</a>
-            <a class="static-info__a c-link-shadow"
+            <a class="c-static-info__a c-link-shadow"
                href="https://github.com/escorponox/learning-web-components/tree/master/components/listing"><span
                 class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code</a>
           </p>
@@ -315,55 +515,55 @@
       </div>
       <label for="tab-radio5" class="accordion">UI Components</label>
       <div class="vertical-tab__content__project">
-        <div class="carousel">
-          <input type="radio" class="carousel__radio o-display-none" checked id="car05-item1" name="car05">
-          <input type="radio" class="carousel__radio o-display-none" id="car05-item2" name="car05">
-          <input type="radio" class="carousel__radio o-display-none" id="car05-item3" name="car05">
-          <div class="carousel__item-container">
-            <div class="carousel__item">
+        <div class="c-carousel">
+          <input type="radio" class="c-carousel__radio o-display-none" checked id="car05-item1" name="car05">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car05-item2" name="car05">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car05-item3" name="car05">
+          <div class="c-carousel__item-container">
+            <div class="c-carousel__item">
               <img src="assets/images/component-1.gif"/>
             </div>
-            <div class="carousel__item">
+            <div class="c-carousel__item">
               <img src="assets/images/component-2.gif"/>
             </div>
-            <div class="carousel__item">
+            <div class="c-carousel__item">
               <img src="assets/images/component-3.gif"/>
             </div>
 
-            <label for="car05-item2" class="carousel__right item-1"><span
+            <label for="car05-item2" class="c-carousel__right item-1"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car05-item3" class="carousel__left item-1"><span
+            <label for="car05-item3" class="c-carousel__left item-1"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car05-item3" class="carousel__right item-2"><span
+            <label for="car05-item3" class="c-carousel__right item-2"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car05-item1" class="carousel__left item-2"><span
+            <label for="car05-item1" class="c-carousel__left item-2"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car05-item1" class="carousel__right item-3"><span
+            <label for="car05-item1" class="c-carousel__right item-3"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car05-item2" class="carousel__left item-3"><span
+            <label for="car05-item2" class="c-carousel__left item-3"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
           </div>
-          <ul class="carousel__dot-list">
-            <li class="carousel__dot-list__item">
-              <label for="car05-item1" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+          <ul class="c-carousel__dot-list">
+            <li class="c-carousel__dot-list__item">
+              <label for="car05-item1" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__item">
-              <label for="car05-item2" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            <li class="c-carousel__dot-list__item">
+              <label for="car05-item2" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
-            <li class="carousel__dot-list__item">
-              <label for="car05-item3" class="carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
+            <li class="c-carousel__dot-list__item">
+              <label for="car05-item3" class="c-carousel__dot-list__dot"><span class="fa fa-circle"></span></label>
             </li>
           </ul>
         </div>
-        <div class="static-info">
-          <p class="static-info__title"><strong>Technologies:</strong> HTML5, CSS3</p>
+        <div class="c-static-info">
+          <p class="c-static-info__title"><strong>Technologies:</strong> HTML5, CSS3</p>
           <p>Pure CSS re-usable components</p>
           <p>
-            <a class="static-info__a c-link-shadow link-blue"
+            <a class="c-static-info__a c-link-shadow link-blue"
                href="http://jsbin.com/nikoxaj/3/edit?output">Tabs</a>
-            <a class="static-info__a c-link-shadow link-blue"
+            <a class="c-static-info__a c-link-shadow link-blue"
                href="http://jsbin.com/sifoda/1/edit?output">Accordion</a>
-            <a class="static-info__a c-link-shadow link-blue"
+            <a class="c-static-info__a c-link-shadow link-blue"
                href="https://escorponox.github.io/learning-web-components/components/buttons/index.html">Buttons</a>
           </p>
         </div>
