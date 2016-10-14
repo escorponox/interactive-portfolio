@@ -107,9 +107,9 @@
     <em>Modern Frontend Developer</em>. Building them from scratch has helped me to develop a solid HTML5 and CSS3
     basis.</p>
   <div class="section__content o-center-margin o-center-container">
-    <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio1" name="tab">
+    <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio1" name="tab" checked>
     <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio2" name="tab">
-    <input type="radio" checked class="vertical-tab__radio o-display-none" id="tab-radio3" name="tab">
+    <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio3" name="tab">
     <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio4" name="tab">
     <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio5" name="tab">
 
@@ -122,7 +122,7 @@
     </div>
 
     <div class="vertical-tab__content">
-      <label for="tab-radio1" class="accordion">Sidebar</label>
+      <label for="tab-radio1" class="c-accordion">Sidebar</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
           <input type="radio" class="c-carousel__radio o-display-none" checked id="car01-item1" name="carr01">
@@ -203,7 +203,7 @@
           </p>
         </div>
       </div>
-      <label for="tab-radio2" class="accordion">Forms</label>
+      <label for="tab-radio2" class="c-accordion">Forms</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
           <input type="radio" class="c-carousel__radio o-display-none" checked id="car02-item1" name="car02">
@@ -410,13 +410,13 @@
           </p>
         </div>
       </div>
-      <label for="tab-radio3" class="accordion">Kids Calculator</label>
+      <label for="tab-radio3" class="c-accordion">Kids Calculator</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
-          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item1" name="car03">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item1" name="car03" checked>
           <input type="radio" class="c-carousel__radio o-display-none" id="car03-item2" name="car03">
           <input type="radio" class="c-carousel__radio o-display-none" id="car03-item3" name="car03">
-          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item4" name="car03" checked>
+          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item4" name="car03">
           <div class="c-carousel__item-container">
             <div class="c-carousel__item">
               <img class="c-carousel__item__image" src="assets/images/calc-1.png"/>
@@ -431,7 +431,7 @@
               <div class="c-carousel-item__content">
                 <div id="calculator" class="calculator">
                   <div class="screen">
-                    <input id="screen" class="calculator__screen" readonly maxlength="12" value="0">
+                    <input id="screen" class="calculator__screen" readonly value="0">
                   </div>
                   <div class="button-row">
                     <div id="number7" class="calculator__button calculator__button--20 calculator__button--number">7
@@ -519,7 +519,7 @@
           </p>
         </div>
       </div>
-      <label for="tab-radio4" class="accordion">Shopping Cart</label>
+      <label for="tab-radio4" class="c-accordion">Shopping Cart</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
           <input type="radio" class="c-carousel__radio o-display-none" checked id="car04-item1" name="car04">
@@ -584,21 +584,106 @@
           </p>
         </div>
       </div>
-      <label for="tab-radio5" class="accordion">UI Components</label>
+      <label for="tab-radio5" class="c-accordion">UI Components</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
-          <input type="radio" class="c-carousel__radio o-display-none" checked id="car05-item1" name="car05">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car05-item1" name="car05" checked>
           <input type="radio" class="c-carousel__radio o-display-none" id="car05-item2" name="car05">
           <input type="radio" class="c-carousel__radio o-display-none" id="car05-item3" name="car05">
           <div class="c-carousel__item-container">
             <div class="c-carousel__item">
-              <img class="c-carousel__item__image" src="assets/images/component-1.gif"/>
+              <div class="c-carousel__item__content">
+                <div class="tabComponent">
+                  <input type="radio" checked name="fake-tab" id="homeDecor">
+                  <label for="homeDecor">Decor</label>
+
+                  <input type="radio" name="fake-tab" id="furniture">
+                  <label for="furniture">Furniture</label>
+
+                  <input type="radio" name="fake-tab" id="kitchen">
+                  <label for="kitchen">Kitchen</label>
+
+                  <div class="tab">Browse through our list of Home Decor Items</div>
+                  <div class="tab">Flash Sale on Living Room and Bedroom Furniture</div>
+                  <div class="tab">Bring the best out of the masterchef in you!!</div>
+                </div>
+              </div>
             </div>
             <div class="c-carousel__item">
-              <img class="c-carousel__item__image" src="assets/images/component-2.gif"/>
+              <div class="c-carousel__item__content">
+                <div class="accordion vertical">
+                  <ul>
+                    <li>
+                      <input type="radio" id="radio-1" name="radio-accordion" checked="checked"/>
+                      <label for="radio-1">Appetizers</label>
+                      <div class="content">
+                        <h3>Check our our tasty apps!</h3>
+                        <p><strong>Happy hour menu - half off!!</strong></p>
+                        <ul>
+                          <li>Chicken Wings (6) - 5.99$</li>
+                          <li>Calamari - 7.99$</li>
+                          <li>Garlic breaded pickles - 4.59$</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio-2" name="radio-accordion"/>
+                      <label for="radio-2">Entrees</label>
+                      <div class="content">
+                        <h3>Choose from a wide range of pastas</h3>
+                        <p><strong>Pastas</strong></p>
+                        <ul>
+                          <li>Chicken Picatta - 14.99$</li>
+                          <li>Chicken Pollo - 12.99$</li>
+                          <li>Lasagna (Chicken/beef) - 10.99$</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio-3" name="radio-accordion"/>
+                      <label for="radio-3">Desserts</label>
+                      <div class="content">
+                        <h3>New Summer specials!!</h3>
+                        <p><strong>Shakes and Ice Creams</strong></p>
+                        <ul>
+                          <li>Turtle Caramel Shake - 6.99$</li>
+                          <li> Chocolate Brownie Bite- 4.99$</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <input type="radio" id="radio-4" name="radio-accordion"/>
+                      <label for="radio-4">Soups & Salads</label>
+                      <div class="content">
+                        <h3>Healthy starters</h3>
+                        <p><strong>Soups</strong></p>
+                        <ul>
+                          <li>Vegetable Soup - 6.99$</li>
+                          <li>Gazpacho Andaluz - 4.99$</li>
+                        </ul>
+                        <p><strong>Salads</strong></p>
+                        <ul>
+                          <li>Caesar Salad - 6.99$</li>
+                          <li>Green Salad - 4.99$</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="c-carousel__item">
-              <img class="c-carousel__item__image" src="assets/images/component-3.gif"/>
+              <div class="c-carousel__item__content">
+                <div class="embed-buttons">
+                  <div class="button">Buy Now</div>
+                  <button class="button">Send Mail</button>
+                  <a href="#" class="button">Search</a>
+                  <div class="button button--sm">A Small Button</div>
+                  <div class="button">A Button</div>
+                  <div class="button button--md">A Medium Button</div>
+                  <div class="button button--lg">A Large Button</div>
+                </div>
+              </div>
             </div>
 
             <label for="car05-item2" class="c-carousel__right item-1"><span
