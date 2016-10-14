@@ -1,11 +1,14 @@
 .calculator {
   background: #66DDFF;
   border-radius: 5px;
-  box-sizing: border-box;
   font: bold 16px "Source Sans Pro", sans-serif;
   overflow: auto;
-  padding: 10px;
-  width: 295px;
+  padding: 5px;
+  width: 205px;
+
+  @include mq($mq-tablet) {
+    width: 280px;
+  }
 }
 
 .calculator__screen {
@@ -13,33 +16,45 @@
   border: 2px solid #00B3E5;
   border-radius: 5px;
   color: #000000;
-  font-family: "Roboto", "Source Sans Pro", monospace;
+  font-family: monospace;
   font-size: 24px;
   font-weight: bold;
-  margin: 5px;
+  margin: 5px 0;
   padding: 3px;
   text-align: right;
-  width: 255px;
+  width: 100%;
 }
 
 .calculator__button {
   border: 2px solid;
   border-radius: 5px;
-  box-sizing: border-box;
   height: 35px;
-  margin: 5px;
-  padding: 6px;
+  margin: 2px;
+  padding: 6px 0;
   text-align: center;
+  user-select: none;
+
+  @include mq($mq-tablet) {
+    height: 50px;
+    font-size: 24px;
+  }
 }
 
 .calculator__button--40 {
   float: left;
-  width: 100px;
+  width: 74px;
+
+  @include mq($mq-tablet) {
+    width: 104px;
+  }
 }
 
 .calculator__button--20 {
   float: left;
-  width: 45px;
+  width: 35px;
+  @include mq($mq-tablet) {
+    width: 50px;
+  }
 }
 
 .calculator__button--equal {
@@ -47,9 +62,14 @@
   border-color: #40E500;
   color: #007400;
   float: right;
-  height: 80px;
-  line-height: 64px;
+  height: 74px;
+  line-height: 58px;
   vertical-align: middle;
+
+  @include mq($mq-tablet) {
+    height: 104px;
+    line-height: 88px;
+  }
 }
 
 .calculator__button--equal:active {

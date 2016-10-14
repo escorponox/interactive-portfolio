@@ -72,7 +72,7 @@
   calculator.equal = function (arr) {
     if (isNewOperand(arr) || arr[arr.length - 1] === '.') return arr;
     const screenString = calculator.displayScreen(arr);
-    return [eval(screenString).toString()];
+    return [parseFloat(eval(screenString)).toPrecision(10).toString()];
   };
 
   calculator.displayScreen = function (arr) {

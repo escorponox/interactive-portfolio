@@ -107,9 +107,9 @@
     <em>Modern Frontend Developer</em>. Building them from scratch has helped me to develop a solid HTML5 and CSS3
     basis.</p>
   <div class="section__content o-center-margin o-center-container">
-    <input type="radio" checked class="vertical-tab__radio o-display-none" id="tab-radio1" name="tab">
+    <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio1" name="tab">
     <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio2" name="tab">
-    <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio3" name="tab">
+    <input type="radio" checked class="vertical-tab__radio o-display-none" id="tab-radio3" name="tab">
     <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio4" name="tab">
     <input type="radio" class="vertical-tab__radio o-display-none" id="tab-radio5" name="tab">
 
@@ -413,10 +413,10 @@
       <label for="tab-radio3" class="accordion">Kids Calculator</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
-          <input type="radio" class="c-carousel__radio o-display-none" checked id="car03-item1" name="car03">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item1" name="car03">
           <input type="radio" class="c-carousel__radio o-display-none" id="car03-item2" name="car03">
           <input type="radio" class="c-carousel__radio o-display-none" id="car03-item3" name="car03">
-          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item4" name="car03">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item4" name="car03" checked>
           <div class="c-carousel__item-container">
             <div class="c-carousel__item">
               <img class="c-carousel__item__image" src="assets/images/calc-1.png"/>
@@ -431,7 +431,7 @@
               <div class="c-carousel-item__content">
                 <div id="calculator" class="calculator">
                   <div class="screen">
-                    <input id="screen" class="calculator__screen" readonly value="0">
+                    <input id="screen" class="calculator__screen" readonly maxlength="12" value="0">
                   </div>
                   <div class="button-row">
                     <div id="number7" class="calculator__button calculator__button--20 calculator__button--number">7
