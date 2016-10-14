@@ -5,8 +5,9 @@
 }
 
 .section__img {
-  padding: 0 $base-spacing-unit;
+  display: block;
   margin-bottom: $base-spacing-unit;
+  padding: 0 $base-spacing-unit;
 }
 
 .section__paragraph {

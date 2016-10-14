@@ -53,8 +53,12 @@
     border-radius: 0 $base-radius $base-radius 0;
     height: 48rem;
     margin: 0;
-    max-width: 48rem;
+    max-width: 32rem;
     padding: $base-spacing-unit;
+  }
+
+  @include mq($mq-desktop) {
+    max-width: 48rem;
   }
 }
 

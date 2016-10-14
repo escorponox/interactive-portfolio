@@ -10,6 +10,8 @@
   <script src="scripts/signup-form.js"></script>
   <script src="scripts/questionnaire.js"></script>
   <script src="scripts/color.js"></script>
+  <script src="scripts/calculator-utils.js"></script>
+  <script src="scripts/calculator.js"></script>
   <title>Carlos Coves - Interactive Portfolio</title>
 </head>
 <body>
@@ -85,7 +87,7 @@
 
 <section id="about">
   <h1 class="section__title">About Me</h1>
-  <img class="section__img" src="assets/images/me.png"/>
+  <img class="section__img o-center-margin" src="assets/images/me.png"/>
   <p class="section__paragraph o-center-margin">I am a former industrial engineer from Spain. I love computers since I
     was a child. And this love has led me to become a web developer.</p>
   <p class="section__paragraph o-center-margin">In my early days as Java developer, I have been lucky to met an Agile
@@ -128,10 +130,10 @@
           <input type="radio" class="c-carousel__radio o-display-none" id="car01-item3" name="carr01">
           <div class="c-carousel__item-container">
             <div class="c-carousel__item">
-              <img src="assets/images/sidebar.png"/>
+              <img class="c-carousel__item__image" src="assets/images/sidebar.png"/>
             </div>
             <div class="c-carousel__item">
-              <img src="assets/images/sidebar-2.png"/>
+              <img class="c-carousel__item__image" src="assets/images/sidebar-2.png"/>
             </div>
             <div class="c-carousel__item">
               <div class="c-carousel__item__content">
@@ -330,7 +332,7 @@
                               aria-live="polite"></span>
                       </div>
                     </div>
-                    <div class="coves-form__input-container--row coves-form__input-container--center-flex-direction">
+                    <div class="coves-form__input-container--row">
                       <input type="submit" class="button" value="Submit" tabindex="3">
                     </div>
                     <div class="coves-form__input-container--row">
@@ -414,35 +416,93 @@
           <input type="radio" class="c-carousel__radio o-display-none" checked id="car03-item1" name="car03">
           <input type="radio" class="c-carousel__radio o-display-none" id="car03-item2" name="car03">
           <input type="radio" class="c-carousel__radio o-display-none" id="car03-item3" name="car03">
+          <input type="radio" class="c-carousel__radio o-display-none" id="car03-item4" name="car03">
           <div class="c-carousel__item-container">
             <div class="c-carousel__item">
-              <img src="assets/images/calc-1.png"/>
+              <img class="c-carousel__item__image" src="assets/images/calc-1.png"/>
             </div>
             <div class="c-carousel__item">
-              <img src="assets/images/calc-2.png"/>
+              <img class="c-carousel__item__image" src="assets/images/calc-2.png"/>
             </div>
             <div class="c-carousel__item">
-              <img src="assets/images/calc-3.png"/>
+              <img class="c-carousel__item__image" src="assets/images/calc-3.png"/>
+            </div>
+            <div class="c-carousel__item">
+              <div class="c-carousel-item__content">
+                <div id="calculator" class="calculator">
+                  <div class="screen">
+                    <input id="screen" class="calculator__screen" readonly value="0">
+                  </div>
+                  <div class="button-row">
+                    <div id="number7" class="calculator__button calculator__button--20 calculator__button--number">7
+                    </div>
+                    <div id="number8" class="calculator__button calculator__button--20 calculator__button--number">8
+                    </div>
+                    <div id="number9" class="calculator__button calculator__button--20 calculator__button--number">9
+                    </div>
+                    <div id="divide" class="calculator__button calculator__button--20 calculator__button--sign">/</div>
+                    <div id="del" class="calculator__button calculator__button--20 calculator__button--clear-del">DEL
+                    </div>
+                  </div>
+                  <div class="button-row">
+                    <div id="number4" class="calculator__button calculator__button--20 calculator__button--number">4
+                    </div>
+                    <div id="number5" class="calculator__button calculator__button--20 calculator__button--number">5
+                    </div>
+                    <div id="number6" class="calculator__button calculator__button--20 calculator__button--number">6
+                    </div>
+                    <div id="multiply" class="calculator__button calculator__button--20 calculator__button--sign">*
+                    </div>
+                    <div id="clear" class="calculator__button calculator__button--20 calculator__button--clear-del">C
+                    </div>
+                  </div>
+                  <div class="button-row">
+                    <div id="number1" class="calculator__button calculator__button--20 calculator__button--number">1
+                    </div>
+                    <div id="number2" class="calculator__button calculator__button--20 calculator__button--number">2
+                    </div>
+                    <div id="number3" class="calculator__button calculator__button--20 calculator__button--number">3
+                    </div>
+                    <div id="minus" class="calculator__button calculator__button--20 calculator__button--sign">-</div>
+                  </div>
+                  <div id="equal" class="calculator__button calculator__button--20 calculator__button--equal">=</div>
+                  <div class="button-row">
+                    <div id="number0" class="calculator__button calculator__button--40 calculator__button--number">0
+                    </div>
+                    <div id="number-point" class="calculator__button calculator__button--20 calculator__button--number">
+                      .
+                    </div>
+                    <div id="plus" class="calculator__button calculator__button--20 calculator__button--sign">+</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <label for="car03-item2" class="c-carousel__right item-1"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
-            <label for="car03-item3" class="c-carousel__left item-1"><span
+            <label for="car03-item4" class="c-carousel__left item-1"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
             <label for="car03-item3" class="c-carousel__right item-2"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
             <label for="car03-item1" class="c-carousel__left item-2"><span
                 class="fa fa-chevron-left fa-2x"></span></label>
-            <label for="car03-item1" class="c-carousel__right item-3"><span
+            <label for="car03-item4" class="c-carousel__right item-3"><span
                 class="fa fa-chevron-right fa-2x"></span></label>
             <label for="car03-item2" class="c-carousel__left item-3"><span
-                class="fa fa-chevron-left fa-2x"></span></label></div>
+                class="fa fa-chevron-left fa-2x"></span></label>
+            <label for="car03-item1" class="c-carousel__right item-4"><span
+                class="fa fa-chevron-right fa-2x"></span></label>
+            <label for="car03-item3" class="c-carousel__left item-4"><span
+                class="fa fa-chevron-left fa-2x"></span></label>
+          </div>
           <ul class="c-carousel__dot-list">
             <li class="c-carousel__dot-list__item"><label for="car03-item1" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
             <li class="c-carousel__dot-list__item"><label for="car03-item2" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
             <li class="c-carousel__dot-list__item"><label for="car03-item3" class="c-carousel__dot-list__dot"><span
+                class="fa fa-circle"></span></label></li>
+            <li class="c-carousel__dot-list__item"><label for="car03-item4" class="c-carousel__dot-list__dot"><span
                 class="fa fa-circle"></span></label></li>
           </ul>
         </div>
@@ -467,13 +527,13 @@
           <input type="radio" class="c-carousel__radio o-display-none" id="car04-item3" name="car04">
           <div class="c-carousel__item-container">
             <div class="c-carousel__item">
-              <img src="assets/images/cart-1.png"/>
+              <img class="c-carousel__item__image" src="assets/images/cart-1.png"/>
             </div>
             <div class="c-carousel__item">
-              <img src="assets/images/cart-2.png"/>
+              <img class="c-carousel__item__image" src="assets/images/cart-2.png"/>
             </div>
             <div class="c-carousel__item">
-              <img src="assets/images/cart-3.png"/>
+              <img class="c-carousel__item__image" src="assets/images/cart-3.png"/>
             </div>
 
             <label for="car04-item2" class="c-carousel__right item-1"><span
@@ -521,13 +581,13 @@
           <input type="radio" class="c-carousel__radio o-display-none" id="car05-item3" name="car05">
           <div class="c-carousel__item-container">
             <div class="c-carousel__item">
-              <img src="assets/images/component-1.gif"/>
+              <img class="c-carousel__item__image" src="assets/images/component-1.gif"/>
             </div>
             <div class="c-carousel__item">
-              <img src="assets/images/component-2.gif"/>
+              <img class="c-carousel__item__image" src="assets/images/component-2.gif"/>
             </div>
             <div class="c-carousel__item">
-              <img src="assets/images/component-3.gif"/>
+              <img class="c-carousel__item__image" src="assets/images/component-3.gif"/>
             </div>
 
             <label for="car05-item2" class="c-carousel__right item-1"><span
