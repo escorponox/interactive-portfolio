@@ -1,11 +1,10 @@
 .c-accordion {
   box-shadow: 0 2px 2px $color-grey;
   transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  align-items: center;
   background-color: $color-background;
   border: 1px solid $color-grey;
   cursor: pointer;
-  display: flex;
+  @include flex-container();
   @include font-size(20px);
   padding: 1rem;
   user-select: none;

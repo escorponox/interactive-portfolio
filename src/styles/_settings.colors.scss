@@ -15,16 +15,19 @@ $color-indigo: #9c60e6;
 
 $color-red: #fb5e5e;
 
-$color-bar-1: #FFAC41;
-$color-bar-2: #38BAF0;
-$color-bar-3: #69D12B;
-$color-bar-4: #FA8BB0;
-$color-bar-5: #EFE211;
-$color-bar-alt-1: #9FCD56;
-$color-bar-alt-2: #3BC693;
-$color-bar-alt-3: #4CC1F1;
-$color-bar-alt-4: #8D9DFF;
-$color-bar-alt-5: #CD98FE;
+$bar-color-map: (
+        2: #FFAC41,
+        3: #38BAF0,
+        4: #69D12B,
+        5: #FA8BB0,
+        6: #EFE211);
+
+$bar-color-map-alt: (
+        2: #9FCD56,
+        3: #3BC693,
+        4: #4CC1F1,
+        5: #8D9DFF,
+        6: #CD98FE);
 
 $color-alpha-dark: rgba(0, 0, 0, .7);
 $color-alpha: rgba(50, 50, 50, .4);

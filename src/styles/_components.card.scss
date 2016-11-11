@@ -1,5 +1,4 @@
 .c-card-container {
-  display: block;
   height: 375px;
   padding: $base-height-unit;
   width: 300px;
@@ -113,27 +112,20 @@
 }
 
 .c-card__front__media {
-  display: flex;
-  flex-direction: column;
+  @include flex-container(column, stretch, space-around);
   flex-grow: 1;
-  justify-content: space-around;
-  align-items: stretch;
 
   @include mq($mq-tablet) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-container($spacing: space-between);
   }
 }
 
 .c-card__front__media__encyclopedia {
   font-weight: 600;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  @include flex-container(column, stretch, center);
   padding-left: 50px;
   min-height: 46px;
-  justify-content: center;
 }
 
 .c-card__front__media__encyclopedia-icon {

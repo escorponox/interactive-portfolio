@@ -11,13 +11,11 @@
 }
 
 .vertical-tab__label {
-  align-items: center;
+  @include flex-container($spacing: flex-end);
   border-radius: 4px 0 0 4px;
   box-sizing: border-box;
   cursor: pointer;
-  display: flex;
   height: 4rem;
-  justify-content: flex-end;
   padding: 1em;
   text-align: right;
   transition: background-color 0.2s ease-in;
@@ -33,14 +31,11 @@
   }
 }
 
-.vertical-tab__radio:checked:nth-of-type(1) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(1),
-.vertical-tab__radio:checked:nth-of-type(2) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(2),
-.vertical-tab__radio:checked:nth-of-type(3) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(3),
-.vertical-tab__radio:checked:nth-of-type(4) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(4),
-.vertical-tab__radio:checked:nth-of-type(5) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(5),
-.vertical-tab__radio:checked:nth-of-type(6) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(6) {
-  background-color: $color-white;
-  color: $color-blue;
+@each $i in 1, 2, 3, 4, 5, 6 {
+  .vertical-tab__radio:checked:nth-of-type(#{$i}) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(#{$i}) {
+    background-color: $color-white;
+    color: $color-blue;
+  }
 }
 
 .vertical-tab__content {
@@ -78,22 +73,17 @@
   }
 }
 
-.vertical-tab__radio:checked:nth-of-type(1) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(1),
-.vertical-tab__radio:checked:nth-of-type(2) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(2),
-.vertical-tab__radio:checked:nth-of-type(3) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(3),
-.vertical-tab__radio:checked:nth-of-type(4) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(4),
-.vertical-tab__radio:checked:nth-of-type(5) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(5),
-.vertical-tab__radio:checked:nth-of-type(6) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(6) {
+@each $i in 1, 2, 3, 4, 5, 6 {
+  .vertical-tab__radio:checked:nth-of-type(#{$i}) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(#{$i}) {
 
-  @media only screen and (max-width: 699px) {
-    margin: $base-spacing-unit 0;
-    padding: $base-spacing-unit;
-    max-height: 40rem;
-  }
+    @media only screen and (max-width: 699px) {
+      margin: $base-spacing-unit 0;
+      padding: $base-spacing-unit;
+      max-height: 40rem;
+    }
 
-  @include mq($mq-landscape) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mq($mq-landscape) {
+      @include flex-container(column);
+    }
   }
 }

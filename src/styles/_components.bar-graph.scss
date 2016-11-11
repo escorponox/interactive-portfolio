@@ -8,11 +8,8 @@
 }
 
 .row-labels {
-  display: flex;
-  flex-direction: column;
+  @include flex-container(column, flex-end, flex-end);
   padding-right: 1rem;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .row-labels__label {
@@ -23,12 +20,10 @@
 
 .bar-graph {
   border-bottom: 1px solid $color-grey;
-  display: flex;
+  @include flex-container(row, flex-end, space-between);
+  flex-wrap: nowrap;
   margin-bottom: 10em;
   padding-right: 1rem;
-  flex-wrap: nowrap;
-  align-items: flex-end;
-  justify-content: space-between;
 
   @include mq($mq-landscape) {
     margin: 0 1em 10em;
@@ -51,58 +46,44 @@
   min-width: 2em;
   position: relative;
 
-  &:nth-of-type(2) {
-    background-color: $color-bar-1;
+  @each $index in 2,3,4,5,6 {
+    &:nth-of-type(#{$index}) {
+      background-color: map-get($bar-color-map, $index);
+    }
   }
+}
 
-  &:nth-of-type(3) {
-    background-color: $color-bar-2;
+.bar-graph__col--alt-color {
+  @extend .bar-graph__col;
+  @each $index in 2,3,4,5,6 {
+    &:nth-of-type(#{$index}) {
+      background-color: map-get($bar-color-map-alt, $index);
+    }
   }
+}
 
-  &:nth-of-type(4) {
-    background-color: $color-bar-3;
+$bar-height: (
+        learning: 1.5em,
+        competent: 4.5em,
+        proficient: 7.5em,
+        expert: 10.5em);
+
+@each $key, $value in $bar-height {
+  .bar-graph__col--#{$key} {
+    @extend .bar-graph__col;
+    height: $value;
+
+    .bar-graph__col__tooltip {
+      bottom: $value - 1em;
+    }
+
+    &:hover {
+      .bar-graph__col__tooltip {
+        bottom: $value + 1em;
+        opacity: 1;
+      }
+    }
   }
-
-  &:nth-of-type(5) {
-    background-color: $color-bar-4;
-  }
-
-  &:nth-of-type(6) {
-    background-color: $color-bar-5;
-  }
-
-}
-
-.bar-graph__col--alt-color:nth-of-type(2) {
-  background-color: $color-bar-alt-1;
-}
-
-.bar-graph__col--alt-color:nth-of-type(3) {
-  background-color: $color-bar-alt-2;
-}
-
-.bar-graph__col--alt-color:nth-of-type(4) {
-  background-color: $color-bar-alt-3;
-}
-
-.bar-graph__col--alt-color:nth-of-type(5) {
-  background-color: $color-bar-alt-4;
-}
-
-.bar-graph__col--alt-color:nth-of-type(6) {
-  background-color: $color-bar-alt-5;
-}
-
-.bar-graph__col--competent {
-  height: 4.5em;
-}
-
-.bar-graph__col--proficient {
-  height: 7.5em;
-}
-
-.bar-graph__col--expert {
-  height: 10.5em;
 }
 
 .bar-graph__col__tooltip,
@@ -134,43 +115,6 @@
   transform: translate(-50%);
   z-index: 10;
 }
-
-.bar-graph__col .bar-graph__col__tooltip {
-  bottom: .5em;
-}
-
-.bar-graph__col.bar-graph__col--competent .bar-graph__col__tooltip {
-  bottom: 3.5em;
-}
-
-.bar-graph__col.bar-graph__col--proficient .bar-graph__col__tooltip {
-  bottom: 6.5em;
-}
-
-.bar-graph__col.bar-graph__col--expert .bar-graph__col__tooltip {
-  bottom: 9.5em;
-}
-
-.bar-graph__col:hover .bar-graph__col__tooltip {
-  opacity: 1;
-  bottom: 2.5em;
-}
-
-.bar-graph__col:hover.bar-graph__col--competent .bar-graph__col__tooltip {
-  opacity: 1;
-  bottom: 5.5em;
-}
-
-.bar-graph__col:hover.bar-graph__col--proficient .bar-graph__col__tooltip {
-  opacity: 1;
-  bottom: 8.5em;
-}
-
-.bar-graph__col:hover.bar-graph__col--expert .bar-graph__col__tooltip {
-  opacity: 1;
-  bottom: 11.5em;
-}
-
 
 .bar-graph__col__tooltip:after {
   border-left: 10px solid transparent;

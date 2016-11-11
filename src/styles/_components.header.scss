@@ -1,8 +1,6 @@
 .header__section {
-  align-items: center;
-  display: flex;
+  @include flex-container(row, center, center);
   flex-basis: 33%;
-  justify-content: center;
 
   &:nth-of-type(2),
   &:nth-of-type(3) {

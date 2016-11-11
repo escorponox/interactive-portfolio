@@ -111,7 +111,6 @@
   &:checked + .c-menu {
     opacity: 1;
     transition: opacity 0.5s;
-    -webkit-transition: opacity 0.5s;
     visibility: visible;
 
     & .c-menu__box {
