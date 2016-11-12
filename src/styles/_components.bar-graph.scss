@@ -46,7 +46,7 @@
   min-width: 2em;
   position: relative;
 
-  @each $index in 2,3,4,5,6 {
+  @for $index from 2 through 6 {
     &:nth-of-type(#{$index}) {
       background-color: map-get($bar-color-map, $index);
     }
@@ -55,7 +55,7 @@
 
 .bar-graph__col--alt-color {
   @extend .bar-graph__col;
-  @each $index in 2,3,4,5,6 {
+  @for $index from 2 through 6 {
     &:nth-of-type(#{$index}) {
       background-color: map-get($bar-color-map-alt, $index);
     }

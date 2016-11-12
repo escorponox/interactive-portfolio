@@ -31,13 +31,6 @@
   }
 }
 
-@each $i in 1, 2, 3, 4, 5, 6 {
-  .vertical-tab__radio:checked:nth-of-type(#{$i}) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(#{$i}) {
-    background-color: $color-white;
-    color: $color-blue;
-  }
-}
-
 .vertical-tab__content {
   background-color: $color-white;
   border-radius: $base-radius;
@@ -73,7 +66,12 @@
   }
 }
 
-@each $i in 1, 2, 3, 4, 5, 6 {
+@for $i from 1 through 6 {
+  .vertical-tab__radio:checked:nth-of-type(#{$i}) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(#{$i}) {
+    background-color: $color-white;
+    color: $color-blue;
+  }
+
   .vertical-tab__radio:checked:nth-of-type(#{$i}) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(#{$i}) {
 
     @media only screen and (max-width: 699px) {

@@ -43,12 +43,6 @@
   right: 0;
 }
 
-@each $i in 1, 2, 3, 4 {
-  .c-carousel__radio:checked:nth-of-type(#{$i}) ~ .c-carousel__item-container > .item-#{$i} {
-    display: block;
-  }
-}
-
 .c-carousel__item {
   @include flex-container();
   opacity: 0;
@@ -73,21 +67,6 @@
   margin: auto 0;
 }
 
-@each $i in 1, 2, 3, 4 {
-  .c-carousel__radio:checked:nth-of-type(#{$i}) ~ .c-carousel__item-container > .c-carousel__item:nth-of-type(#{$i}) {
-    opacity: 1;
-    max-width: 100%;
-  }
-}
-
-.c-carousel__radio:checked:nth-last-of-type(1) ~ .c-carousel__item-container > .c-carousel__item:nth-of-type(1) {
-  order: 1;
-}
-
-.c-carousel__radio:checked:nth-of-type(1) ~ .c-carousel__item-container > .c-carousel__item:nth-last-of-type(1) {
-  order: -1;
-}
-
 .c-carousel__dot-list {
   list-style: none;
   margin-top: $base-height-unit;
@@ -109,12 +88,6 @@
   }
 }
 
-@each $i in 1, 2, 3, 4 {
-  .c-carousel__radio:checked:nth-of-type(#{$i}) ~ .c-carousel__dot-list .c-carousel__dot-list__item:nth-child(#{$i}) {
-    color: $color-blue;
-  }
-}
-
 .c-static-info {
   align-self: flex-start;
 }
@@ -131,6 +104,27 @@
   margin-right: $base-spacing-unit;
 }
 
+@for $i from 1 through 4 {
+  .c-carousel__radio:checked:nth-of-type(#{$i}) ~ .c-carousel__item-container > .item-#{$i} {
+    display: block;
+  }
 
+  .c-carousel__radio:checked:nth-of-type(#{$i}) ~ .c-carousel__item-container > .c-carousel__item:nth-of-type(#{$i}) {
+    opacity: 1;
+    max-width: 100%;
+  }
+
+  .c-carousel__radio:checked:nth-of-type(#{$i}) ~ .c-carousel__dot-list .c-carousel__dot-list__item:nth-child(#{$i}) {
+    color: $color-blue;
+  }
+}
+
+.c-carousel__radio:checked:nth-last-of-type(1) ~ .c-carousel__item-container > .c-carousel__item:nth-of-type(1) {
+  order: 1;
+}
+
+.c-carousel__radio:checked:nth-of-type(1) ~ .c-carousel__item-container > .c-carousel__item:nth-last-of-type(1) {
+  order: -1;
+}
 
 
