@@ -50,15 +50,35 @@
   transform: rotateX(180deg);
 }
 
+@keyframes flip {
+  0% {
+    transform: rotateZ(15deg);
+  }
+  50% {
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    transform: rotateZ(15deg);
+  }
+}
+
 .c-card__flip-label {
   cursor: pointer;
   position: absolute;
   right: $base-height-unit;
   top: $base-spacing-unit;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 
   &:hover .flip-line {
     filter: url(#blur-filter);
     -webkit-filter: url(#blur-filter);
+  }
+
+  svg {
+    transform-style: preserve-3d;
+    animation: flip 800ms ease-in-out 0ms infinite;
+
   }
 
   @include mq($mq-landscape) {
