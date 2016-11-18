@@ -40,10 +40,14 @@
 .header__nav__link {
   color: $color-blue-light;
   @include font-size(20px);
-  margin: 0 .25em;
+  margin: 0 .5em;
 
   &:hover {
-    color: #ffffff;
+    color: $color-white;
+  }
+
+  @include mq($mq-desktop) {
+    margin: 0 1em;
   }
 }
 
