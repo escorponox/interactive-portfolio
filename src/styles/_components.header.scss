@@ -46,7 +46,7 @@
     color: $color-white;
   }
 
-  @include mq($mq-desktop) {
+  @include mq(1100px) {
     margin: 0 1em;
   }
 }
