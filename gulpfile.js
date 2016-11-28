@@ -71,7 +71,7 @@ gulp.task('watch', function () {
   gulp.watch('src/assets/**/*', ['images']);
 });
 
-gulp.task('serve', function () {
+gulp.task('serve', ['styles-dev'], function () {
   gulp.watch('src/styles/**/*.scss', ['styles-dev']);
 
   bs({
