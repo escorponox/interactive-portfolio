@@ -1,4 +1,5 @@
 .header__section {
+  color: $color-blue-light;
   @include flex-container(row, center, center);
   flex-basis: 33%;
 

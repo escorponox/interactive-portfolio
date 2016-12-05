@@ -12,6 +12,7 @@
   <script src="scripts/color.js"></script>
   <script src="scripts/calculator-utils.js"></script>
   <script src="scripts/calculator.js"></script>
+  <script src="scripts/smooth-scroll.js"></script>
   <title>Carlos Coves - Interactive Portfolio</title>
 </head>
 <body>
@@ -22,25 +23,28 @@
     <div class="c-menu__header">Carlos Coves</div>
     <nav class="c-menu__nav">
       <ul>
-        <li><a class="c-menu__nav__link" href="#about">About</a></li>
+        <li><a class="c-menu__nav__link section-link" href="#about">About</a></li>
         <li>
           <input id="sub-menu-toggle" type="checkbox" class="c-menu__nav__sub-menu-toggle o-display-none">
-          <label for="sub-menu-toggle" class="c-menu__nav__link" href="#projects">Projects</label>
+          <label for="sub-menu-toggle" class="c-menu__nav__link section-link" href="#projects">Projects</label>
           <ul class="c-menu__nav__sub-menu">
-            <li><label for="tab-radio1" class="c-menu__nav__sub-menu__link">Sidebar</label></li>
-            <li><label for="tab-radio2" class="c-menu__nav__sub-menu__link">Forms</label></li>
-            <li><label for="tab-radio3" class="c-menu__nav__sub-menu__link">Kids Calculator</label></li>
-            <li><label for="tab-radio4" class="c-menu__nav__sub-menu__link">Shopping Cart</label></li>
-            <li><label for="tab-radio5" class="c-menu__nav__sub-menu__link">UI Components</label></li>
+            <li><label for="tab-radio1" class="c-menu__nav__sub-menu__link accordion-label-menu">Sidebar</label></li>
+            <li><label for="tab-radio2" class="c-menu__nav__sub-menu__link accordion-label-menu">Forms</label></li>
+            <li><label for="tab-radio3" class="c-menu__nav__sub-menu__link accordion-label-menu">Kids Calculator</label></li>
+            <li><label for="tab-radio4" class="c-menu__nav__sub-menu__link accordion-label-menu">Shopping Cart</label></li>
+            <li><label for="tab-radio5" class="c-menu__nav__sub-menu__link accordion-label-menu">UI Components</label></li>
           </ul>
         </li>
-        <li><a class="c-menu__nav__link" href="#skills">Skills</a></li>
-        <li><a class="c-menu__nav__link" href="#articles">Articles</a></li>
-        <li><a class="c-menu__nav__link" href="#contact">Contact</a></li>
+        <li><a class="c-menu__nav__link section-link" href="#skills">Skills</a></li>
+        <li><a class="c-menu__nav__link section-link" href="#articles">Articles</a></li>
+        <li><a class="c-menu__nav__link section-link" href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="c-menu__footer">2016 - Carlos Coves Prieto</div>
   </div>
+</div>
+<div id="scroll-to-top" class="c-to-top o-icon-button--circle">
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <header>
   <div class="header__section">
@@ -54,11 +58,11 @@
   </div>
   <div class="header__section">
     <nav class="header__nav">
-      <a class="header__nav__link" href="#about">About</a>
-      <a class="header__nav__link" href="#projects">Projects</a>
-      <a class="header__nav__link" href="#skills">Skills</a>
-      <a class="header__nav__link" href="#articles">Articles</a>
-      <a class="header__nav__link" href="#contact">Contact</a>
+      <a class="header__nav__link section-link" href="#about">About</a>
+      <a class="header__nav__link section-link" href="#projects">Projects</a>
+      <a class="header__nav__link section-link" href="#skills">Skills</a>
+      <a class="header__nav__link section-link" href="#articles">Articles</a>
+      <a class="header__nav__link section-link" href="#contact">Contact</a>
     </nav>
   </div>
   <div class="header__section">
@@ -91,8 +95,8 @@
   <p class="section__paragraph o-center-margin">I am a former industrial engineer from Spain. I love computers since I
     was a child. And this love has led me to become a web developer.</p>
   <p class="section__paragraph o-center-margin">In my early days as Java developer, I have been lucky to met an Agile
-    developer who has introduced me in the world of Test Driven Development, Clean Code and SOLID principles. He
-    probably does not remember me, but I must express my gratitude to that developer. Thank you so much Ignasi!</p>
+    developer who has introduced me in the world of Test Driven Development, Clean Code and SOLID principles. Thank you
+    so much!</p>
   <p class="section__paragraph o-center-margin">Right now, <em>Learn.Modern Developer</em> is helping me to become a
     Fullstack Developer. This portfolio, built without a single line of JavaScript (except for the embedded projects),
     is a proof of how we can create pleasant user experiences by just mastering HTML and CSS, the basic frontend
@@ -121,7 +125,7 @@
     </div>
 
     <div class="vertical-tab__content">
-      <label for="tab-radio1" class="c-accordion">Sidebar</label>
+      <label for="tab-radio1" class="c-accordion accordion-label">Sidebar</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
           <input type="radio" class="c-carousel__radio o-display-none" checked id="car01-item1" name="carr01">
@@ -202,7 +206,7 @@
           </p>
         </div>
       </div>
-      <label for="tab-radio2" class="c-accordion">Forms</label>
+      <label for="tab-radio2" class="c-accordion accordion-label">Forms</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
           <input type="radio" class="c-carousel__radio o-display-none" checked id="car02-item1" name="car02">
@@ -217,7 +221,7 @@
                     <div class="icon icon-user"></div>
                     <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
                     <input id="username" class="coves-form__input coves-form__input--required"
-                           type="text" name="username" placeholder="Your username" tabindex="1">
+                           type="text" name="username" placeholder="Your username">
                     <div id="username__error" class="coves-form__error--attached"></div>
                   </div>
                   <label for="first-name" class="coves-form__label">First Name</label>
@@ -225,7 +229,7 @@
                     <span class="icon icon-name"></span>
                     <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
                     <input id="first-name" class="coves-form__input coves-form__input--required"
-                           type="text" name="firstname" maxlength="50" placeholder="Your first name" tabindex="2">
+                           type="text" name="firstname" maxlength="50" placeholder="Your first name">
                     <div id="first-name__error" class="coves-form__error--attached"></div>
                   </div>
                   <label for="last-name" class="coves-form__label">Last Name</label>
@@ -233,7 +237,7 @@
                     <span class="icon icon-name"></span>
                     <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
                     <input id="last-name" class="coves-form__input coves-form__input--required"
-                           type="text" name="lastname" maxlength="50" placeholder="Your last name" tabindex="3">
+                           type="text" name="lastname" maxlength="50" placeholder="Your last name">
                     <div id="last-name__error" class="coves-form__error--attached"></div>
                   </div>
                   <label for="email" class="coves-form__label">Email Address</label>
@@ -241,7 +245,7 @@
                     <span class="icon icon-email"></span>
                     <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
                     <input id="email" class="coves-form__input coves-form__input--required"
-                           type="text" name="email" placeholder="Your e-mail address" tabindex="4">
+                           type="text" name="email" placeholder="Your e-mail address">
                     <div id="email__error" class="coves-form__error--attached"></div>
                   </div>
                   <label for="birth" class="coves-form__label">Date of Birth</label>
@@ -249,7 +253,7 @@
                     <span class="icon icon-date"></span>
                     <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
                     <input id="birth" class="coves-form__input coves-form__input--required"
-                           type="text" name="birth" placeholder="Your date of birth" tabindex="5">
+                           type="text" name="birth" placeholder="Your date of birth">
                     <div id="birth__error" class="coves-form__error--attached"></div>
                   </div>
                   <label for="pass" class="coves-form__label">Password</label>
@@ -257,7 +261,7 @@
                     <span class="icon icon-pass"></span>
                     <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
                     <input id="pass" class="coves-form__input coves-form__input--required"
-                           type="password" name="pass" tabindex="6">
+                           type="password" name="pass">
                     <div id="pass__error" class="coves-form__error--attached"></div>
                   </div>
                   <label for="pass-repeat" class="coves-form__label">Repeat Password</label>
@@ -265,11 +269,11 @@
                     <span class="icon icon-pass"></span>
                     <span class="coves-form-ok fa fa-thumbs-o-up fa-lg" aria-hidden="true"></span>
                     <input id="pass-repeat" class="coves-form__input coves-form__input--required"
-                           type="password" name="pass-repeat" tabindex="7">
+                           type="password" name="pass-repeat">
                     <div id="pass-repeat__error" class="coves-form__error--attached"></div>
                   </div>
                   <div class="coves-form__input-container--row t-center-main">
-                    <input type="submit" class="button" value="Submit" tabindex="8">
+                    <input type="submit" class="button" value="Submit">
                   </div>
                   <div class="coves-form__input-container--row t-center-main">
                     <div id="signup__error-box" class="coves-form__error-box">All inputs are required</div>
@@ -283,8 +287,8 @@
                   <label class="coves-form__label">How did you find this page?</label>
                   <div class="coves-form__radio-set">
                     <div class="coves-form__radio-container">
-                      <input id="magazine" class="coves-form__radio-container__input" type="radio" name="find" value="magazine"
-                             tabindex="1">
+                      <input id="magazine" class="coves-form__radio-container__input" type="radio" name="find"
+                             value="magazine">
                       <label for="magazine" class="coves-form__radio-container__label o-cursor-pointer">Magazine</label>
                     </div>
                     <div class="coves-form__radio-container">
@@ -292,25 +296,29 @@
                       <label for="tv" class="coves-form__radio-container__label o-cursor-pointer">TV</label>
                     </div>
                     <div class="coves-form__radio-container">
-                      <input id="google" class="coves-form__radio-container__input" type="radio" name="find" value="google">
+                      <input id="google" class="coves-form__radio-container__input" type="radio" name="find"
+                             value="google">
                       <label for="google" class="coves-form__radio-container__label o-cursor-pointer">Google Ad</label>
                     </div>
                     <div class="coves-form__radio-container">
-                      <input id="friend" class="coves-form__radio-container__input" type="radio" name="find" value="friend">
+                      <input id="friend" class="coves-form__radio-container__input" type="radio" name="find"
+                             value="friend">
                       <label for="friend" class="coves-form__radio-container__label o-cursor-pointer">Friend</label>
                     </div>
                     <div class="coves-form__radio-container">
-                      <input id="other" class="coves-form__radio-container__input" type="radio" name="find" value="other">
+                      <input id="other" class="coves-form__radio-container__input" type="radio" name="find"
+                             value="other">
                       <label for="other" class="coves-form__radio-container__label o-cursor-pointer">Other</label>
                     </div>
                     <div class="coves-form__input-container--column">
                       <input id="other-text" class="coves-form__input coves-form__radio-container__text" type="text"
-                             name="other-text" disabled placeholder="Other media" tabindex="2">
-                      <div id="other-text__error" class="coves-form__error--attached coves-form__radio-container__text"></div>
+                             name="other-text" disabled placeholder="Other media">
+                      <div id="other-text__error"
+                           class="coves-form__error--attached coves-form__radio-container__text"></div>
                     </div>
                   </div>
                   <div class="coves-form__input-container--row t-center-main">
-                    <input type="submit" class="button" value="Submit" tabindex="3">
+                    <input type="submit" class="button" value="Submit">
                   </div>
                   <div class="coves-form__input-container--row t-center-main">
                     <div id="questionnaire__error-box" class="coves-form__error-box"></div>
@@ -383,7 +391,7 @@
           </p>
         </div>
       </div>
-      <label for="tab-radio3" class="c-accordion">Kids Calculator</label>
+      <label for="tab-radio3" class="c-accordion accordion-label">Kids Calculator</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
           <input type="radio" class="c-carousel__radio o-display-none" id="car03-item1" name="car03" checked>
@@ -492,7 +500,7 @@
           </p>
         </div>
       </div>
-      <label for="tab-radio4" class="c-accordion">Shopping Cart</label>
+      <label for="tab-radio4" class="c-accordion accordion-label">Shopping Cart</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
           <input type="radio" class="c-carousel__radio o-display-none" checked id="car04-item1" name="car04">
@@ -557,7 +565,7 @@
           </p>
         </div>
       </div>
-      <label for="tab-radio5" class="c-accordion">UI Components</label>
+      <label for="tab-radio5" class="c-accordion accordion-label">UI Components</label>
       <div class="vertical-tab__content__project">
         <div class="c-carousel">
           <input type="radio" class="c-carousel__radio o-display-none" id="car05-item1" name="car05" checked>

@@ -1,0 +1,19 @@
+.c-to-top {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  bottom: $base-spacing-unit / 2;
+  right: $base-spacing-unit / 2;
+  background-color: $color-blue;
+  box-shadow: 2px 2px 2px rgba(21, 73, 152, 0.5);
+  transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
+  z-index: 90;
+}
+
+.c-to-top--show {
+  @include mq($mq-landscape) {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
