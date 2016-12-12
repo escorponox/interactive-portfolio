@@ -9,7 +9,7 @@
     var scrollToTopButton = document.querySelector('#scroll-to-top');
 
     window.addEventListener('scroll', function (event) {
-      if (document.body.scrollTop > 200) {
+      if (window.pageYOffset > 200) {
         scrollToTopButton.classList.add('c-to-top--show');
       }
       else {
@@ -22,13 +22,13 @@
 
     function smoothScroll(duration, endScroll, offset) {
       var start = null;
-      var initScroll = document.body.scrollTop;
+      var initScroll = window.pageYOffset;
       offset = offset || 0;
 
       function step(timestamp) {
         if (!start) start = timestamp;
         var progress = timestamp - start;
-        document.body.scrollTop = easing(progress, initScroll, endScroll - offset - initScroll, duration);
+        window.scrollTo(0, easing(progress, initScroll, endScroll - offset - initScroll, duration));
         if (progress < duration) {
           window.requestAnimationFrame(step);
         } else {
@@ -42,7 +42,7 @@
       }
 
       function endAnimation() {
-        document.body.scrollTop = endScroll - offset;
+        window.scrollTo(0, endScroll - offset);
       }
 
       window.requestAnimationFrame(step);
