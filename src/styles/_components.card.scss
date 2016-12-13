@@ -71,8 +71,7 @@
   transform-style: preserve-3d;
 
   &:hover .flip-line {
-    filter: url(#blur-filter);
-    -webkit-filter: url(#blur-filter);
+    filter: url("../#blur-filter");
   }
 
   svg {
