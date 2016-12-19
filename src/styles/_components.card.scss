@@ -67,17 +67,55 @@
   position: absolute;
   right: $base-height-unit;
   top: $base-spacing-unit;
-  perspective: 1000px;
-  transform-style: preserve-3d;
+  height: 1.5 * $base-spacing-unit;
+  width: 1.5 * $base-spacing-unit;
+  animation: flip 800ms ease-in-out 0ms infinite;
 
   &:hover .flip-line {
-    filter: url("/#blur-filter");
+    box-shadow: 0 0 3px 2px rgba(255, 255, 255, .5), inset 0 0 3px 2px rgba(255, 255, 255, .5);
   }
 
-  svg {
-    transform-style: preserve-3d;
-    animation: flip 800ms ease-in-out 0ms infinite;
+  .flip-line {
+    position: absolute;
 
+    &:nth-child(1) {
+      top: 2px;
+      left: 2px;
+      height: 32px;
+      width: 32px;
+      border: 2px solid $color-white;
+      border-radius: 2 * $base-radius;
+    }
+
+    &:nth-child(n+2) {
+      height: 5px;
+      border-top: 2px solid $color-white;
+      border-left: 2px solid $color-white;
+    }
+
+    &:nth-child(2) {
+      top: 16px;
+      left: -1px;
+      transform: rotateZ(60deg);
+    }
+
+    &:nth-child(3) {
+      top: 16px;
+      left: 5px;
+      transform: rotateZ(-60deg);
+    }
+
+    &:nth-child(4) {
+      top: 14px;
+      right: -1px;
+      transform: rotateZ(60deg);
+    }
+
+    &:nth-child(5) {
+      top: 14px;
+      right: 5px;
+      transform: rotateZ(-60deg);
+    }
   }
 
   @include mq($mq-landscape) {
