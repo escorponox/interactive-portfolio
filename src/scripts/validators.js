@@ -1,10 +1,13 @@
-(function (root, init) {
+(function (root, factory) {
   // Runtime environment check inspired by Jonathan Chan (cusxio)
-  if (typeof exports === 'object' && typeof module === 'object') {
-    module.exports = init();
-  } else {
-    root.validator = init();
-  }
+  if(typeof exports === 'object' && typeof module === 'object')
+    module.exports = factory();
+  else if(typeof define === 'function' && define.amd)
+    define([], factory);
+  else if(typeof exports === 'object')
+    exports["validator"] = factory();
+  else
+    root["validator"] = factory();
 })(this, function () {
   var validator = {};
 

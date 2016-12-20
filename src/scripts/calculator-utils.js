@@ -1,9 +1,13 @@
-(function (root, init) {
-  if (typeof exports === 'object' && typeof module === 'object') {
-    module.exports = init();
-  } else {
-    root.calculator = init();
-  }
+(function (root, factory) {
+  // Runtime environment check inspired by Jonathan Chan (cusxio)
+  if(typeof exports === 'object' && typeof module === 'object')
+    module.exports = factory();
+  else if(typeof define === 'function' && define.amd)
+    define([], factory);
+  else if(typeof exports === 'object')
+    exports["calculatorUtils"] = factory();
+  else
+    root["calculatorUtils"] = factory();
 })(this, function () {
 
   const calculator = {};

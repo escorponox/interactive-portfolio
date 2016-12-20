@@ -1,3 +1,5 @@
+import throttle from 'lodash.throttle';
+
 (function (document) {
 
   function documentReady(cb) {
@@ -6,28 +8,71 @@
 
   documentReady(function () {
 
-    var scrollToTopButton = document.querySelector('#scroll-to-top');
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    const header = document.querySelector('header');
 
-    window.addEventListener('scroll', function (event) {
-      if (window.pageYOffset > 200) {
-        scrollToTopButton.classList.add('c-to-top--show');
-      }
-      else {
-        scrollToTopButton.classList.remove('c-to-top--show');
-      }
-    });
-
+    window.addEventListener('scroll', throttle(showScrollToTopButton, 50));
     scrollToTopButton.addEventListener('click', smoothScroll.bind(null, 500, 0, 0));
 
+    [].forEach.call(document.querySelectorAll('a.section-link'), (link) => {
+      link.addEventListener('click', function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        const linkHref = event.currentTarget.getAttribute('href');
+        const target = document.querySelector(linkHref);
+        smoothScroll(500, target.offsetTop);
+      })
+    });
+
+    [].forEach.call(document.querySelectorAll('label.section-link'), (link) => {
+      link.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const linkHref = event.currentTarget.getAttribute('href');
+        const target = document.querySelector(linkHref);
+        const forInput = document.querySelector('#' + event.currentTarget.getAttribute('for'));
+        if (!forInput.checked) {
+          smoothScroll(500, target.offsetTop);
+        }
+      })
+    });
+
+    [].forEach.call(document.querySelectorAll('label.accordion-label'), (label) => {
+      label.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const forInput = document.querySelector('#' + event.currentTarget.getAttribute('for'));
+        if (!forInput.checked) {
+          const target = event.currentTarget;
+          setTimeout(function () {
+            smoothScroll(500, target.offsetTop, header.offsetHeight);
+          }, 500);
+        }
+      })
+    });
+
+    [].forEach.call(document.querySelectorAll('label.accordion-label-menu'), (label) => {
+      label.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const labelFor = event.currentTarget.getAttribute('for');
+        const target = document.querySelector('label.accordion-label[for=' + labelFor + ']');
+        setTimeout(function () {
+          smoothScroll(500, target.offsetTop, header.offsetHeight);
+        }, 500);
+
+      })
+    });
+
+    function showScrollToTopButton() {
+      window.pageYOffset > 200 ? scrollToTopButton.classList.add('c-to-top--show') : scrollToTopButton.classList.remove('c-to-top--show');
+    }
 
     function smoothScroll(duration, endScroll, offset) {
-      var start = null;
-      var initScroll = window.pageYOffset;
+      let start = null;
+      const initScroll = window.pageYOffset;
       offset = offset || 0;
 
       function step(timestamp) {
         if (!start) start = timestamp;
-        var progress = timestamp - start;
+        const progress = timestamp - start;
         window.scrollTo(0, easing(progress, initScroll, endScroll - offset - initScroll, duration));
         if (progress < duration) {
           window.requestAnimationFrame(step);
@@ -47,55 +92,6 @@
 
       window.requestAnimationFrame(step);
     }
-
-    [].forEach.call(document.querySelectorAll('a.section-link'), function (link) {
-      link.addEventListener('click', function (event) {
-        event.stopPropagation();
-        event.preventDefault();
-        var linkHref = event.currentTarget.getAttribute('href');
-        var target = document.querySelector(linkHref);
-        smoothScroll(500, target.offsetTop);
-      })
-    });
-
-    [].forEach.call(document.querySelectorAll('label.section-link'), function (link) {
-      link.addEventListener('click', function (event) {
-        event.stopPropagation();
-        var linkHref = event.currentTarget.getAttribute('href');
-        var target = document.querySelector(linkHref);
-        var forInput = document.querySelector('#' + event.currentTarget.getAttribute('for'));
-        if (!forInput.checked) {
-          smoothScroll(500, target.offsetTop);
-        }
-      })
-    });
-
-    [].forEach.call(document.querySelectorAll('label.accordion-label'), function (label) {
-      label.addEventListener('click', function (event) {
-        event.stopPropagation();
-        var forInput = document.querySelector('#' + event.currentTarget.getAttribute('for'));
-        if (!forInput.checked) {
-          var headerOffset = document.querySelector('header').offsetHeight;
-          var target = event.currentTarget;
-          setTimeout(function () {
-            smoothScroll(500, target.offsetTop, headerOffset);
-          }, 500);
-        }
-      })
-    });
-
-    [].forEach.call(document.querySelectorAll('label.accordion-label-menu'), function (label) {
-      label.addEventListener('click', function (event) {
-        event.stopPropagation();
-        var labelFor = event.currentTarget.getAttribute('for');
-        var headerOffset = document.querySelector('header').offsetHeight;
-        var target = document.querySelector('label.accordion-label[for=' + labelFor + ']');
-        setTimeout(function () {
-          smoothScroll(500, target.offsetTop, headerOffset);
-        }, 500);
-
-      })
-    });
 
   });
 })(document);
