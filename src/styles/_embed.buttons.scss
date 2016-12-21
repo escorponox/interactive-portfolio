@@ -1,0 +1,40 @@
+.embed-buttons {
+  @include flex-container(column)
+}
+
+.button {
+  background-color: $color-blue-forms-light;
+  border: 2px outset $color-blue-forms;
+  border-radius: $base-radius;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em;
+  text-align: center;
+  user-select: none;
+
+  &:hover {
+    background-color: $color-blue-forms;
+  }
+
+  &:active {
+    background-color: $color-blue-forms-dark;
+    border-color: $color-blue-forms-dark;
+  }
+
+  @at-root .embed-buttons & {
+    margin: 0.5em 0;
+  }
+}
+
+.button--lg {
+  @include font-size(24px)
+}
+
+.button--md {
+  @include font-size(20px)
+}
+
+.button--sm {
+  @include font-size(16px, 16px);
+}

@@ -76,6 +76,7 @@
   }
 
   .flip-line {
+    display: block;
     position: absolute;
 
     &:nth-child(1) {

@@ -1,81 +1,51 @@
 .sidebar {
-  background-color: #F6F6F6;
-  border: 2px solid #4D4E7F;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  color: #FF5A58;
-  font: 16px "Roboto", sans-serif;
+  background-color: $color-background;
+  border: 2px solid $color-violet;
+  border-radius: $base-radius;
   max-width: 525px;
   min-width: 200px;
-  padding: 1.5em;
+  padding: $base-spacing-unit;
 }
 
 .sidebar__heading {
-  margin: 5px 0;
-}
-
-.sidebar__heading--name {
-  font-weight: normal;
+  color: $color-red;
 }
 
 .sidebar__img {
-  border-radius: 5px;
-  box-sizing: border-box;
-  height: auto;
-  max-width: 100%;
+  float: left;
+  margin: 2%;
+  width: 36%;
+}
+
+.sidebar__img--main {
+  width: 56%;
 }
 
 .sidebar__img--border {
-  border: 2px solid #4D4E7F;
-}
-
-.sidebar__photo-container {
-  box-sizing: border-box;
-  float: left;
-  padding: 5px;
-  width: 40%;
-}
-
-.sidebar__photo-container--main {
-  width: 60%;
-}
-
-.clear-both {
-  clear: both;
+  border-radius: $base-radius;
+  border: 2px solid $color-violet;
 }
 
 .sidebar__hr {
-  background-color: #4D4E7F;
+  background-color: $color-violet;
   border: 0;
   height: 2px;
-  width: 90%;
-}
-
-.sidebar__link {
-  text-decoration: none;
+  margin-top: $base-spacing-unit;
 }
 
 .sidebar__button {
-  background-color: #4D4E7F;
-  border: 2px outset #343698;
-  border-radius: 5px;
-  color: #FFFFFF;
-  display: inline-block;
-  font: 1em/1.5em "Open Sans", sans-serif;
-  padding: 0.5em;
-  text-align: center;
-}
+  background-color: $color-violet;
+  border: 2px outset $color-violet-dark;
 
-.sidebar__button:hover {
-  background-color: #343698;
-}
+  &:hover {
+    background-color: $color-violet-dark;
+  }
 
-.sidebar__button:active {
-  background-color: #1A1DB2;
-  border-color: #1A1DB2;
+  &:active {
+    border-color: $color-violet-dark;
+  }
 }
 
 .sidebar__paragraph {
-  color: #000000;
+  text-align: justify;
 }

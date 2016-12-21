@@ -7,18 +7,6 @@ $color-blue-forms-light: #00c7ff;
 $color-blue-forms: #00a9ff;
 $color-blue-forms-dark: #005eff;
 
-::-moz-placeholder {
-  color: #40D5FF;
-}
-
-::-webkit-input-placeholder {
-  color: #40D5FF;
-}
-
-.coves-form .button {
-  margin: 0.5em 0;
-}
-
 .coves-form {
   background-color: $color-blue-forms-lighter;
   border-radius: $base-radius;
@@ -26,11 +14,6 @@ $color-blue-forms-dark: #005eff;
   min-width: 200px;
   padding: $base-spacing-unit-forms 2px;
   @include flex-container(column, stretch);
-
-  ::-webkit-input-placeholder,
-  ::-moz-placeholder {
-    color: $color-blue-light;
-  }
 
   section {
     @include flex-container(column, stretch);
@@ -91,6 +74,7 @@ $color-blue-forms-dark: #005eff;
   border: 1px solid transparent;
   border-radius: $base-radius;
   padding: 2px 10px;
+  @include font-size($base-font-size);
 
   &:hover,
   &:focus {
@@ -249,38 +233,4 @@ $color-blue-forms-dark: #005eff;
 .coves-form__textarea--no-resize {
   @extend .coves-form__textarea;
   resize: none;
-}
-
-.button {
-  background-color: $color-blue-forms-light;
-  border: 2px outset $color-blue-forms;
-  border-radius: $base-radius;
-  color: $color-white;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0.5em;
-  text-align: center;
-  user-select: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $color-blue-forms;
-  }
-
-  &:active {
-    background-color: $color-blue-forms-dark;
-    border-color: $color-blue-forms-dark;
-  }
-}
-
-.button--lg {
-  @include font-size(24px)
-}
-
-.button--md {
-  @include font-size(20px)
-}
-
-.button--sm {
-  @include font-size(16px, 16px);
 }
