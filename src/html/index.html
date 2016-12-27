@@ -17,7 +17,13 @@
 <div class="c-menu">
   <label for="menu-toggle" class="c-menu__background"></label>
   <div class="c-menu__box">
-    <div class="c-menu__header">Carlos Coves</div>
+    <div class="c-menu__header">
+      <span class="c-menu__header__name">Carlos Coves</span>
+      <label for="menu-toggle" class="c-menu-toggle-label" aria-hidden="true">
+        <span class="fa fa-caret-left fa-2x"></span>
+        <span class="fa fa-caret-right fa-2x"></span>
+      </label>
+    </div>
     <nav class="c-menu__nav">
       <ul>
         <li class="c-menu__nav__li">
@@ -25,7 +31,7 @@
           <span class="fa fa-circle c-menu__nav__mark"></span>
         </li>
         <li class="c-menu__nav__li">
-          <label for="sub-menu-toggle" class="c-menu__nav__link section-link" href="#projects">Projects</label>
+          <label for="sub-menu-toggle" class="c-menu__nav__link section-link" data-href="#projects">Projects</label>
           <span class="fa fa-circle c-menu__nav__mark"></span>
         </li>
         <li>
@@ -61,12 +67,6 @@
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <header>
-  <div class="header__section">
-    <label for="menu-toggle" class="c-menu-toggle-label o-icon-button o-enlarge--active " aria-hidden="true">
-      <span class="fa fa-caret-left fa-2x"></span>
-      <span class="fa fa-caret-right fa-2x"></span>
-    </label>
-  </div>
   <div class="header__section">
     <div class="header__name">Carlos Coves</div>
   </div>

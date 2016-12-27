@@ -30,7 +30,7 @@
   flex-direction: column;
   left: -194px;
   max-width: 240px;
-  padding: 0 $base-height-unit 0 $base-spacing-unit;
+  padding: $base-height-unit $base-height-unit 0 $base-spacing-unit;
   position: absolute;
   top: 6rem;
   transition: left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -41,16 +41,16 @@
 }
 
 .c-menu__header {
-  border-bottom: 1px solid $color-white;
+  @include flex-container($spacing: space-between);
   color: $color-white;
-  font-size: 2em;
-  font-weight: 600;
   text-align: center;
   white-space: nowrap;
+}
 
-  @include mq($mq-tablet) {
-    display: none;
-  }
+.c-menu__header__name {
+  border-bottom: 2px solid $color-white;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .c-menu__nav {
@@ -77,10 +77,6 @@
   &:hover {
     color: #ffffff;
   }
-}
-
-.c-menu__nav__mark {
-
 }
 
 .c-menu__nav__sub-menu {
@@ -111,12 +107,20 @@
 }
 
 .c-menu-toggle-label {
+  cursor: pointer;
+  transition: transform .2s ease-out;
+
+  &:active {
+    transform: scale(1.4);
+  }
+
   :first-child {
     display: none;
   }
   :last-child {
     display: block;
   }
+
 }
 
 .c-menu-toggle {
@@ -130,7 +134,7 @@
     }
   }
 
-  &:checked ~ header .c-menu-toggle-label {
+  &:checked ~ .c-menu .c-menu-toggle-label {
     :first-child {
       display: block;
     }
