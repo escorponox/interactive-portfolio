@@ -3,10 +3,14 @@
   max-height: 48rem;
   overflow-x: hidden;
   overflow-y: auto;
-  width: 11rem;
+  width: 8rem;
 
   @include mq($mq-landscape) {
     display: block;
+  }
+
+  @include mq($mq-desktop) {
+    width: 11rem;
   }
 }
 
@@ -16,7 +20,7 @@
   box-sizing: border-box;
   cursor: pointer;
   height: 4rem;
-  padding: 1em;
+  padding: .5em;
   text-align: right;
   transition: background-color 0.2s ease-in;
   width: 100%;
@@ -28,6 +32,7 @@
 
   @include mq($mq-desktop) {
     @include font-size(20px);
+    padding: 1em;
   }
 }
 

@@ -7,7 +7,7 @@
   width: 205px;
 
   @include mq($mq-tablet) {
-    width: 280px;
+    width: 255px;
   }
 }
 
@@ -35,7 +35,7 @@
   user-select: none;
 
   @include mq($mq-tablet) {
-    height: 50px;
+    height: 45px;
     font-size: 24px;
   }
 }
@@ -45,7 +45,7 @@
   width: 74px;
 
   @include mq($mq-tablet) {
-    width: 104px;
+    width: 94px;
   }
 }
 
@@ -53,7 +53,7 @@
   float: left;
   width: 35px;
   @include mq($mq-tablet) {
-    width: 50px;
+    width: 45px;
   }
 }
 
@@ -67,8 +67,8 @@
   vertical-align: middle;
 
   @include mq($mq-tablet) {
-    height: 104px;
-    line-height: 88px;
+    height: 94px;
+    line-height: 78px;
   }
 }
 

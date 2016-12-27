@@ -9,22 +9,14 @@
   margin: 0 auto;
   padding: 10px;
   width: 100%;
-}
 
-@media screen and (min-width: 450px) {
-  .accordion {
-    width: 280px;
+  @include mq($mq-tablet) {
+    width: 255px;
   }
-}
-
-@media screen and (min-width: 700px) {
-  .accordion {
+  @include mq($mq-landscape) {
     width: 360px;
   }
-}
-
-@media screen and (min-width: 1000px) {
-  .accordion {
+  @include mq($mq-desktop) {
     width: 600px;
   }
 }

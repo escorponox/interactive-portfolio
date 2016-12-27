@@ -1,12 +1,12 @@
 .c-card-container {
   height: 375px;
-  padding: $base-height-unit;
+  padding: 12px;
   width: 300px;
   perspective: 1000px;
   transform-style: preserve-3d;
 
   @include mq($mq-tablet) {
-    width: 430px;
+    width: 395px;
   }
 
   @include mq($mq-landscape) {
@@ -36,7 +36,7 @@
   width: 100%;
 
   &:hover {
-    box-shadow: 10px 20px 20px $color-alpha;
+    box-shadow: 5px 10px 10px $color-alpha;
   }
 
   @include mq($mq-landscape) {
@@ -197,15 +197,16 @@
 }
 
 .c-card__front__social {
-  display: flex;
-}
+  max-width: 70%;
+  @include flex-container($spacing: space-between);
 
-.c-card__front__social__item {
-  flex-basis: 46px;
-  margin-right: $base-height-unit;
+  @include mq($mq-tablet) {
+    @include flex-container($spacing: space-around);
+    flex-grow: 1;
+  }
 
-  &:nth-last-of-type(1) {
-    margin-right: 0;
+  @include mq($mq-landscape) {
+    max-width: 40%;
   }
 }
 

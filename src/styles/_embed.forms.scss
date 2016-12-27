@@ -22,8 +22,7 @@ $color-blue-forms-dark: #005eff;
   width: 200px;
 
   @include mq($mq-tablet) {
-    padding: 1.5em 1em;
-    width: 280px;
+    width: 255px;
   }
 
   @include mq($mq-landscape) {

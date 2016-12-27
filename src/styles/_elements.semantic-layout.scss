@@ -29,6 +29,10 @@ section {
     height: 4rem;
     margin-top: -4rem;
   }
+
+  @include mq($mq-tablet) {
+    padding-left: 2.5 * $base-height-unit;
+  }
 }
 
 footer {

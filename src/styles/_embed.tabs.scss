@@ -3,7 +3,7 @@ div.tabComponent {
   width: 100%;
 
   @include mq($mq-tablet) {
-    width: 280px;
+    width: 255px;
   }
 
   @include mq($mq-landscape) {
