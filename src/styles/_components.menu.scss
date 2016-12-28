@@ -80,30 +80,25 @@
 .c-menu__nav__li {
   @include flex-container($spacing: space-between);
   margin-top: $base-height-unit;
+  cursor: pointer;
+
+  &:hover{
+    color: #ffffff;
+  }
 }
 
 .c-menu__nav__link {
   border-bottom: 2px dotted;
-  color: $color-blue-light;
-  cursor: pointer;
   display: block;
   @include font-size(20px);
   font-weight: 700;
   flex-grow: 1;
   user-select: none;
-  margin-right: 0;
-
-  &:hover {
-    color: #ffffff;
-  }
-
-  @include mq($mq-tablet) {
-    margin-right: $base-height-unit;
-  }
 }
 
 .c-menu__nav__mark {
   display: none;
+  margin-left: $base-height-unit;
 
   @include mq($mq-tablet) {
     display: block;
