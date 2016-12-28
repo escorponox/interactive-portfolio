@@ -1,0 +1,7 @@
+.c-menu__nav__sub-menu {
+  margin-left: 0;
+
+  @include mq($mq-tablet) {
+    margin-left: $base-spacing-unit !important;
+  }
+}

@@ -19,23 +19,27 @@
   <div class="c-menu__box">
     <div class="c-menu__header">
       <span class="c-menu__header__name">Carlos Coves</span>
-      <label for="menu-toggle" class="c-menu-toggle-label" aria-hidden="true">
+      <label for="menu-toggle" class="c-menu-toggle-label">
         <span class="fa fa-caret-left fa-2x"></span>
         <span class="fa fa-caret-right fa-2x"></span>
       </label>
     </div>
     <nav class="c-menu__nav">
+      <input id="sub-menu-toggle" type="checkbox" class="c-menu__nav__sub-menu-toggle o-display-none">
       <ul>
         <li class="c-menu__nav__li">
           <a class="c-menu__nav__link section-link" href="#about">About</a>
           <span class="fa fa-circle c-menu__nav__mark"></span>
         </li>
         <li class="c-menu__nav__li">
-          <label for="sub-menu-toggle" class="c-menu__nav__link section-link" data-href="#projects">Projects</label>
+          <label for="sub-menu-toggle" class="c-menu__nav__sub-menu-toggle-label">
+            <span class="fa fa-minus-square-o fa-lg"></span>
+            <span class="fa fa-plus-square-o fa-lg"></span>
+          </label>
+          <a class="c-menu__nav__link section-link" href="#projects">Projects</a>
           <span class="fa fa-circle c-menu__nav__mark"></span>
         </li>
         <li>
-          <input id="sub-menu-toggle" type="checkbox" class="c-menu__nav__sub-menu-toggle o-display-none">
           <ul class="c-menu__nav__sub-menu">
             <li><label for="tab-radio1" class="c-menu__nav__sub-menu__link accordion-label-menu">Sidebar</label></li>
             <li><label for="tab-radio2" class="c-menu__nav__sub-menu__link accordion-label-menu">Forms</label></li>
@@ -67,6 +71,12 @@
   <i class="fa fa-arrow-up" aria-hidden="true"></i>
 </div>
 <header>
+  <div class="header__section">
+    <label for="menu-toggle" class="c-menu-toggle-label o-icon-button o-enlarge--active " aria-hidden="true">
+      <span class="fa fa-caret-up fa-2x"></span>
+      <span class="fa fa-caret-down fa-2x"></span>
+    </label>
+  </div>
   <div class="header__section">
     <div class="header__name">Carlos Coves</div>
   </div>

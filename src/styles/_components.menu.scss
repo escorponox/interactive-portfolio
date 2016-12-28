@@ -21,27 +21,46 @@
 }
 
 .c-menu__box {
-  border-radius: 0 $base-radius $base-radius 0;
-  background-color: $color-blue;
-  box-shadow: 2px 2px 2px 0 $color-blue-dark;
-  //bottom: 0;
-  color: $color-blue-light;
-  display: flex;
-  flex-direction: column;
-  left: -194px;
-  max-width: 240px;
-  padding: $base-height-unit $base-height-unit 0 $base-spacing-unit;
+  @include flex-container(column, stretch);
   position: absolute;
-  top: 6rem;
-  transition: left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  width: 15rem;
-  opacity: .99;
+  border-radius: 0;
+  background-color: $color-blue;
+  box-shadow: 0 2px 2px 0 $color-blue-dark;
+  color: $color-blue-light;
+  padding: $base-height-unit;
+  max-height: 75vh;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 1;
   visibility: visible;
   overflow: hidden;
+  width: 100%;
+  top: -325px;
+
+  @include mq($mq-tablet) {
+    border-radius: 0 $base-radius $base-radius 0;
+    box-shadow: 2px 2px 2px 0 $color-blue-dark;
+    left: -194px;
+    width: 240px;
+    max-width: 240px;
+    padding: $base-height-unit $base-height-unit 0 $base-spacing-unit;
+    top: 6rem;
+    bottom: auto;
+  }
+
+  @at-root .c-menu-toggle:checked + .c-menu & {
+    top: 4rem;
+
+    @include mq($mq-tablet) {
+      top: 6rem;
+      left: 0;
+    }
+
+  }
 }
 
 .c-menu__header {
   @include flex-container($spacing: space-between);
+  flex-shrink: 0;
   color: $color-white;
   text-align: center;
   white-space: nowrap;
@@ -72,10 +91,22 @@
   font-weight: 700;
   flex-grow: 1;
   user-select: none;
-  margin-right: $base-height-unit;
+  margin-right: 0;
 
   &:hover {
     color: #ffffff;
+  }
+
+  @include mq($mq-tablet) {
+    margin-right: $base-height-unit;
+  }
+}
+
+.c-menu__nav__mark {
+  display: none;
+
+  @include mq($mq-tablet) {
+    display: block;
   }
 }
 
@@ -87,12 +118,47 @@
   color: $color-blue;
   background-color: $color-blue-light;
   padding: 0;
+
+  @include mq($mq-landscape) {
+    display: none;
+  }
 }
 
-.c-menu__nav__sub-menu-toggle:checked ~ .c-menu__nav__sub-menu {
+.c-menu__nav__sub-menu-toggle:checked + ul .c-menu__nav__sub-menu {
   margin-top: $base-height-unit;
   max-height: 150px;
   padding: $base-height-unit;
+}
+
+.c-menu__nav__sub-menu-toggle-label {
+  cursor: pointer;
+  margin-right: $base-radius;
+  user-select: none;
+  &:hover {
+    color: #ffffff;
+  }
+
+  :first-child {
+    display: none;
+  }
+  :last-child {
+    display: inline-block;
+  }
+
+  @at-root .c-menu__nav__sub-menu-toggle:checked + ul & {
+    :first-child {
+      display: inline-block;
+    }
+
+    :last-child {
+      display: none;
+    }
+  }
+
+  @include mq($mq-landscape) {
+    display: none;
+  }
+
 }
 
 .c-menu__nav__sub-menu__link {
@@ -121,6 +187,14 @@
     display: block;
   }
 
+  @at-root .c-menu__header & {
+    display: none;
+
+    @include mq($mq-tablet) {
+      display: block;
+    }
+  }
+
 }
 
 .c-menu-toggle {
@@ -128,13 +202,10 @@
   &:checked + .c-menu {
     transition: all 0s ease 0s;
     visibility: visible;
-
-    & .c-menu__box {
-      left: 0;
-    }
   }
 
-  &:checked ~ .c-menu .c-menu-toggle-label {
+  &:checked ~ .c-menu .c-menu-toggle-label,
+  &:checked ~ header .c-menu-toggle-label {
     :first-child {
       display: block;
     }
