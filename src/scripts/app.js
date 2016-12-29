@@ -5,6 +5,7 @@ import questionnaire from './questionnaire';
 import color from './color';
 import calculator from './calculator';
 import documentReady from './document-ready';
+import menuHighlight from './menu-highlight'
 
 documentReady(questionnaire);
 documentReady(signUp);
@@ -17,6 +18,8 @@ documentReady(() => {
   const header = document.querySelector('header');
   const menuInput = document.getElementById('menu-toggle');
   const subMenuInput = document.getElementById('sub-menu-toggle');
+  const sections = document.querySelectorAll('section');
+  const sectionLinks = document.querySelectorAll('.section-link');
 
   const showScrollToTopButton = throttle(() => {
     window.pageYOffset > 200
@@ -24,7 +27,7 @@ documentReady(() => {
       : scrollToTopButton.classList.remove('c-to-top--show');
   }, 200);
 
-  const hideSideBar = throttle((event) => {
+  const hideSideBar = throttle(() => {
     menuInput.checked = false;
     subMenuInput.checked = false;
   }, 200);
@@ -37,9 +40,20 @@ documentReady(() => {
     previousScroll = currentScroll;
   }, 200);
 
+  const highlightSection = throttle(() => {
+    const sectionId = menuHighlight(sections);
+    console.log(sectionId);
+    sectionLinks.forEach((link) => {
+      link.getAttribute('href').slice(1) === sectionId
+        ? link.classList.add('t-highlighted-link')
+        : link.classList.remove('t-highlighted-link');
+    })
+  }, 100);
+
   window.addEventListener('scroll', showScrollToTopButton);
   window.addEventListener('scroll', hideSideBar);
   window.addEventListener('scroll', showHideHeader);
+  window.addEventListener('scroll', highlightSection);
   scrollToTopButton.addEventListener('click', smoothScroll.bind(null, 500, 0, 0));
 
   [].forEach.call(document.querySelectorAll('.section-link'), (link) => {
