@@ -46,6 +46,7 @@
 .header__nav__link {
   color: $color-blue-light;
   @include font-size(20px);
+  font-weight: 600;
   margin: 0 .5em;
 
   &:hover {

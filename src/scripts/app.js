@@ -42,7 +42,6 @@ documentReady(() => {
 
   const highlightSection = throttle(() => {
     const sectionId = menuHighlight(sections);
-    console.log(sectionId);
     sectionLinks.forEach((link) => {
       link.getAttribute('href').slice(1) === sectionId
         ? link.classList.add('t-highlighted-link')
@@ -75,7 +74,7 @@ documentReady(() => {
   [].forEach.call(document.querySelectorAll('label.accordion-label'), (label) => {
     label.addEventListener('click', function (event) {
       event.stopPropagation();
-      const forInput = document.querySelector('#' + event.currentTarget.getAttribute('for'));
+      const forInput = document.getElementById(event.currentTarget.getAttribute('for'));
       if (!forInput.checked) {
         const target = event.currentTarget;
         setTimeout(function () {
