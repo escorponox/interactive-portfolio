@@ -1,9 +1,10 @@
 header {
-  @include flex-container($spacing: space-around);
+  @include flex-container($spacing: space-between);
   background-color: $color-blue;
   box-shadow: 0 2px 2px $color-blue-dark;
   display: flex;
   height: 4rem;
+  padding: 0 $base-spacing-unit;
   position: fixed;
   top: 0;
   width: 100%;
