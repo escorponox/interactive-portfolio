@@ -1,5 +1,3 @@
-const calculatorUtils = {};
-
 function isOperator(char) {
   return /^[+\-*/]$/.test(char);
 }
@@ -36,7 +34,7 @@ function isAnAllowedZero(char, arr) {
   return char === '0' && !isNewOperand(arr);
 }
 
-calculatorUtils.appendChar = function (arr, char) {
+export const appendChar = function (arr, char) {
   if ((isAnAllowedOperator(char, arr))
     || isANewOperandChar(char, arr)) {
     const appendingStr = char === '.' ? '0.' : char;
@@ -50,29 +48,27 @@ calculatorUtils.appendChar = function (arr, char) {
   return arr;
 };
 
-calculatorUtils.delete = function (arr) {
+export const del = function (arr) {
   if (!arr.length) return [];
   const last = arr[arr.length - 1];
   return last.length === 1 ? arr.slice(0, arr.length - 1)
     : arr.slice(0, arr.length - 1).concat(last.slice(0, last.length - 1));
 };
 
-calculatorUtils.clear = function () {
+export const clear = function () {
   return [];
 };
 
-calculatorUtils.equal = function (arr) {
+export const equal = function (arr) {
   if (isNewOperand(arr) || arr[arr.length - 1] === '.') return arr;
-  const screenString = calculatorUtils.displayScreen(arr);
+  const screenString = displayScreen(arr);
   return [parseFloat(eval(screenString)).toPrecision(10).toString()];
 };
 
-calculatorUtils.displayScreen = function (arr) {
+export const displayScreen = function (arr) {
   return arr.reduce(function (prev, curr) {
       if (isOperator(curr)) prev += curr;
       else prev += curr.slice(curr.length - 1) === '.' ? curr : Number(curr).toString();
       return prev;
     }, '') || '0';
 };
-
-export default calculatorUtils;

@@ -1,17 +1,17 @@
-import calculatorUtils from './calculator-utils'
+import * as calculatorUtils from './calculator-utils'
 
 const calculator = () => {
 
   let screenExpression = [];
-  const screenInput = document.querySelector('#screen');
+  const screenInput = document.getElementById('screen');
 
-  document.querySelector('#calculator').addEventListener('click', function (event) {
+  document.getElementById('calculator').addEventListener('click', event =>{
     if (event.target.classList.contains('calculator__button--number')
       || event.target.classList.contains('calculator__button--sign')) {
       screenExpression = calculatorUtils.appendChar(screenExpression, event.target.innerHTML.trim());
     }
     if (event.target.id === 'del') {
-      screenExpression = calculatorUtils.delete(screenExpression);
+      screenExpression = calculatorUtils.del(screenExpression);
     }
     if (event.target.id === 'clear') {
       screenExpression = calculatorUtils.clear();
