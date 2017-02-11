@@ -25,9 +25,10 @@ export default () => {
       document.getElementById(cookies[name]).checked = true
     });
 
-  document.getElementById('greeting').innerHTML = cookies.firstTime ? 'About Me' : 'Welcome';
+  document.getElementById('greeting').innerHTML = cookies.visited ? 'About Me' : 'Carlos Coves';
+  document.getElementById('welcome-paragraph').style.display = cookies.visited ? 'none' : 'block';
 
   const now = new Date();
   now.setTime(now.getTime() + (2592000000)); // 30 days
-  document.cookie = `firstTime=false;expires=${now.toUTCString()};path=/`;
+  document.cookie = `visited=true;expires=${now.toUTCString()};path=/`;
 }
