@@ -45,7 +45,7 @@ export default () => {
   window.addEventListener('scroll', highlightSection);
   scrollToTopButton.addEventListener('click', smoothScroll.bind(null, 500, 0, 0));
 
-  [].forEach.call(document.querySelectorAll('.section-link'), (link) => {
+  Array.from(document.querySelectorAll('.section-link')).forEach((link) => {
     link.addEventListener('click', function (event) {
       event.stopPropagation();
       event.preventDefault();
@@ -55,13 +55,13 @@ export default () => {
     })
   });
 
-  [].forEach.call(document.querySelectorAll('label[for=menu-toggle]'), (label) => {
+  Array.from(document.querySelectorAll('label[for=menu-toggle]')).forEach((label) => {
     label.addEventListener('click', () => {
       subMenuInput.checked = false;
     })
   });
 
-  [].forEach.call(document.querySelectorAll('label.accordion-label'), (label) => {
+  Array.from(document.querySelectorAll('label.accordion-label')).forEach((label) => {
     label.addEventListener('click', function (event) {
       event.stopPropagation();
       const forInput = document.getElementById(event.currentTarget.getAttribute('for'));
@@ -74,7 +74,7 @@ export default () => {
     })
   });
 
-  [].forEach.call(document.querySelectorAll('label.accordion-label-menu'), (label) => {
+  Array.from(document.querySelectorAll('label.accordion-label-menu')).forEach((label) => {
     label.addEventListener('click', function (event) {
       event.stopPropagation();
       const labelFor = event.currentTarget.getAttribute('for');
