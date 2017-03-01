@@ -1,6 +1,6 @@
 .skill-container {
-  border-radius: $base-radius;
   background-color: $color-white;
+  border-radius: $base-radius;
   padding: $base-spacing-unit;
 }
 
@@ -24,9 +24,9 @@
   @include font-size(20px);
   font-weight: 600;
   height: 1.5em;
+  justify-content: center;
   padding: 0 $base-spacing-unit;
   width: 60%;
-  justify-content: center;
 
   @include mq(500px) {
     justify-content: space-between;

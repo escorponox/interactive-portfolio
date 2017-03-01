@@ -8,12 +8,12 @@
 .input-range-coves {
   height: 6px;
   margin: 15px 0;
-  -webkit-appearance: none;
   width: 75px;
-
   @include mq($mq-tablet) {
     width: 100px;
   }
+
+  -webkit-appearance: none;
 }
 
 .input-range-coves:focus {

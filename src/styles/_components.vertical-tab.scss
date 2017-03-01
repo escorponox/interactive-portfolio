@@ -24,8 +24,6 @@
   text-align: right;
   transition: background-color 0.2s ease-in;
   width: 100%;
-  user-select: none;
-
   &:hover {
     background-color: $color-white;
   }
@@ -34,6 +32,8 @@
     @include font-size(20px);
     padding: 1em;
   }
+
+  user-select: none;
 }
 
 .vertical-tab__content {

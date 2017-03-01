@@ -15,11 +15,11 @@ $color-blue-forms-dark: #005eff;
   padding: $base-spacing-unit-forms 2px;
   @include flex-container(column, stretch);
 
+  width: 200px;
+
   section {
     @include flex-container(column, stretch);
   }
-
-  width: 200px;
 
   @include mq($mq-tablet) {
     width: 255px;
@@ -82,9 +82,9 @@ $color-blue-forms-dark: #005eff;
 
   &:invalid {
     background-color: $color-red-light;
-    border-color: $color-red;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border-color: $color-red;
 
     &:focus {
       background-color: $color-white;
@@ -170,7 +170,6 @@ $color-blue-forms-dark: #005eff;
   background-color: $color-white;
   color: $color-black;
 }
-
 
 .coves-form__radio-set {
   @include flex-container(column, stretch);

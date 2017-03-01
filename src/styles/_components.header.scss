@@ -37,9 +37,9 @@
 }
 
 .header__nav {
-  justify-content: space-around;
-  flex-wrap: nowrap;
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 .header__nav__link {
@@ -67,11 +67,11 @@
   border: none;
   border-bottom: 2px solid $color-blue-light;
   color: $color-white;
+  display: inline-block;
   height: 2.5em;
+  margin-right: 2 * $base-spacing-unit;
   padding: 1.25em 0 0.25em;
   width: 8em;
-  margin-right: 2 * $base-spacing-unit;
-  display: inline-block;
 
   @include mq($mq-landscape) {
     width: 12em;
@@ -80,8 +80,8 @@
 
 .header__search__icon {
   bottom: 0;
-  position: absolute;
   left: 8.25em;
+  position: absolute;
   z-index: 10;
 
   @include mq($mq-landscape) {
@@ -91,13 +91,13 @@
 
 .header__search__placeholder {
   color: $color-blue-light;
+  display: inline-block;
   left: 0;
   line-height: 1em;
   position: absolute;
   top: 1em;
   transition: all 0.4s ease-out;
   z-index: -1;
-  display: inline-block;
 }
 
 .header__search__input:focus ~ .header__search__placeholder,
