@@ -20,6 +20,10 @@
   }
 }
 
+.section__paragraph--center {
+  text-align: center;
+}
+
 .section__content {
   max-width: 60rem;
   padding: 0 .5*$base-spacing-unit;
