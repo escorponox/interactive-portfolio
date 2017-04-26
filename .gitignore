@@ -1,9 +1,7 @@
 *.iml
 .idea/
 node_modules/
-dist/
-src/styles/main.css
 .sass-cache/
-public
 npm-debug.log
-.publish/
+dist/
+.publish

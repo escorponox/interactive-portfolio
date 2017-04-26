@@ -1,5 +1,5 @@
 import test from 'tape';
-import * as calculator from '../../src/scripts/calculator-utils';
+import * as calculator from '../../app/scripts/calculator-utils';
 
 test('operands', t => {
   t.deepEqual(calculator.appendChar([], '1'), ['1'], '1 adds 1 to empty operand');

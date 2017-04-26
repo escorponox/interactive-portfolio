@@ -1,0 +1,10 @@
+{{#with htmlWebpackPlugin.options.data.about}}
+  <section id="about">
+    <h1 id="greeting" class="section__title">{{title}}</h1>
+    <img class="section__img o-center-margin" src="assets/images/me.png"/>
+    <p id="welcome-paragraph" class="section__paragraph o-center-margin">{{welcome}}</p>
+    {{#each paragraphs}}
+      <p class="section__paragraph o-center-margin">{{this}}</p>
+    {{/each}}
+  </section>
+{{/with}}

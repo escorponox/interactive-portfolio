@@ -1,5 +1,5 @@
 import test from 'tape';
-import * as validator from '../../src/scripts/validators';
+import * as validator from '../../app/scripts/validators';
 
 test('email', (t) => {
   t.equal(validator.isEmailAddress(), false, 'no input should return false, waiting for response on QA');

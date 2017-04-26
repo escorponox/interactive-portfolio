@@ -1,0 +1,29 @@
+{{#with htmlWebpackPlugin.options.data.header}}
+  <header>
+    <div class="header__section">
+      <label for="menu-toggle" class="c-menu-toggle-label o-icon-button o-enlarge--active">
+        <span class="fa fa-caret-up fa-2x"></span>
+        <span class="fa fa-caret-down fa-2x"></span>
+      </label>
+    </div>
+    <div class="header__section">
+      <div class="header__name">{{name}}</div>
+    </div>
+    <div class="header__section">
+      <nav class="header__nav">
+        {{#each navigationLinks}}
+          <a class="header__nav__link section-link {{#if @first}}t-highlighted-link{{/if}}" href="{{href}}">{{text}}</a>
+        {{/each}}
+      </nav>
+    </div>
+    <div class="header__section">
+      <div class="header__search">
+        <input type="text" class="header__search__input" type="text" value="" required>
+        <label for="modal-toggle" class="header__search__icon o-icon-button o-enlarge--active">
+          <span class="fa fa-search fa-lg"></span>
+        </label>
+        <span class="header__search__placeholder">{{searchPlaceholder}}</span>
+      </div>
+    </div>
+  </header>
+{{/with}}

@@ -1,0 +1,13 @@
+{{#with htmlWebpackPlugin.options.data.searchModal}}
+  <input id="modal-toggle" type="checkbox" class="c-modal-toggle o-display-none">
+  <div class="c-modal">
+    <label for="modal-toggle" class="c-modal__background"></label>
+    <div class="c-modal__box o-center-margin">
+      <h1 class="c-modal__box__title">{{title}}</h1>
+      <label for="modal-toggle" class="c-modal__box__button o-center-margin o-enlarge--active">Close</label>
+      {{#each footers}}
+        <div class="c-modal__box__footer">{{{this}}}</div>
+      {{/each}}
+    </div>
+  </div>
+{{/with}}
