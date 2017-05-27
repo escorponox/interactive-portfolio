@@ -114,7 +114,12 @@ export default (env = {dev: true}) => {
             path.resolve(__dirname, 'app/templates'),
           ],
           use: {
-            loader: 'handlebars-loader'
+            loader: 'handlebars-loader',
+            options: {
+              helperDirs: [
+                path.resolve(__dirname, 'app/templates/helpers'),
+              ]
+            }
           }
         }
       ]
