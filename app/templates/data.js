@@ -149,7 +149,7 @@ export default ({
                 blue: true
               },
               {
-                href: 'https://github.com/escorponox/learning-web-components/tree/master/components/sidebar',
+                href: 'https://github.com/escorponox/learning-web-components/blob/master/src/components/sidebar/index.html',
                 text: '<span class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code'
               }
             ]
@@ -387,7 +387,7 @@ export default ({
                 blue: true
               },
               {
-                href: 'https://github.com/escorponox/learning-web-components/tree/master/components/calculator',
+                href: 'https://github.com/escorponox/learning-web-components/tree/master/src/components/forms',
                 text: '<span class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code'
               }
             ]
@@ -423,7 +423,7 @@ export default ({
                 blue: true
               },
               {
-                href: 'https://github.com/escorponox/learning-web-components/tree/master/components/listing',
+                href: 'https://github.com/escorponox/learning-web-components/blob/master/src/components/listing/index.html',
                 text: '<span class="fa fa-github fa-lg" aria-hidden="true"></span> Source Code'
               }
             ]
@@ -552,7 +552,9 @@ export default ({
   },
   skills: {
     title: 'Skills',
-    paragraphs: 'My frontend skills are improving quickly due to <em>Modern Developer Program</em>, just like the backend skills will do when the time comes.',
+    paragraphs: [
+      'Constantly improving',
+    ],
     bar: [
       {
         label: 'Frontend',
@@ -586,13 +588,13 @@ export default ({
             },
             {
               label: 'jQuery',
-              level: 'expert',
-              tooltip: 'Years of experience'
+              level: 'proficient',
+              tooltip: 'Reaching the expert level'
             },
             {
               label: 'React',
               level: 'learning',
-              tooltip: 'L.MD will improve this'
+              tooltip: 'Imminent'
             },
             {
               label: 'Redux',
@@ -607,7 +609,7 @@ export default ({
             {
               label: 'NodeJS',
               level: 'competent',
-              tooltip: 'L.MD will improve this'
+              tooltip: 'Improving soon'
             },
             {
               label: 'Java/Spring',
@@ -622,7 +624,7 @@ export default ({
             {
               label: 'NoSQL DB',
               level: 'learning',
-              tooltip: 'L.MD will improve this'
+              tooltip: 'Improving soon'
             },
             {
               label: 'Web Services',
@@ -638,7 +640,7 @@ export default ({
             {
               label: 'Communication',
               level: 'learning',
-              tooltip: 'L.MD will improve this'
+              tooltip: 'Improving soon'
             },
             {
               label: 'TDD',

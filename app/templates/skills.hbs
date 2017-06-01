@@ -1,125 +1,45 @@
-<section id="skills">
-  <h1 class="section__title">Skills</h1>
-  <p class="section__paragraph o-center-margin">My frontend skills are improving quickly due to <em>Bov Academy
-    Program</em>, just like the backend skills will do when the time comes.</p>
-  <div class="section__content o-center-margin">
-    <div class="skill-container">
-      <div class="front-back-bar o-center-margin">
-        <div class="front-back-bar__front">
-          <span class="front-back-bar__bar__label">Frontend</span>
-          <span class="front-back-bar__bar__percentage">60%</span>
-        </div>
-        <div class="front-back-bar__back">
-          <span class="front-back-bar__bar__percentage">40%</span>
-          <span class="front-back-bar__bar__label">Backend</span>
-        </div>
-      </div>
-      <div class="o-center-container o-center-container--wrap">
-        <div class="graph-container">
-          <h3 class="align-center bar-graph--red">Frontend</h3>
-          <div class="bar-graph">
-            <div class="row-labels">
-              <div class="row-labels__label">Expert</div>
-              <div class="row-labels__label">Proficient</div>
-              <div class="row-labels__label">Competent</div>
-              <div class="row-labels__label">Learning</div>
-            </div>
-            <div class="bar-graph__col--proficient">
-              <div class="bar-graph__col__tooltip">
-                Reaching the expert level
-              </div>
-              <div class="bar-graph__col__label">HTML5/CSS3</div>
-            </div>
-            <div class="bar-graph__col--proficient">
-              <div class="bar-graph__col__tooltip">
-                Reaching the expert level
-              </div>
-              <div class="bar-graph__col__label">JavaScript</div>
-            </div>
-            <div class="bar-graph__col--expert">
-              <div class="bar-graph__col__tooltip">
-                Years of experience
-              </div>
-              <div class="bar-graph__col__label">jQuery</div>
-            </div>
-            <div class="bar-graph__col--learning">
-              <div class="bar-graph__col__tooltip">
-                L.MD will improve this
-              </div>
-              <div class="bar-graph__col__label">React</div>
-            </div>
-            <div class="bar-graph__col--learning">
-              <div class="bar-graph__col__tooltip">
-                Revising Abramov lessons
-              </div>
-              <div class="bar-graph__col__label">Redux</div>
-            </div>
+{{#with htmlWebpackPlugin.options.data.skills}}
+  <section id="skills">
+    <h1 class="section__title">{{title}}</h1>
+    {{#each paragraphs}}
+      <p class="section__paragraph section__paragraph--center o-center-margin">{{this}}</p>
+    {{/each}}
+
+    <div class="section__content o-center-margin">
+      <div class="skill-container">
+        <div class="front-back-bar o-center-margin">
+          <div class="front-back-bar__front">
+            <span class="front-back-bar__bar__label">{{bar.0.label}}</span>
+            <span class="front-back-bar__bar__percentage">{{bar.0.percentage}}</span>
+          </div>
+          <div class="front-back-bar__back">
+            <span class="front-back-bar__bar__percentage">{{bar.1.percentage}}</span>
+            <span class="front-back-bar__bar__label">{{bar.1.label}}</span>
           </div>
         </div>
-        <div class="graph-container">
-          <h3 class="align-center bar-graph--blue">Backend</h3>
-          <div class="bar-graph">
-            <div class="row-labels">
-              <div class="row-labels__label">Expert</div>
-              <div class="row-labels__label">Proficient</div>
-              <div class="row-labels__label">Competent</div>
-              <div class="row-labels__label">Learning</div>
+
+
+        <div class="o-center-container o-center-container--wrap">
+          {{#each barGraphs.graphs}}
+            <div class="graph-container">
+              <h3 class="align-center bar-graph--red">{{title}}</h3>
+              <div class="bar-graph">
+                <div class="row-labels">
+                  {{#each ../this.barGraphs.labels}}
+                    <div class="row-labels__label">{{this}}</div>
+                  {{/each}}
+                </div>
+                {{#each skills}}
+                  <div class="{{#if ../alternateColor}}bar-graph__col--alt-color {{/if}}bar-graph__col--{{level}}">
+                    <div class="bar-graph__col__tooltip">{{tooltip}}</div>
+                    <div class="bar-graph__col__label">{{label}}</div>
+                  </div>
+                {{/each}}
+              </div>
             </div>
-            <div class="bar-graph__col--competent">
-              <div class="bar-graph__col__tooltip">L.MD will improve this</div>
-              <div class="bar-graph__col__label">NodeJS</div>
-            </div>
-            <div class="bar-graph__col--expert">
-              <div class="bar-graph__col__tooltip">Years of experience</div>
-              <div class="bar-graph__col__label">Java/Spring</div>
-            </div>
-            <div class="bar-graph__col--expert">
-              <div class="bar-graph__col__tooltip">Years of experience</div>
-              <div class="bar-graph__col__label">SQL DB</div>
-            </div>
-            <div class="bar-graph__col--learning">
-              <div class="bar-graph__col__tooltip">L.MD will improve this</div>
-              <div class="bar-graph__col__label">NoSQL DB</div>
-            </div>
-            <div class="bar-graph__col--proficient">
-              <div class="bar-graph__col__tooltip">SOAP and REST</div>
-              <div class="bar-graph__col__label">Web Services</div>
-            </div>
-          </div>
-        </div>
-        <div class="graph-container">
-          <h3 class="align-center">Other</h3>
-          <div class="bar-graph">
-            <div class="row-labels">
-              <div class="row-labels__label">Expert</div>
-              <div class="row-labels__label">Proficient</div>
-              <div class="row-labels__label">Competent</div>
-              <div class="row-labels__label">Learning</div>
-            </div>
-            <div class="bar-graph__col--alt-color bar-graph__col--learning">
-              <div class="bar-graph__col__tooltip">L.MD will improve this</div>
-              <div class="bar-graph__col__label">Communication</div>
-            </div>
-            <div class="bar-graph__col--alt-color bar-graph__col--proficient">
-              <div class="bar-graph__col__tooltip">"Uncle Bob" disciple</div>
-              <div class="bar-graph__col__label">TDD</div>
-            </div>
-            <div class="bar-graph__col--alt-color bar-graph__col--expert">
-              <div class="bar-graph__col__tooltip">Former Industrial Engineer</div>
-              <div class="bar-graph__col__label">Problem Solving</div>
-            </div>
-            <div class="bar-graph__col--alt-color bar-graph__col--expert">
-              <div class="bar-graph__col__tooltip">Former Industrial Engineer</div>
-              <div class="bar-graph__col__label">Project Management</div>
-            </div>
-            <div class="bar-graph__col--alt-color bar-graph__col--expert">
-              <div class="bar-graph__col__tooltip">Former Industrial Engineer</div>
-              <div class="bar-graph__col__label">Logistics</div>
-            </div>
-          </div>
+          {{/each}}
         </div>
       </div>
     </div>
-  </div>
-
-</section>
+  </section>
+{{/with}}
