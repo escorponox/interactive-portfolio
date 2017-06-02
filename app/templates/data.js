@@ -612,9 +612,9 @@ export default ({
               tooltip: 'Improving soon'
             },
             {
-              label: 'Java/Spring',
-              level: 'expert',
-              tooltip: 'Years of experience'
+              label: 'NoSQL DB',
+              level: 'learning',
+              tooltip: 'Improving soon'
             },
             {
               label: 'SQL DB',
@@ -622,14 +622,14 @@ export default ({
               tooltip: 'Years of experience'
             },
             {
-              label: 'NoSQL DB',
-              level: 'learning',
-              tooltip: 'Improving soon'
+              label: 'Java',
+              level: 'expert',
+              tooltip: 'Years of experience'
             },
             {
-              label: 'Web Services',
-              level: 'proficient',
-              tooltip: 'SOAP and REST'
+              label: 'Spring',
+              level: 'expert',
+              tooltip: 'Years of experience'
             }
           ]
         },
@@ -670,43 +670,43 @@ export default ({
   articles: {
     title: 'Articles',
     paragraphs: [
-      'Clear and concise articles written as end-of-chapter tasks for the <em>Modern Frontend Developer</em> program. They are oriented to all kind of people, even the non-technical ones.'
+      'Some academic articles on web development'
     ],
     list: [
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-02-Introduction-to-CSS/answer-3.md',
         text: 'CSS Borders'
       },
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-03-Getting-Started-with-JavaScript/answer-2.md',
         text: 'Element\'s width'
       },
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-03-Getting-Started-with-JavaScript/answer-3.md',
         text: 'Comparison Operators'
       },
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-04-Introduction-to-JavaScript-Core/answer-2.md',
         text: 'CSS Sibling Selectors'
       },
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-05-Introduction-to-the-DOM/answer-4.md',
         text: 'JavaScript DOM'
       },
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-01-Architecture-of-the-Internet-the-Web-and-the-Browser/answer-2.md',
         text: 'Domain Name System (DNS)'
       },
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-02-Style-Guide-Driven-Development/answer-4.md',
         text: 'Style Guides Disadvantages'
       },
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-03-Mastering-HTML/answer-5.md',
         text: 'SVG Graphics'
       },
       {
-        href: '#articles',
+        href: 'https://github.com/escorponox/articles/blob/master/Chapter-04-Mastering-CSS/answer-3.md',
         text: 'HTML5 Numbers'
       }
     ]
@@ -714,55 +714,29 @@ export default ({
   contact: {
     title: 'Contact',
     paragraphs: [
-      'Don\'t hesitate to contact me if you feel I can fit in your team. You can find me in the social media in the card below.'
+      'Don\'t hesitate to contact me if you feel I can fit in your team.'
     ],
     card: {
       name: 'Carlos Coves<span class="c-card__front__name__second-surname"> Prieto</span>',
       position: 'Freelance Frontend Developer',
-      intro: 'Passionated web developer and Software Craftmanship enthusiast.',
+      intro: 'Impassioned frontend engineer and Software Craftmanship enthusiast.',
       location: 'Location: Spain, World',
       email: 'escorponox@gmail.com',
-      media: {
-        encyclopedia: {
-          imgSrc: 'assets/icons/enc2.png',
-          name: 'Carlos Coves Prieto',
-          on: 'on <a href="#" class="t-color-indigo">Encyclopedia.MD</a>'
+      media: [
+        {
+          href: 'https://twitter.com/escorponox',
+          imgSrc: 'assets/icons/twitter.png'
         },
-        social: [
-          {
-            href: 'https://twitter.com/escorponox',
-            imgSrc: 'assets/icons/twitter.png'
-          },
-          {
-            href: 'https://github.com/escorponox',
-            imgSrc: 'assets/icons/github2.png'
-          },
-          {
-            href: 'https://es.linkedin.com/in/carlos-coves-prieto-a3128b49',
-            imgSrc: 'assets/icons/linkedin.png'
-          }
-        ]
-      },
-      flipSvg: `<svg width="38" height="34">
-            <clipPath id="rect-clip-path">
-              <rect x="0" y="0" width="38" height="10"></rect>
-              <rect x="0" y="24" width="38" height="10"></rect>
-              <rect x="19" y="10" width="19" height="8"></rect>
-              <rect x="0" y="16" width="19" height="8"></rect>
-            </clipPath>
-            <filter id="blur-filter" x="-2" y="-2" width="50" height="50">
-              <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"></feOffset>
-              <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2"></feGaussianBlur>
-              <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
-            </filter>
-            <rect class="flip-line" x="7" y="4" width="24" height="26" rx="5" ry="5"
-                  style="fill:transparent;stroke:white;stroke-width:2;"
-                  clip-path="url(#rect-clip-path)"></rect>
-            <polyline class="flip-line" points="3,17 7,15 11,17"
-                      style="fill:none;stroke:white;stroke-width:2"/>
-            <polyline class="flip-line" points="27,17 31,19 35,17"
-                      style="fill:none;stroke:white;stroke-width:2"/>
-          </svg>`
+        {
+          href: 'https://github.com/escorponox',
+          imgSrc: 'assets/icons/github2.png'
+        },
+        {
+          href: 'https://es.linkedin.com/in/carlos-coves-prieto-a3128b49',
+          imgSrc: 'assets/icons/linkedin.png'
+        }
+      ],
+      back: 'Carlos Coves Prieto'
     }
   },
   footer: '2016 - Carlos Coves Prieto'

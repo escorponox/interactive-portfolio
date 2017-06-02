@@ -50,6 +50,65 @@
   transform: rotateX(180deg);
 }
 
+.c-card__front__name {
+  @include font-size(28px);
+  color: $color-white;
+  font-weight: 700;
+  margin-bottom: 0;
+
+  @include mq($mq-landscape) {
+    @include font-size(48px);
+    font-weight: 300;
+    position: relative;
+    right: 3px;
+  }
+}
+
+.c-card__front__name__second-surname {
+  display: none;
+
+  @include mq($mq-tablet) {
+    display: inline;
+  }
+}
+
+.c-card__front__position {
+  margin-bottom: $base-height-unit;
+}
+
+.c-card__front__intro,
+.c-card__front__location {
+  @extend .c-card__front__position;
+  font-weight: 600;
+}
+
+.c-card-container .c-card__front__email {
+  color: $color-indigo;
+}
+
+.c-card__front__social {
+  @include flex-container($spacing: flex-end);
+
+  .c-card__social-link:not(:last-child) {
+    margin-right: $base-spacing-unit;
+  }
+}
+
+.c-card__back__name {
+  background-color: $color-alpha-light;
+  border-radius: $base-radius;
+  bottom: $base-spacing-unit;
+  color: $color-indigo;
+  font-weight: 600;
+  left: $base-spacing-unit;
+  padding: $base-radius;
+  position: absolute;
+}
+
+.c-card__flip:checked + .c-card {
+  transform: rotateX(180deg);
+}
+
 @keyframes flip {
   0% {
     transform: rotateZ(15deg);
@@ -122,105 +181,4 @@
   @include mq($mq-landscape) {
     right: $base-spacing-unit;
   }
-}
-
-.c-card__front__name {
-  @include font-size(28px);
-  color: $color-white;
-  font-weight: 700;
-  margin-bottom: 0;
-
-  @include mq($mq-landscape) {
-    @include font-size(48px);
-    font-weight: 300;
-    position: relative;
-    right: 3px;
-  }
-}
-
-.c-card__front__name__second-surname {
-  display: none;
-
-  @include mq($mq-tablet) {
-    display: inline;
-  }
-}
-
-.c-card__front__position {
-  margin-bottom: $base-height-unit;
-}
-
-.c-card__front__intro {
-  @extend .c-card__front__position;
-  display: none;
-  font-weight: 600;
-
-  @include mq($mq-tablet) {
-    display: block;
-  }
-}
-
-.c-card__front__location {
-  @extend .c-card__front__intro;
-  display: block;
-}
-
-.c-card-container .c-card__front__email {
-  color: $color-indigo;
-}
-
-.c-card__front__media {
-  @include flex-container(column, stretch, space-around);
-  flex-grow: 1;
-
-  @include mq($mq-tablet) {
-    @include flex-container($spacing: space-between);
-  }
-}
-
-.c-card__front__media__encyclopedia {
-  font-weight: 600;
-  min-height: 46px;
-  @include flex-container(column, stretch, center);
-  padding-left: 50px;
-  position: relative;
-}
-
-.c-card__front__media__encyclopedia-icon {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-}
-
-.c-card__front__encyclopedia-name {
-  color: $color-white;
-}
-
-.c-card__front__social {
-  max-width: 70%;
-  @include flex-container($spacing: space-between);
-
-  @include mq($mq-tablet) {
-    @include flex-container($spacing: space-around);
-    flex-grow: 1;
-  }
-
-  @include mq($mq-landscape) {
-    max-width: 40%;
-  }
-}
-
-.c-card__back__name {
-  background-color: $color-alpha-light;
-  border-radius: $base-radius;
-  bottom: $base-spacing-unit;
-  color: $color-indigo;
-  font-weight: 600;
-  left: $base-spacing-unit;
-  padding: $base-radius;
-  position: absolute;
-}
-
-.c-card__flip:checked + .c-card {
-  transform: rotateX(180deg);
 }

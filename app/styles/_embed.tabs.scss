@@ -28,7 +28,12 @@ div.tabComponent label {
   float: left;
   @include font-size(16px);
   font-weight: 600;
-  padding: 8px;
+  padding: 4px;
+
+  @include mq($mq-tablet) {
+    padding: 8px;
+  }
+
   @include mq($mq-landscape) {
     @include font-size(20px);
   }
