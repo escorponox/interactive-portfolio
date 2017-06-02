@@ -14,7 +14,7 @@
     "build": "webpack --env.dev",
     "build:prod": "webpack --env.prod -p",
     "predeploy": "npm run build:prod",
-    "deploy": "gh-pages -d dist",
+    "deploy": "surge dist carlos-coves.surge.sh",
     "test": "babel-tape-runner ./test/**/*.test.js | tap-diff",
     "test-verbose": "babel-tape-runner ./test/**/*.test.js",
     "test-summ": "babel-tape-runner ./test/**/*.test.js | tap-summary"

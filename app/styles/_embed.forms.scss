@@ -7,6 +7,14 @@ $color-blue-forms-light: #00c7ff;
 $color-blue-forms: #00a9ff;
 $color-blue-forms-dark: #005eff;
 
+::-webkit-input-placeholder {
+  color: $color-blue-forms-light;
+}
+
+::-moz-placeholder {
+  color: $color-blue-forms-light;
+}
+
 .coves-form {
   background-color: $color-blue-forms-lighter;
   border-radius: $base-radius;

@@ -64,7 +64,7 @@ export default ({
         text: 'Skills'
       },
       {
-        href: '#Articles',
+        href: '#articles',
         text: 'Articles'
       },
       {
