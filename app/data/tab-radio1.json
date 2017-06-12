@@ -1,0 +1,31 @@
+{
+  "pindex": 1,
+  "carousel": [
+    {
+      "img": "assets/images/encyclopedia-1.jpeg"
+    },
+    {
+      "img": "assets/images/encyclopedia-2.jpeg"
+    },
+    {
+      "img": "assets/images/encyclopedia-3.jpeg"
+    }
+  ],
+  "static": {
+    "title": "<strong>Technologies:</strong> HTML5, CSS3 and Vanilla JavaScript",
+    "paragraphs": [
+      "Programming encyclopedia sample page"
+    ],
+    "links": [
+      {
+        "href": "http://escorponox.github.io/encyclopedia-browser-support-component/",
+        "text": "Live Demo",
+        "blue": true
+      },
+      {
+        "href": "https://github.com/escorponox/encyclopedia-browser-support-component",
+        "text": "<span class=\"fa fa-github fa-lg\" aria-hidden=\"true\"></span> Source Code"
+      }
+    ]
+  }
+}

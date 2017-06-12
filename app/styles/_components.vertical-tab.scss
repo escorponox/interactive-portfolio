@@ -67,11 +67,21 @@
 
   @include mq($mq-landscape) {
     display: none;
-
   }
 }
 
-@for $i from 1 through 6 {
+.vertical-tab__contents {
+  height: 100%;
+  display: block;
+  width: 100%;
+}
+
+.c-vertical-tab__spinner {
+  display: none;
+  width: 100%;
+}
+
+@for $i from 1 through 8 {
   .vertical-tab__radio:checked:nth-of-type(#{$i}) ~ .vertical-tab__tabs > .vertical-tab__label:nth-of-type(#{$i}) {
     background-color: $color-white;
     color: $color-blue;
@@ -86,7 +96,20 @@
     }
 
     @include mq($mq-landscape) {
-      @include flex-container(column);
+      @include flex-container(column, center, center);
+    }
+
+    &.vertical-tab__content__project--empty {
+      & .c-vertical-tab__spinner {
+        width: 100%;
+        display: block;
+        height: 3em;
+        text-align: center;
+      }
+
+      & .vertical-tab__contents {
+        display: none;
+      }
     }
   }
 }

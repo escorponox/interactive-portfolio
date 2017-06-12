@@ -12,11 +12,13 @@ export default (env = {dev: true}) => {
     context: path.join(__dirname, 'app'),
     entry: {
       app: './scripts/app.js',
+      forms: './scripts/forms.js',
+      calculator: './scripts/calculator.js',
       vendor: ['lodash']
     },
     output: {
       path: path.join(__dirname, 'dist'),
-      filename: '[name].bundle.[hash].js'
+      filename: '[name].bundle.js'
     },
     externals: ['window'], //used to attach things like jQuery to window in development phase
     devtool: env.prod ? 'source-map' : 'cheap-module-eval-source-map',
@@ -130,6 +132,7 @@ export default (env = {dev: true}) => {
         filename: './index.html',
         template: './templates/my-index.hbs',
         inject: 'body',
+        excludeChunks: ['forms', 'calculator'],
         minify: env.prod ? {
           removeComments: true,
           removeScriptTypeAttributes: true,

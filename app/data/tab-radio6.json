@@ -1,0 +1,34 @@
+{
+  "pindex": 6,
+  "carousel": [
+    {
+      "img": "assets/images/cart-1.gif"
+    },
+    {
+      "img": "assets/images/cart-2.gif"
+    },
+    {
+      "img": "assets/images/cart-3.gif"
+    },
+    {
+      "img": "assets/images/cart-4.gif"
+    }
+  ],
+  "static": {
+    "title": "<strong>Technologies:</strong> HTML5, CSS3 and Vanilla JavaScript",
+    "paragraphs": [
+      "Simple shopping cart. Now more elegant and responsive"
+    ],
+    "links": [
+      {
+        "href": "https://escorponox.github.io/learning-web-components/components/listing/index.html",
+        "text": "Live Demo",
+        "blue": true
+      },
+      {
+        "href": "https://github.com/escorponox/learning-web-components/blob/master/src/components/listing/index.html",
+        "text": "<span class=\"fa fa-github fa-lg\" aria-hidden=\"true\"></span> Source Code"
+      }
+    ]
+  }
+}

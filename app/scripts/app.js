@@ -2,15 +2,12 @@ import '../styles/main.scss'
 import documentReady from './document-ready'
 import cookiesManagement from './cookies'
 import scrollManagement from './scroll-management'
-import signUp from './signup-form'
-import questionnaire from './questionnaire'
-import color from './color'
-import calculator from './calculator'
+import hashManagement from './hash-management'
+import projectTemplate from './project-template'
 
-documentReady(cookiesManagement
-  ,scrollManagement
-  ,questionnaire
-  ,signUp
-  ,color
-  ,calculator
+documentReady(
+  cookiesManagement,
+  scrollManagement,
+  hashManagement,
+  projectTemplate
 )

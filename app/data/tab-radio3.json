@@ -1,0 +1,31 @@
+{
+  "pindex": 3,
+  "carousel": [
+    {
+      "img": "assets/images/xml-1.jpeg"
+    },
+    {
+      "img": "assets/images/xml-2.jpeg"
+    },
+    {
+      "img": "assets/images/xml-3.jpeg"
+    }
+  ],
+  "static": {
+    "title": "<strong>Technologies:</strong> HTML5, CSS3 and Vanilla JavaScript",
+    "paragraphs": [
+      "XML JSON Parser"
+    ],
+    "links": [
+      {
+        "href": "https://escorponox.github.io/xml-json-parser/",
+        "text": "Live Demo",
+        "blue": true
+      },
+      {
+        "href": "https://github.com/escorponox/xml-json-parser",
+        "text": "<span class=\"fa fa-github fa-lg\" aria-hidden=\"true\"></span> Source Code"
+      }
+    ]
+  }
+}

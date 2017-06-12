@@ -1,0 +1,37 @@
+{
+  "pindex": 7,
+  "carousel": [
+    {
+      "content": "<div class=\"tabComponent\"><input type=\"radio\" checked name=\"fake-tab\" id=\"homeDecor\"><label for=\"homeDecor\">Decor</label><input type=\"radio\" name=\"fake-tab\" id=\"furniture\"><label for=\"furniture\">Furniture</label><input type=\"radio\" name=\"fake-tab\" id=\"kitchen\"><label for=\"kitchen\">Kitchen</label><div class=\"tab\">Browse through our list of Home Decor Items</div><div class=\"tab\">Flash Sale on Living Room and Bedroom Furniture</div><div class=\"tab\">Bring the best out of the masterchef in you!!</div></div>"
+    },
+    {
+      "content": "<div class=\"accordion vertical\"><ul><li><input type=\"radio\" id=\"radio-1\" name=\"radio-accordion\" checked=\"checked\"/><label for=\"radio-1\">Appetizers</label><div class=\"content\"><h3>Check our our tasty apps!</h3><p><strong>Happy hour menu - half off!!</strong></p><ul><li>Chicken Wings (6) - 5.99$</li><li>Calamari - 7.99$</li><li>Garlic breaded pickles - 4.59$</li></ul></div></li><li><input type=\"radio\" id=\"radio-2\" name=\"radio-accordion\"/><label for=\"radio-2\">Entrees</label><div class=\"content\"><h3>Choose from a wide range of pastas</h3><p><strong>Pastas</strong></p><ul><li>Chicken Picatta - 14.99$</li><li>Chicken Pollo - 12.99$</li><li>Lasagna (Chicken/beef) - 10.99$</li></ul></div></li><li><input type=\"radio\" id=\"radio-3\" name=\"radio-accordion\"/><label for=\"radio-3\">Desserts</label><div class=\"content\"><h3>New Summer specials!!</h3><p><strong>Shakes and Ice Creams</strong></p><ul><li>Turtle Caramel Shake - 6.99$</li><li> Chocolate Brownie Bite- 4.99$</li></ul></div></li><li><input type=\"radio\" id=\"radio-4\" name=\"radio-accordion\"/><label for=\"radio-4\">Soups & Salads</label><div class=\"content\"><h3>Healthy starters</h3><p><strong>Soups</strong></p><ul><li>Vegetable Soup - 6.99$</li><li>Gazpacho Andaluz - 4.99$</li></ul><p><strong>Salads</strong></p><ul><li>Caesar Salad - 6.99$</li><li>Green Salad - 4.99$</li></ul></div></li></ul></div>"
+    },
+    {
+      "content": "<div class=\"embed-buttons\"><div class=\"button\">Buy Now</div><button class=\"button\">Send Mail</button><a href=\"#\" class=\"button\">Search</a><div class=\"button button--sm\">A Small Button</div><div class=\"button\">A Button</div><div class=\"button button--md\">A Medium Button</div><div class=\"button button--lg\">A Large Button</div></div>"
+    }
+  ],
+  "static": {
+    "title": "<strong>Technologies:</strong> HTML5, CSS3",
+    "paragraphs": [
+      "Pure CSS re-usable components"
+    ],
+    "links": [
+      {
+        "href": "http://jsbin.com/nikoxaj/3/edit?output",
+        "text": "Tabs",
+        "blue": true
+      },
+      {
+        "href": "http://jsbin.com/sifoda/1/edit?output",
+        "text": "Accordion",
+        "blue": true
+      },
+      {
+        "href": "https://escorponox.github.io/learning-web-components/components/buttons/index.html",
+        "text": "Buttons",
+        "blue": true
+      }
+    ]
+  }
+}

@@ -12,64 +12,70 @@
 
       <div class="vertical-tab__tabs">
         {{#each tabs}}
-          <label class="vertical-tab__label" for="tab-radio{{@index}}">{{label}}</label>
+          <label class="vertical-tab__label js-project-label" for="tab-radio{{@index}}">{{label}}</label>
         {{/each}}
       </div>
 
       <div class="vertical-tab__content">
         {{#each tabs}}
-          <label for="tab-radio{{@index}}" class="c-accordion accordion-label">{{label}}</label>
+          <label for="tab-radio{{@index}}" class="c-accordion accordion-label js-project-label">{{label}}</label>
 
-          <div class="vertical-tab__content__project">
-            <div class="c-carousel">
-              {{#each this.tab.carousel}}
-                <input type="radio" class="c-carousel__radio o-display-none" id="car{{@../index}}-item{{@index}}"
-                       name="car{{@../index}}" {{#if @first}}checked{{/if}}>
-              {{/each}}
-              <div class="c-carousel__item-container">
-                {{#each this.tab.carousel}}
-
-                  <div class="c-carousel__item">
-                    {{#if img}}<img class="c-carousel__item__image" src="{{img}}"/>
-                    {{else}}
-                      <div class="c-carousel__item__content">{{{content}}}</div>
-                    {{/if}}
-                  </div>
-                  <label for="car{{@../index}}-item{{carousel-label-next ../this.tab.carousel.length}}"
-                         class="c-carousel__right item-{{@index}}"><span
-                      class="fa fa-chevron-right fa-2x"></span></label>
-                  <label for="car{{@../index}}-item{{carousel-label-prev ../this.tab.carousel.length}}"
-                         class="c-carousel__left item-{{@index}}"><span
-                      class="fa fa-chevron-left fa-2x"></span></label>
-                {{/each}}
-              </div>
-
-              <ul class="c-carousel__dot-list">
-                {{#each this.tab.carousel}}
-                  <li class="c-carousel__dot-list__item">
-                    <label for="car{{@../index}}-item{{@index}}" class="c-carousel__dot-list__dot"><span
-                        class="fa fa-circle"></span></label>
-                  </li>
-                {{/each}}
-              </ul>
+          <div class="vertical-tab__content__project {{#unless @first}}vertical-tab__content__project--empty{{/unless}}">
+            <div class="c-vertical-tab__spinner">
+              <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+              <span class="sr-only">Loading...</span>
             </div>
-            <div class="c-static-info">
-              {{#with this.tab.static}}
-                <p>{{{title}}}</p>
-                {{#each paragraphs}}<p>{{this}}</p>{{/each}}
-                <p>
-                  {{#each links}}
-                    <a class="c-static-info__a c-link-shadow {{#if blue}}link-blue{{/if}}"
-                       href="{{href}}">{{{text}}}</a>
+            {{#if @first}}
+              <div class="vertical-tab__contents">
+                <div class="c-carousel">
+                  {{#each this.tab.carousel}}
+                    <input type="radio" class="c-carousel__radio o-display-none" id="car{{@../index}}-item{{@index}}"
+                           name="car{{@../index}}" {{#if @first}}checked{{/if}}>
                   {{/each}}
-                </p>
-              {{/with}}
-            </div>
+                  <div class="c-carousel__item-container">
+                    {{#each this.tab.carousel}}
+
+                      <div class="c-carousel__item">
+                        {{#if img}}<img class="c-carousel__item__image" src="{{img}}"/>
+                        {{else}}
+                          <div class="c-carousel__item__content">{{{content}}}</div>
+                        {{/if}}
+                      </div>
+                      <label for="car{{@../index}}-item{{carousel-label-next ../this.tab.carousel.length}}"
+                             class="c-carousel__right item-{{@index}}"><span
+                          class="fa fa-chevron-right fa-2x"></span></label>
+                      <label for="car{{@../index}}-item{{carousel-label-prev ../this.tab.carousel.length}}"
+                             class="c-carousel__left item-{{@index}}"><span
+                          class="fa fa-chevron-left fa-2x"></span></label>
+                    {{/each}}
+                  </div>
+
+                  <ul class="c-carousel__dot-list">
+                    {{#each this.tab.carousel}}
+                      <li class="c-carousel__dot-list__item">
+                        <label for="car{{@../index}}-item{{@index}}" class="c-carousel__dot-list__dot"><span
+                            class="fa fa-circle"></span></label>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </div>
+                <div class="c-static-info">
+                  {{#with this.tab.static}}
+                    <p>{{{title}}}</p>
+                    {{#each paragraphs}}<p>{{this}}</p>{{/each}}
+                    <p>
+                      {{#each links}}
+                        <a class="c-static-info__a c-link-shadow {{#if blue}}link-blue{{/if}}"
+                           href="{{href}}">{{{text}}}</a>
+                      {{/each}}
+                    </p>
+                  {{/with}}
+                </div>
+              </div>
+            {{/if}}
           </div>
         {{/each}}
-
       </div>
-
     </div>
   </section>
 {{/with}}

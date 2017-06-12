@@ -1,0 +1,31 @@
+{
+  "pindex": 2,
+  "carousel": [
+    {
+      "img": "assets/images/puzzle-1.jpg"
+    },
+    {
+      "img": "assets/images/puzzle-2.jpg"
+    },
+    {
+      "img": "assets/images/puzzle-3.jpg"
+    }
+  ],
+  "static": {
+    "title": "<strong>Technologies:</strong> HTML5, CSS3 and Vanilla JavaScript",
+    "paragraphs": [
+      "Simple Jigsaw puzzle"
+    ],
+    "links": [
+      {
+        "href": "https://escorponox.github.io/jigsaw-puzzle/",
+        "text": "Live Demo",
+        "blue": true
+      },
+      {
+        "href": "https://github.com/escorponox/jigsaw-puzzle",
+        "text": "<span class=\"fa fa-github fa-lg\" aria-hidden=\"true\"></span> Source Code"
+      }
+    ]
+  }
+}

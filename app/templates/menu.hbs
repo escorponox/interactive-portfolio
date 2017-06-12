@@ -13,44 +13,28 @@
       <nav class="c-menu__nav">
         <input id="sub-menu-toggle" type="checkbox" class="c-menu__nav__sub-menu-toggle o-display-none">
         <ul>
-          <li class="c-menu__nav__li">
-            <a class="c-menu__nav__link section-link t-highlighted-link" href="#about">About</a>
-            <a class="c-menu__nav__mark section-link t-highlighted-link" href="#about"><span
-                class="fa fa-circle"></span></a>
-          </li>
-          <li class="c-menu__nav__li">
-            <label for="sub-menu-toggle" class="c-menu__nav__sub-menu-toggle-label">
-              <span class="fa fa-minus-square-o fa-lg"></span>
-              <span class="fa fa-plus-square-o fa-lg"></span>
-            </label>
-            <a class="c-menu__nav__link section-link" href="#projects">Projects</a>
-            <a class="c-menu__nav__mark section-link" href="#projects"><span class="fa fa-circle"></span></a>
-          </li>
-          <li>
-            <ul class="c-menu__nav__sub-menu">
-              <li><label for="tab-radio1" class="c-menu__nav__sub-menu__link accordion-label-menu">Sidebar</label></li>
-              <li><label for="tab-radio2" class="c-menu__nav__sub-menu__link accordion-label-menu">Forms</label></li>
-              <li><label for="tab-radio3" class="c-menu__nav__sub-menu__link accordion-label-menu">Kids
-                Calculator</label>
+          {{#each navigationLinks}}
+            <li class="c-menu__nav__li">
+              {{#if subMenu}}
+                <label for="sub-menu-toggle" class="c-menu__nav__sub-menu-toggle-label">
+                  <span class="fa fa-minus-square-o fa-lg"></span>
+                  <span class="fa fa-plus-square-o fa-lg"></span>
+                </label>
+              {{/if}}
+              <a class="c-menu__nav__link section-link t-highlighted-link" href="{{href}}">{{text}}</a>
+              <a class="c-menu__nav__mark section-link t-highlighted-link" href="{{href}}"><span
+                  class="fa fa-circle"></span></a>
+            </li>
+            {{#if subMenu}}
+              <li>
+                <ul class="c-menu__nav__sub-menu">
+                  {{#each subMenu}}
+                    <li><label for="tab-radio{{@index}}" class="c-menu__nav__sub-menu__link accordion-label-menu js-project-label">{{this}}</label></li>
+                  {{/each}}
+                </ul>
               </li>
-              <li><label for="tab-radio4" class="c-menu__nav__sub-menu__link accordion-label-menu">Shopping Cart</label>
-              </li>
-              <li><label for="tab-radio5" class="c-menu__nav__sub-menu__link accordion-label-menu">UI Components</label>
-              </li>
-            </ul>
-          </li>
-          <li class="c-menu__nav__li">
-            <a class="c-menu__nav__link section-link" href="#skills">Skills</a>
-            <a class="c-menu__nav__mark section-link" href="#skills"><span class="fa fa-circle"></span></a>
-          </li>
-          <li class="c-menu__nav__li">
-            <a class="c-menu__nav__link section-link" href="#articles">Articles</a>
-            <a class="c-menu__nav__mark section-link" href="#articles"><span class="fa fa-circle"></span></a>
-          </li>
-          <li class="c-menu__nav__li">
-            <a class="c-menu__nav__link section-link" href="#contact">Contact</a>
-            <a class="c-menu__nav__mark section-link" href="#contact"><span class="fa fa-circle"></span></a>
-          </li>
+            {{/if}}
+          {{/each}}
         </ul>
       </nav>
     </div>

@@ -32,7 +32,9 @@
 .vertical-tab__radio:checked:nth-of-type(3) ~ .vertical-tab__content > .c-accordion:nth-of-type(3),
 .vertical-tab__radio:checked:nth-of-type(4) ~ .vertical-tab__content > .c-accordion:nth-of-type(4),
 .vertical-tab__radio:checked:nth-of-type(5) ~ .vertical-tab__content > .c-accordion:nth-of-type(5),
-.vertical-tab__radio:checked:nth-of-type(6) ~ .vertical-tab__content > .c-accordion:nth-of-type(6) {
+.vertical-tab__radio:checked:nth-of-type(6) ~ .vertical-tab__content > .c-accordion:nth-of-type(6),
+.vertical-tab__radio:checked:nth-of-type(7) ~ .vertical-tab__content > .c-accordion:nth-of-type(7),
+.vertical-tab__radio:checked:nth-of-type(8) ~ .vertical-tab__content > .c-accordion:nth-of-type(8) {
   background-color: $color-white;
   border-color: $color-blue;
   box-shadow: 0 2px 2px $color-blue-dark;

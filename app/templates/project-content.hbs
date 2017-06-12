@@ -1,0 +1,46 @@
+<div class="vertical-tab__contents">
+  <div class="c-carousel">
+    {{#each carousel}}
+      <input type="radio" class="c-carousel__radio o-display-none" id="car{{../pindex}}-item{{@index}}"
+             name="car{{../pindex}}" {{#if @first}}checked{{/if}}>
+    {{/each}}
+    <div class="c-carousel__item-container">
+      {{#each carousel}}
+
+        <div class="c-carousel__item">
+          {{#if img}}<img class="c-carousel__item__image" src="{{img}}"/>
+          {{else}}
+            <div class="c-carousel__item__content">{{{content}}}</div>
+          {{/if}}
+        </div>
+        <label for="car{{../pindex}}-item{{carousel-label-next ../this.carousel.length}}"
+               class="c-carousel__right item-{{@index}}"><span
+            class="fa fa-chevron-right fa-2x"></span></label>
+        <label for="car{{../pindex}}-item{{carousel-label-prev ../this.carousel.length}}"
+               class="c-carousel__left item-{{@index}}"><span
+            class="fa fa-chevron-left fa-2x"></span></label>
+      {{/each}}
+    </div>
+
+    <ul class="c-carousel__dot-list">
+      {{#each carousel}}
+        <li class="c-carousel__dot-list__item">
+          <label for="car{{../pindex}}-item{{@index}}" class="c-carousel__dot-list__dot"><span
+              class="fa fa-circle"></span></label>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="c-static-info">
+    {{#with static}}
+      <p>{{{title}}}</p>
+      {{#each paragraphs}}<p>{{this}}</p>{{/each}}
+      <p>
+        {{#each links}}
+          <a class="c-static-info__a c-link-shadow {{#if blue}}link-blue{{/if}}"
+             href="{{href}}">{{{text}}}</a>
+        {{/each}}
+      </p>
+    {{/with}}
+  </div>
+</div>

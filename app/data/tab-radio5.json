@@ -1,0 +1,35 @@
+{
+  "pindex": 5,
+  "carousel": [
+    {
+      "img": "assets/images/calc-1.png"
+    },
+    {
+      "img": "assets/images/calc-2.png"
+    },
+    {
+      "img": "assets/images/calc-3.png"
+    },
+    {
+      "content": "<div id=\"calculator\" class=\"calculator\"><div class=\"screen\"><input id=\"screen\" class=\"calculator__screen\" readonly value=\"0\"></div><div class=\"button-row\"><div id=\"number7\" class=\"calculator__button calculator__button--20 calculator__button--number\">7</div><div id=\"number8\" class=\"calculator__button calculator__button--20 calculator__button--number\">8</div><div id=\"number9\" class=\"calculator__button calculator__button--20 calculator__button--number\">9</div><div id=\"divide\" class=\"calculator__button calculator__button--20 calculator__button--sign\">/</div><div id=\"del\" class=\"calculator__button calculator__button--20 calculator__button--clear-del\">DEL</div></div><div class=\"button-row\"><div id=\"number4\" class=\"calculator__button calculator__button--20 calculator__button--number\">4</div><div id=\"number5\" class=\"calculator__button calculator__button--20 calculator__button--number\">5</div><div id=\"number6\" class=\"calculator__button calculator__button--20 calculator__button--number\">6</div><div id=\"multiply\" class=\"calculator__button calculator__button--20 calculator__button--sign\">*</div><div id=\"clear\" class=\"calculator__button calculator__button--20 calculator__button--clear-del\">C</div></div><div class=\"button-row\"><div id=\"number1\" class=\"calculator__button calculator__button--20 calculator__button--number\">1</div><div id=\"number2\" class=\"calculator__button calculator__button--20 calculator__button--number\">2</div><div id=\"number3\" class=\"calculator__button calculator__button--20 calculator__button--number\">3</div><div id=\"minus\" class=\"calculator__button calculator__button--20 calculator__button--sign\">-</div></div><div id=\"equal\" class=\"calculator__button calculator__button--20 calculator__button--equal\">=</div><div class=\"button-row\"><div id=\"number0\" class=\"calculator__button calculator__button--40 calculator__button--number\">0</div><div id=\"number-point\" class=\"calculator__button calculator__button--20 calculator__button--number\">.</div><div id=\"plus\" class=\"calculator__button calculator__button--20 calculator__button--sign\">+</div></div></div>"
+    }
+  ],
+  "static": {
+    "title": "<strong>Technologies:</strong> HTML5, CSS3 and Vanilla JavaScript",
+    "paragraphs": [
+      "Basic calculator with a flashy color palette to attract kids attention"
+    ],
+    "links": [
+      {
+        "href": "https://escorponox.github.io/learning-web-components/components/calculator/index.html",
+        "text": "Live Demo",
+        "blue": true
+      },
+      {
+        "href": "https://github.com/escorponox/learning-web-components/tree/master/src/components/forms",
+        "text": "<span class=\"fa fa-github fa-lg\" aria-hidden=\"true\"></span> Source Code"
+      }
+    ]
+  },
+  "script": "calculator.bundle.js"
+}
