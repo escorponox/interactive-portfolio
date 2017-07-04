@@ -32,7 +32,7 @@ const loadProject = event => {
           document.getElementsByTagName('head')[0].appendChild(scriptTag)
         }
       })
-      .catch((error) => console.error('Error retrieving project data:', error))
+      .catch(err => console.error('Error retrieving project data:', err))
   }
 }
 

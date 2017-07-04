@@ -6,7 +6,6 @@
     "clean-dist": "rimraf dist",
     "copy-files": "copyfiles -u 1 app/assets/icons/* dist && copyfiles -u 1 app/assets/images/* dist && copyfiles -u 1 app/data/* dist && copyfiles -u 2 app/static/* dist",
     "clean-and-copy": "npm run clean-dist && npm run copy-files",
-    "templates": "handlebars app/templates/my-index.hbs -f app/index-lalala.hbs -d app/templates/data.js",
     "prestart": "npm run clean-and-copy",
     "start": "webpack-dev-server --env.dev --hot",
     "prebuild": "npm run clean-and-copy",

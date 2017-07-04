@@ -21,8 +21,8 @@
                   <span class="fa fa-plus-square-o fa-lg"></span>
                 </label>
               {{/if}}
-              <a class="c-menu__nav__link section-link t-highlighted-link" href="{{href}}">{{text}}</a>
-              <a class="c-menu__nav__mark section-link t-highlighted-link" href="{{href}}"><span
+              <a class="c-menu__nav__link section-link{{#if @first}} t-highlighted-link{{/if}}" href="{{href}}">{{text}}</a>
+              <a class="c-menu__nav__mark section-link{{#if @first}} t-highlighted-link{{/if}}" href="{{href}}"><span
                   class="fa fa-circle"></span></a>
             </li>
             {{#if subMenu}}

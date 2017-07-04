@@ -48,7 +48,6 @@ export default () => {
   Array.from(document.querySelectorAll('.section-link')).forEach((link) => {
     link.addEventListener('click', function (event) {
       event.stopPropagation()
-      event.preventDefault()
       const linkHref = event.currentTarget.getAttribute('href')
       const target = document.querySelector(linkHref)
       smoothScroll(500, target.offsetTop, header.offsetHeight)

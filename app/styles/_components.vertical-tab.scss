@@ -39,6 +39,7 @@
 .vertical-tab__content {
   background-color: $color-white;
   border-radius: $base-radius;
+  overflow: hidden;
   padding: 0;
   width: 100%;
 
@@ -56,7 +57,7 @@
 }
 
 .vertical-tab__content__project {
-
+  position: relative;
   @media only screen and (max-width: 699px) {
     overflow: hidden;
     margin: 0;
@@ -72,13 +73,28 @@
 
 .vertical-tab__contents {
   height: 100%;
-  display: block;
+  opacity: 1;
+  visibility: visible;
   width: 100%;
+
+  @include mq($mq-landscape) {
+    transition: opacity 0.5s ease 0.4s;
+  }
 }
 
 .c-vertical-tab__spinner {
-  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  opacity: 0;
+  text-align: center;
+  visibility: hidden;
   width: 100%;
+  transform: translateY(-50%);
+
+  @include mq($mq-landscape) {
+    transition: opacity 0.3s, visibility 0s linear 0.4s;
+  }
 }
 
 @for $i from 1 through 8 {
@@ -88,27 +104,41 @@
   }
 
   .vertical-tab__radio:checked:nth-of-type(#{$i}) ~ .vertical-tab__content > .vertical-tab__content__project:nth-of-type(#{$i}) {
-
     @media only screen and (max-width: 699px) {
       margin: $base-spacing-unit 0;
       padding: $base-spacing-unit;
       max-height: 40rem;
+
+      &.vertical-tab__content__project--empty {
+        max-height: 6rem;
+        height: 6rem;
+      }
     }
 
     @include mq($mq-landscape) {
-      @include flex-container(column, center, center);
+      display: block;
+      height: 100%;
     }
 
     &.vertical-tab__content__project--empty {
       & .c-vertical-tab__spinner {
-        width: 100%;
-        display: block;
-        height: 3em;
-        text-align: center;
+        visibility: visible;
+        opacity: 1;
+        height: 3rem;
+
+        @include mq($mq-landscape) {
+          transition: opacity 0.3s;
+        }
       }
 
       & .vertical-tab__contents {
-        display: none;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        @include mq($mq-landscape) {
+          transition: opacity 0.5s ease 0.4s,
+          visibility 0s linear 1s;
+        }
       }
     }
   }
