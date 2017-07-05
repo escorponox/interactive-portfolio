@@ -131,7 +131,7 @@ export default (env = {dev: true}) => {
       new HtmlWebpackPlugin({
         filename: './index.html',
         template: './templates/my-index.hbs',
-        inject: 'body',
+        inject: false,
         excludeChunks: ['forms', 'calculator'],
         minify: env.prod ? {
           removeComments: true,
@@ -146,7 +146,7 @@ export default (env = {dev: true}) => {
         data: data
       }),
       env.prod ? new ExtractTextPlugin({
-        filename: '[name].bundle.[hash].css',
+        filename: '[name].bundle.css',
         disable: false,
         allChunks: true
       }) : undefined,
