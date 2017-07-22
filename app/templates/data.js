@@ -165,28 +165,28 @@ export default {
           skills: [
             {
               label: 'HTML5/CSS3',
-              level: 'proficient',
-              tooltip: 'Reaching the expert level'
+              level: 'expert',
+              tooltip: 'No more input-label hack. I promise!!'
             },
             {
               label: 'JavaScript',
-              level: 'proficient',
-              tooltip: 'Reaching the expert level'
+              level: 'expert',
+              tooltip: 'ccoves => expert'
             },
             {
               label: 'jQuery',
               level: 'proficient',
-              tooltip: 'Reaching the expert level'
+              tooltip: 'Enough of this'
             },
             {
-              label: 'React',
-              level: 'learning',
-              tooltip: 'Imminent'
+              label: 'React/Redux',
+              level: 'proficient',
+              tooltip: 'const mapStateToProps = state => ({ level: proficient })'
             },
             {
-              label: 'Redux',
-              level: 'learning',
-              tooltip: 'Revising Abramov lessons'
+              label: 'Vue/Nuxt',
+              level: 'competent',
+              tooltip: 'I love it!!!'
             }
           ]
         },
@@ -225,9 +225,9 @@ export default {
           alternateColor: true,
           skills: [
             {
-              label: 'Communication',
-              level: 'learning',
-              tooltip: 'Improving soon'
+              label: 'Accessibility',
+              level: 'proficient',
+              tooltip: 'WCAG 2.0 AAA? No problem'
             },
             {
               label: 'TDD',
